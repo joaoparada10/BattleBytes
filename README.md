@@ -12,10 +12,12 @@ Simple game written in C that integrates hardware I/O devices: Mouse, Keyboard, 
 
 ## Installation
 1. Install VirtualBox for your system.
-2. Download the zipped VM image.
-3. Extract the image from the zip.
+2. Clone this repository.
+3. Extract MINIX-LCOM.zip.
 4. Open the .vbox file using Virtual Box double-clicking the file should execute Virtual Box with the settings for the MINIX-LCOM VM.
-5. Create shared folder under MINIX-LCOM/ (eg. shared) and clone this rep (minus the zip) into it.
+5. Create shared folder under MINIX-LCOM/ (eg. shared) and select it in the settings (should be like this by default) ![image](https://github.com/user-attachments/assets/69379836-5d51-4414-a810-763f1dcc99dd)
+6. Copy the other folders (proj & .minix-src) into shared.
+
 
 ## Instructions
 1. Start MINIX-LCOM VM
@@ -23,3 +25,4 @@ Simple game written in C that integrates hardware I/O devices: Mouse, Keyboard, 
 3. `cd labs/proj/src`
 4. `make`
 5. `lcom_run proj`
+6. Use Mouse and Keyboard to play!

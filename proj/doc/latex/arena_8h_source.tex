@@ -1,0 +1,30 @@
+\doxysection{arena.\+h}
+\hypertarget{arena_8h_source}{}\label{arena_8h_source}\index{model/arena.h@{model/arena.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ARENA\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ARENA\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}../view/constants.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}../graphics/video\_gr.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}../graphics/sprite.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00009\ \ \ \textcolor{keywordtype}{int}\ grid[ARENA\_HEIGHT][ARENA\_WIDTH];}
+\DoxyCodeLine{00010\ \ \ uint32\_t\ ground\_color;}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \}\ \mbox{\hyperlink{struct_arena}{Arena}};}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \mbox{\hyperlink{struct_arena}{Arena}}*\ \mbox{\hyperlink{arena_8c_a5a12a111043f2011cd8950c83e067d79}{create\_arena}}(xpm\_map\_t\ xpm,\ uint32\_t\ ground\_color);}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{arena_8c_a3c12c77e637315890375e0bd6f987cc3}{is\_walkable}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{arena_8c_a9aa796be96aee9ae5f86f9938cc4f8ad}{arena\_collision}}(\mbox{\hyperlink{struct_sprite}{Sprite}}\ *sprite);}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{arena_8c_a9d713f87cbb3bc2f771a192f069a081e}{destroy\_arena}}(\mbox{\hyperlink{struct_arena}{Arena}}\ *arena);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \mbox{\hyperlink{struct_arena}{Arena}}*\ \mbox{\hyperlink{arena_8c_a643076fac43cdf2e983ffe4ebb4e1f24}{get\_current\_arena}}();}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

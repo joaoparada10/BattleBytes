@@ -1,0 +1,11 @@
+<map id="draw_options" name="draw_options">
+<area shape="rect" id="Node000001" title="Draws the options of the menu on the screen." alt="" coords="5,31,103,57"/>
+<area shape="rect" id="Node000002" href="$menu_8c.html#a44893e3b0e4dd2746abd770f5dd56f9a" title="Draws a string on the screen." alt="" coords="164,5,252,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="103,33,148,26,149,31,104,39"/>
+<area shape="rect" id="Node000005" href="$state_8c.html#ac45d046321314f1a5d9deee403f7b5db" title="Retrieves the current game state." alt="" coords="151,56,265,83"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="104,49,136,55,135,60,103,55"/>
+<area shape="rect" id="Node000003" href="$menu_8c.html#a296070ce636082f7e52b6e39e451ed56" title="Draws a single character on the screen." alt="" coords="313,5,422,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="252,16,298,16,298,21,252,21"/>
+<area shape="rect" id="Node000004" href="$video__gr_8c.html#ae73cfe62147429fce468e5b1ed96e30a" title="Gets the drawing buffer." alt="" coords="470,5,599,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="423,16,455,16,455,21,423,21"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="spawn_collision" name="spawn_collision">
+<area shape="rect" id="Node000001" title="Checks for collision when spawning an object." alt="" coords="5,31,118,57"/>
+<area shape="rect" id="Node000002" href="$game__view_8c.html#a6cd367c585374334ec34ee3f811213bb" title="Retrieves the tank sprite." alt="" coords="166,5,276,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="118,32,150,27,151,32,118,38"/>
+<area shape="rect" id="Node000003" href="$arena_8c.html#a3c12c77e637315890375e0bd6f987cc3" title="Checks if a given coordinate in the arena is walkable." alt="" coords="177,56,265,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="118,50,162,57,161,63,118,56"/>
+<area shape="rect" id="Node000004" href="$arena_8c.html#a643076fac43cdf2e983ffe4ebb4e1f24" title="Gets the current arena." alt="" coords="324,56,449,83"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="265,67,308,67,308,72,265,72"/>
+</map>

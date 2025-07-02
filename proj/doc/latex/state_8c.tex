@@ -1,0 +1,303 @@
+\doxysection{dispatcher/state.c File Reference}
+\hypertarget{state_8c}{}\label{state_8c}\index{dispatcher/state.c@{dispatcher/state.c}}
+
+
+Implementation file for managing game state.  
+
+
+{\ttfamily \#include "{}state.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+State \mbox{\hyperlink{state_8c_af6adcb6b1f3db905dc261ec641b819d2}{init\+\_\+game\+\_\+state}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the game state with default values. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{state_8c_a21ab19713d487f02e880ee4c3f730795}{get\+\_\+score}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the current score. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{state_8c_a49ac678712e9885e0315a1c40640f319}{set\+\_\+score}} (uint32\+\_\+t new\+\_\+score)
+\begin{DoxyCompactList}\small\item\em Sets the score to a new value. \end{DoxyCompactList}\item 
+\Hypertarget{state_8c_a2cf5edc632cfcc66bd78b43dc2d2fc1b}\label{state_8c_a2cf5edc632cfcc66bd78b43dc2d2fc1b} 
+void {\bfseries increase\+\_\+score} ()
+\begin{DoxyCompactList}\small\item\em Increases the score based on the current difficulty level. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{state_8c_af018f3ce79710c9abd7963211ab24e0e}{get\+\_\+timer}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the current timer value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{state_8c_a2649bfd1ec46e9b0ad5aa7dfd3a35ca3}{set\+\_\+timer}} (uint32\+\_\+t new\+\_\+timer)
+\begin{DoxyCompactList}\small\item\em Sets the timer to a new value. \end{DoxyCompactList}\item 
+\Hypertarget{state_8c_a6a71bcde78dc527c54bc55a2dcc1f656}\label{state_8c_a6a71bcde78dc527c54bc55a2dcc1f656} 
+void {\bfseries increase\+\_\+timer} ()
+\begin{DoxyCompactList}\small\item\em Increases the timer by 1. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{state_8c_afd540dc3101b434aae44ddea489c58b6}{get\+\_\+game\+\_\+time}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the current game time. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{state_8c_aef6e11f83952661ad9ad43238f5efdff}{set\+\_\+game\+\_\+time}} (uint32\+\_\+t new\+\_\+game\+\_\+time)
+\begin{DoxyCompactList}\small\item\em Sets the game time to a new value. \end{DoxyCompactList}\item 
+\Hypertarget{state_8c_a91865583e86517fe46b89a7be0d9fafd}\label{state_8c_a91865583e86517fe46b89a7be0d9fafd} 
+void {\bfseries increase\+\_\+game\+\_\+time} ()
+\begin{DoxyCompactList}\small\item\em Increases the game time by 1. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{state_8c_ad3b4b1f504a44638230e3d2ff20439bb}{get\+\_\+difficulty}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the current difficulty level. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{state_8c_a174884f9d8aa485dd2df7cc1864df301}{set\+\_\+difficulty}} (uint8\+\_\+t new\+\_\+difficulty)
+\begin{DoxyCompactList}\small\item\em Sets the difficulty level to a new value. \end{DoxyCompactList}\item 
+\Hypertarget{state_8c_add1e17182223f45388f4a70502b29c3b}\label{state_8c_add1e17182223f45388f4a70502b29c3b} 
+void {\bfseries increase\+\_\+difficulty} ()
+\begin{DoxyCompactList}\small\item\em Increases the difficulty level by 1. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_game_state}{Game\+State}} \mbox{\hyperlink{state_8c_ac45d046321314f1a5d9deee403f7b5db}{get\+\_\+game\+\_\+state}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the current game state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{state_8c_a8777aa396439ae8e5505357c470815b8}{set\+\_\+game\+\_\+state}} (\mbox{\hyperlink{struct_game_state}{Game\+State}} new\+\_\+game\+\_\+state)
+\begin{DoxyCompactList}\small\item\em Sets the game state to a new state. \end{DoxyCompactList}\item 
+State \mbox{\hyperlink{state_8c_a38d3fc207a5e58298bdd4a606c0b1a01}{get\+\_\+state}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the current state of the game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{state_8c_abef3f51e03a484281acce64e7d912c21}{set\+\_\+state}} (State new\+\_\+state)
+\begin{DoxyCompactList}\small\item\em Sets the state of the game to a new state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{state_8c_a53c22c2810ba1561a5f776bffc03a599}{reset\+\_\+game\+\_\+stats}} (\mbox{\hyperlink{struct_game_state}{Game\+State}} state)
+\begin{DoxyCompactList}\small\item\em Resets the game statistics to default values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation file for managing game state. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{state_8c_ad3b4b1f504a44638230e3d2ff20439bb}\index{state.c@{state.c}!get\_difficulty@{get\_difficulty}}
+\index{get\_difficulty@{get\_difficulty}!state.c@{state.c}}
+\doxysubsubsection{\texorpdfstring{get\_difficulty()}{get\_difficulty()}}
+{\footnotesize\ttfamily \label{state_8c_ad3b4b1f504a44638230e3d2ff20439bb} 
+uint8\+\_\+t get\+\_\+difficulty (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves the current difficulty level. 
+
+\begin{DoxyReturn}{Returns}
+The current difficulty level 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{state_8c_ad3b4b1f504a44638230e3d2ff20439bb_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{state_8c_ac45d046321314f1a5d9deee403f7b5db}\index{state.c@{state.c}!get\_game\_state@{get\_game\_state}}
+\index{get\_game\_state@{get\_game\_state}!state.c@{state.c}}
+\doxysubsubsection{\texorpdfstring{get\_game\_state()}{get\_game\_state()}}
+{\footnotesize\ttfamily \label{state_8c_ac45d046321314f1a5d9deee403f7b5db} 
+\mbox{\hyperlink{struct_game_state}{Game\+State}} get\+\_\+game\+\_\+state (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves the current game state. 
+
+\begin{DoxyReturn}{Returns}
+The current game state 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{state_8c_ac45d046321314f1a5d9deee403f7b5db_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{state_8c_afd540dc3101b434aae44ddea489c58b6}\index{state.c@{state.c}!get\_game\_time@{get\_game\_time}}
+\index{get\_game\_time@{get\_game\_time}!state.c@{state.c}}
+\doxysubsubsection{\texorpdfstring{get\_game\_time()}{get\_game\_time()}}
+{\footnotesize\ttfamily \label{state_8c_afd540dc3101b434aae44ddea489c58b6} 
+uint32\+\_\+t get\+\_\+game\+\_\+time (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves the current game time. 
+
+\begin{DoxyReturn}{Returns}
+The current game time 
+\end{DoxyReturn}
+\Hypertarget{state_8c_a21ab19713d487f02e880ee4c3f730795}\index{state.c@{state.c}!get\_score@{get\_score}}
+\index{get\_score@{get\_score}!state.c@{state.c}}
+\doxysubsubsection{\texorpdfstring{get\_score()}{get\_score()}}
+{\footnotesize\ttfamily \label{state_8c_a21ab19713d487f02e880ee4c3f730795} 
+uint32\+\_\+t get\+\_\+score (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves the current score. 
+
+\begin{DoxyReturn}{Returns}
+The current score 
+\end{DoxyReturn}
+\Hypertarget{state_8c_a38d3fc207a5e58298bdd4a606c0b1a01}\index{state.c@{state.c}!get\_state@{get\_state}}
+\index{get\_state@{get\_state}!state.c@{state.c}}
+\doxysubsubsection{\texorpdfstring{get\_state()}{get\_state()}}
+{\footnotesize\ttfamily \label{state_8c_a38d3fc207a5e58298bdd4a606c0b1a01} 
+State get\+\_\+state (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves the current state of the game. 
+
+\begin{DoxyReturn}{Returns}
+The current state of the game 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{state_8c_a38d3fc207a5e58298bdd4a606c0b1a01_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{state_8c_af018f3ce79710c9abd7963211ab24e0e}\index{state.c@{state.c}!get\_timer@{get\_timer}}
+\index{get\_timer@{get\_timer}!state.c@{state.c}}
+\doxysubsubsection{\texorpdfstring{get\_timer()}{get\_timer()}}
+{\footnotesize\ttfamily \label{state_8c_af018f3ce79710c9abd7963211ab24e0e} 
+uint32\+\_\+t get\+\_\+timer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves the current timer value. 
+
+\begin{DoxyReturn}{Returns}
+The current timer value 
+\end{DoxyReturn}
+\Hypertarget{state_8c_af6adcb6b1f3db905dc261ec641b819d2}\index{state.c@{state.c}!init\_game\_state@{init\_game\_state}}
+\index{init\_game\_state@{init\_game\_state}!state.c@{state.c}}
+\doxysubsubsection{\texorpdfstring{init\_game\_state()}{init\_game\_state()}}
+{\footnotesize\ttfamily \label{state_8c_af6adcb6b1f3db905dc261ec641b819d2} 
+State init\+\_\+game\+\_\+state (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Initializes the game state with default values. 
+
+\begin{DoxyReturn}{Returns}
+The initial state of the game 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{state_8c_af6adcb6b1f3db905dc261ec641b819d2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{state_8c_a53c22c2810ba1561a5f776bffc03a599}\index{state.c@{state.c}!reset\_game\_stats@{reset\_game\_stats}}
+\index{reset\_game\_stats@{reset\_game\_stats}!state.c@{state.c}}
+\doxysubsubsection{\texorpdfstring{reset\_game\_stats()}{reset\_game\_stats()}}
+{\footnotesize\ttfamily \label{state_8c_a53c22c2810ba1561a5f776bffc03a599} 
+void reset\+\_\+game\+\_\+stats (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game_state}{Game\+State}}}]{state}{}\end{DoxyParamCaption})}
+
+
+
+Resets the game statistics to default values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & The current game state \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{state_8c_a53c22c2810ba1561a5f776bffc03a599_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{state_8c_a174884f9d8aa485dd2df7cc1864df301}\index{state.c@{state.c}!set\_difficulty@{set\_difficulty}}
+\index{set\_difficulty@{set\_difficulty}!state.c@{state.c}}
+\doxysubsubsection{\texorpdfstring{set\_difficulty()}{set\_difficulty()}}
+{\footnotesize\ttfamily \label{state_8c_a174884f9d8aa485dd2df7cc1864df301} 
+void set\+\_\+difficulty (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{new\+\_\+difficulty}{}\end{DoxyParamCaption})}
+
+
+
+Sets the difficulty level to a new value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+difficulty} & The new difficulty level \\
+\hline
+\end{DoxyParams}
+\Hypertarget{state_8c_a8777aa396439ae8e5505357c470815b8}\index{state.c@{state.c}!set\_game\_state@{set\_game\_state}}
+\index{set\_game\_state@{set\_game\_state}!state.c@{state.c}}
+\doxysubsubsection{\texorpdfstring{set\_game\_state()}{set\_game\_state()}}
+{\footnotesize\ttfamily \label{state_8c_a8777aa396439ae8e5505357c470815b8} 
+void set\+\_\+game\+\_\+state (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game_state}{Game\+State}}}]{new\+\_\+game\+\_\+state}{}\end{DoxyParamCaption})}
+
+
+
+Sets the game state to a new state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+game\+\_\+state} & The new game state \\
+\hline
+\end{DoxyParams}
+\Hypertarget{state_8c_aef6e11f83952661ad9ad43238f5efdff}\index{state.c@{state.c}!set\_game\_time@{set\_game\_time}}
+\index{set\_game\_time@{set\_game\_time}!state.c@{state.c}}
+\doxysubsubsection{\texorpdfstring{set\_game\_time()}{set\_game\_time()}}
+{\footnotesize\ttfamily \label{state_8c_aef6e11f83952661ad9ad43238f5efdff} 
+void set\+\_\+game\+\_\+time (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{new\+\_\+game\+\_\+time}{}\end{DoxyParamCaption})}
+
+
+
+Sets the game time to a new value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+game\+\_\+time} & The new game time value \\
+\hline
+\end{DoxyParams}
+\Hypertarget{state_8c_a49ac678712e9885e0315a1c40640f319}\index{state.c@{state.c}!set\_score@{set\_score}}
+\index{set\_score@{set\_score}!state.c@{state.c}}
+\doxysubsubsection{\texorpdfstring{set\_score()}{set\_score()}}
+{\footnotesize\ttfamily \label{state_8c_a49ac678712e9885e0315a1c40640f319} 
+void set\+\_\+score (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{new\+\_\+score}{}\end{DoxyParamCaption})}
+
+
+
+Sets the score to a new value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+score} & The new score value \\
+\hline
+\end{DoxyParams}
+\Hypertarget{state_8c_abef3f51e03a484281acce64e7d912c21}\index{state.c@{state.c}!set\_state@{set\_state}}
+\index{set\_state@{set\_state}!state.c@{state.c}}
+\doxysubsubsection{\texorpdfstring{set\_state()}{set\_state()}}
+{\footnotesize\ttfamily \label{state_8c_abef3f51e03a484281acce64e7d912c21} 
+void set\+\_\+state (\begin{DoxyParamCaption}\item[{State}]{new\+\_\+state}{}\end{DoxyParamCaption})}
+
+
+
+Sets the state of the game to a new state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+state} & The new state of the game \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{state_8c_abef3f51e03a484281acce64e7d912c21_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{state_8c_a2649bfd1ec46e9b0ad5aa7dfd3a35ca3}\index{state.c@{state.c}!set\_timer@{set\_timer}}
+\index{set\_timer@{set\_timer}!state.c@{state.c}}
+\doxysubsubsection{\texorpdfstring{set\_timer()}{set\_timer()}}
+{\footnotesize\ttfamily \label{state_8c_a2649bfd1ec46e9b0ad5aa7dfd3a35ca3} 
+void set\+\_\+timer (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{new\+\_\+timer}{}\end{DoxyParamCaption})}
+
+
+
+Sets the timer to a new value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+timer} & The new timer value \\
+\hline
+\end{DoxyParams}

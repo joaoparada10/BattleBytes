@@ -1,0 +1,32 @@
+\doxysection{game\+\_\+logic.\+h}
+\hypertarget{game__logic_8h_source}{}\label{game__logic_8h_source}\index{logic/game\_logic.h@{logic/game\_logic.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ GAME\_LOGIC\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ GAME\_LOGIC\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}../model/arena.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}../view/constants.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}../graphics/sprite.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}../model/game\_model.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}../view/game\_view.h"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{game__logic_8c_a0feaea245dcdc9064493d3eb67b05d03}{sprite\_collision}}(\mbox{\hyperlink{struct_sprite}{Sprite}}\ *sp1,\ \mbox{\hyperlink{struct_sprite}{Sprite}}\ *sp2);}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{game__logic_8c_a92e3fa41cbaf0a28e54be4958150e58f}{spawn\_collision}}(uint16\_t\ x,\ uint16\_t\ y,\ uint16\_t\ width,\ uint16\_t\ height);}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{game__logic_8c_a4219c25f38ab1febf8d5d7ecde76241a}{move\_collision}}(\mbox{\hyperlink{struct_sprite}{Sprite}}\ *sprite,\ \textcolor{keywordtype}{int}\ x\_move,\ \textcolor{keywordtype}{int}\ y\_move);}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ int(move\_sprite\_to)(\mbox{\hyperlink{struct_sprite}{Sprite}}\ *sp,\ uint16\_t\ xf,\ uint16\_t\ yf,\textcolor{keywordtype}{bool}\ collision);}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{game__logic_8c_a80d587e65b8e8c5db2d9d60755bc1eb8}{handle\_game\_keyboard}}(uint8\_t*\ bytes,\ uint8\_t\ size);}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{game__logic_8c_a8fab7627be7d63ca1be0e908488a1253}{move\_cursor}}(int16\_t\ delta\_x,int16\_t\ delta\_y);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{game__logic_8c_a1c416c2df9c85e14bd2f21e7709b7ca4}{calculate\_tank\_direction}}();}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{game__logic_8c_aa3912aa6df5e81d539cf9f0709cb765f}{shoot}}();}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

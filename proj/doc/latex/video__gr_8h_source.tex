@@ -1,0 +1,43 @@
+\doxysection{video\+\_\+gr.\+h}
+\hypertarget{video__gr_8h_source}{}\label{video__gr_8h_source}\index{graphics/video\_gr.h@{graphics/video\_gr.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ \_\_VIDEO\_GR\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ \_\_VIDEO\_GR\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <lcom/lcf.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keywordtype}{void}\ *(\mbox{\hyperlink{video__gr_8c_acc11b311c479b1904fd45e8c6da5fcc3}{vg\_init}})\ (uint16\_t\ mode);}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ int(vg\_draw\_pixel)(uint16\_t\ x,\ uint16\_t\ y,\ uint32\_t\ color);}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ int(vg\_draw\_hline)(uint16\_t\ x,\ uint16\_t\ y,\ uint16\_t\ len,\ uint32\_t\ color);}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ int(vg\_draw\_rectangle)(uint16\_t\ x,\ uint16\_t\ y,\ u\_int16\_t\ width,\ u\_int16\_t\ height,\ uint32\_t\ color);}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ int(vg\_draw\_pattern)(uint8\_t\ no\_rectangles,\ uint32\_t\ first,\ uint8\_t\ step,\ uint16\_t\ mode);}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ int(vg\_draw\_pixmap)(xpm\_map\_t\ xpm,\ uint16\_t\ x,\ uint16\_t\ y);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ int(vg\_draw\_character)(xpm\_map\_t\ xpm,\ uint16\_t\ x,\ uint16\_t\ y,\ uint16\_t\ xpm\_desl,}
+\DoxyCodeLine{00023\ uint16\_t\ character\_width,\ uint16\_t\ character\_height);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ int(vg\_move\_pixmap)(xpm\_map\_t\ xpm,\ uint16\_t\ *current\_x,\ uint16\_t\ *current\_y,\ uint16\_t\ xf,\ uint16\_t\ yf,\ int16\_t\ speed,\textcolor{keywordtype}{bool}\ draw);}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{video__gr_8c_ab7a9f040731d1a0eccf3ada95fd3a276}{vg\_flip\_buffers}}();}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{video__gr_8c_ac9794e34a4c756f29a57885461d6186b}{vg\_clear\_buffer}}(\textcolor{keywordtype}{char}*\ buffer);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{video__gr_8c_a2187bcb7d0ea1fe4368bb2873c0fe9ef}{get\_first\_buffer}}();}
+\DoxyCodeLine{00032\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{video__gr_8c_a1fb0e831d4a8e026f6a412550da4997a}{get\_second\_buffer}}();}
+\DoxyCodeLine{00033\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{video__gr_8c_ae73cfe62147429fce468e5b1ed96e30a}{get\_drawing\_buffer}}();}
+\DoxyCodeLine{00034\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{video__gr_8c_aed4987ed2c5abe37a630262487ebda12}{get\_arena\_buffer}}();}
+\DoxyCodeLine{00035\ \textcolor{keywordtype}{unsigned}\ \mbox{\hyperlink{video__gr_8c_ac19350f0662b5c8fbb1a41e051411014}{get\_h\_res}}();}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

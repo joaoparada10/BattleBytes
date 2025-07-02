@@ -1,0 +1,252 @@
+\doxysection{logic/game\+\_\+logic.c File Reference}
+\hypertarget{game__logic_8c}{}\label{game__logic_8c}\index{logic/game\_logic.c@{logic/game\_logic.c}}
+
+
+Contains functions related to game logic and collision detection.  
+
+
+{\ttfamily \#include "{}game\+\_\+logic.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{game__logic_8c_a0feaea245dcdc9064493d3eb67b05d03}{sprite\+\_\+collision}} (\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*}sp1, \mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*}sp2)
+\begin{DoxyCompactList}\small\item\em Checks for collision between two sprites. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{game__logic_8c_a92e3fa41cbaf0a28e54be4958150e58f}{spawn\+\_\+collision}} (uint16\+\_\+t x, uint16\+\_\+t y, uint16\+\_\+t width, uint16\+\_\+t height)
+\begin{DoxyCompactList}\small\item\em Checks for collision when spawning an object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{game__logic_8c_a4219c25f38ab1febf8d5d7ecde76241a}{move\+\_\+collision}} (\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*}sprite, int x\+\_\+move, int y\+\_\+move)
+\begin{DoxyCompactList}\small\item\em Checks for collision when moving a sprite. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{game__logic_8c_a5832452cf7e4857d93142b33d9c7edb0}{move\+\_\+sprite\+\_\+to}} (\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*}sp, uint16\+\_\+t xf, uint16\+\_\+t yf, bool collision)
+\begin{DoxyCompactList}\small\item\em Moves a sprite to the specified coordinates while handling collision. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game__logic_8c_a80d587e65b8e8c5db2d9d60755bc1eb8}{handle\+\_\+game\+\_\+keyboard}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}bytes, uint8\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Handles keyboard input for game controls. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{game__logic_8c_a8fab7627be7d63ca1be0e908488a1253}{move\+\_\+cursor}} (int16\+\_\+t delta\+\_\+x, int16\+\_\+t delta\+\_\+y)
+\begin{DoxyCompactList}\small\item\em Moves the cursor on the screen. \end{DoxyCompactList}\item 
+\Hypertarget{game__logic_8c_a1c416c2df9c85e14bd2f21e7709b7ca4}\label{game__logic_8c_a1c416c2df9c85e14bd2f21e7709b7ca4} 
+void {\bfseries calculate\+\_\+tank\+\_\+direction} ()
+\begin{DoxyCompactList}\small\item\em Calculates the direction of the tank based on the position of the crosshair. \end{DoxyCompactList}\item 
+\Hypertarget{game__logic_8c_aa3912aa6df5e81d539cf9f0709cb765f}\label{game__logic_8c_aa3912aa6df5e81d539cf9f0709cb765f} 
+void {\bfseries shoot} ()
+\begin{DoxyCompactList}\small\item\em Fires a shot from the tank towards the crosshair. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains functions related to game logic and collision detection. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{game__logic_8c_a80d587e65b8e8c5db2d9d60755bc1eb8}\index{game\_logic.c@{game\_logic.c}!handle\_game\_keyboard@{handle\_game\_keyboard}}
+\index{handle\_game\_keyboard@{handle\_game\_keyboard}!game\_logic.c@{game\_logic.c}}
+\doxysubsubsection{\texorpdfstring{handle\_game\_keyboard()}{handle\_game\_keyboard()}}
+{\footnotesize\ttfamily \label{game__logic_8c_a80d587e65b8e8c5db2d9d60755bc1eb8} 
+void handle\+\_\+game\+\_\+keyboard (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{bytes}{, }\item[{uint8\+\_\+t}]{size}{}\end{DoxyParamCaption})}
+
+
+
+Handles keyboard input for game controls. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bytes} & Array of keyboard input bytes. \\
+\hline
+{\em size} & Size of the input array. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__logic_8c_a80d587e65b8e8c5db2d9d60755bc1eb8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__logic_8c_a80d587e65b8e8c5db2d9d60755bc1eb8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{game__logic_8c_a4219c25f38ab1febf8d5d7ecde76241a}\index{game\_logic.c@{game\_logic.c}!move\_collision@{move\_collision}}
+\index{move\_collision@{move\_collision}!game\_logic.c@{game\_logic.c}}
+\doxysubsubsection{\texorpdfstring{move\_collision()}{move\_collision()}}
+{\footnotesize\ttfamily \label{game__logic_8c_a4219c25f38ab1febf8d5d7ecde76241a} 
+bool move\+\_\+collision (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*}}]{sprite}{, }\item[{int}]{x\+\_\+move}{, }\item[{int}]{y\+\_\+move}{}\end{DoxyParamCaption})}
+
+
+
+Checks for collision when moving a sprite. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sprite} & Pointer to the sprite. \\
+\hline
+{\em x\+\_\+move} & Horizontal movement amount. \\
+\hline
+{\em y\+\_\+move} & Vertical movement amount. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if collision occurs, false otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__logic_8c_a4219c25f38ab1febf8d5d7ecde76241a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__logic_8c_a4219c25f38ab1febf8d5d7ecde76241a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{game__logic_8c_a8fab7627be7d63ca1be0e908488a1253}\index{game\_logic.c@{game\_logic.c}!move\_cursor@{move\_cursor}}
+\index{move\_cursor@{move\_cursor}!game\_logic.c@{game\_logic.c}}
+\doxysubsubsection{\texorpdfstring{move\_cursor()}{move\_cursor()}}
+{\footnotesize\ttfamily \label{game__logic_8c_a8fab7627be7d63ca1be0e908488a1253} 
+int move\+\_\+cursor (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{delta\+\_\+x}{, }\item[{int16\+\_\+t}]{delta\+\_\+y}{}\end{DoxyParamCaption})}
+
+
+
+Moves the cursor on the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+\_\+x} & Change in X-\/coordinate. \\
+\hline
+{\em delta\+\_\+y} & Change in Y-\/coordinate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{game__logic_8c_a8fab7627be7d63ca1be0e908488a1253_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__logic_8c_a8fab7627be7d63ca1be0e908488a1253_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{game__logic_8c_a5832452cf7e4857d93142b33d9c7edb0}\index{game\_logic.c@{game\_logic.c}!move\_sprite\_to@{move\_sprite\_to}}
+\index{move\_sprite\_to@{move\_sprite\_to}!game\_logic.c@{game\_logic.c}}
+\doxysubsubsection{\texorpdfstring{move\_sprite\_to()}{move\_sprite\_to()}}
+{\footnotesize\ttfamily \label{game__logic_8c_a5832452cf7e4857d93142b33d9c7edb0} 
+int move\+\_\+sprite\+\_\+to (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*}}]{sp}{, }\item[{uint16\+\_\+t}]{xf}{, }\item[{uint16\+\_\+t}]{yf}{, }\item[{bool}]{collision}{}\end{DoxyParamCaption})}
+
+
+
+Moves a sprite to the specified coordinates while handling collision. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sp} & Pointer to the sprite. \\
+\hline
+{\em xf} & Final X-\/coordinate. \\
+\hline
+{\em yf} & Final Y-\/coordinate. \\
+\hline
+{\em collision} & Flag indicating whether collision should be checked. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__logic_8c_a5832452cf7e4857d93142b33d9c7edb0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__logic_8c_a5832452cf7e4857d93142b33d9c7edb0_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{game__logic_8c_a92e3fa41cbaf0a28e54be4958150e58f}\index{game\_logic.c@{game\_logic.c}!spawn\_collision@{spawn\_collision}}
+\index{spawn\_collision@{spawn\_collision}!game\_logic.c@{game\_logic.c}}
+\doxysubsubsection{\texorpdfstring{spawn\_collision()}{spawn\_collision()}}
+{\footnotesize\ttfamily \label{game__logic_8c_a92e3fa41cbaf0a28e54be4958150e58f} 
+bool spawn\+\_\+collision (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x}{, }\item[{uint16\+\_\+t}]{y}{, }\item[{uint16\+\_\+t}]{width}{, }\item[{uint16\+\_\+t}]{height}{}\end{DoxyParamCaption})}
+
+
+
+Checks for collision when spawning an object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X-\/coordinate of the object. \\
+\hline
+{\em y} & Y-\/coordinate of the object. \\
+\hline
+{\em width} & Width of the object. \\
+\hline
+{\em height} & Height of the object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if collision occurs, false otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__logic_8c_a92e3fa41cbaf0a28e54be4958150e58f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__logic_8c_a92e3fa41cbaf0a28e54be4958150e58f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{game__logic_8c_a0feaea245dcdc9064493d3eb67b05d03}\index{game\_logic.c@{game\_logic.c}!sprite\_collision@{sprite\_collision}}
+\index{sprite\_collision@{sprite\_collision}!game\_logic.c@{game\_logic.c}}
+\doxysubsubsection{\texorpdfstring{sprite\_collision()}{sprite\_collision()}}
+{\footnotesize\ttfamily \label{game__logic_8c_a0feaea245dcdc9064493d3eb67b05d03} 
+bool sprite\+\_\+collision (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*}}]{sp1}{, }\item[{\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*}}]{sp2}{}\end{DoxyParamCaption})}
+
+
+
+Checks for collision between two sprites. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sp1} & Pointer to the first sprite. \\
+\hline
+{\em sp2} & Pointer to the second sprite. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if collision occurs, false otherwise. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__logic_8c_a0feaea245dcdc9064493d3eb67b05d03_icgraph}
+\end{center}
+\end{figure}

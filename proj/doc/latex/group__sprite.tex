@@ -1,0 +1,182 @@
+\doxysection{Sprite}
+\hypertarget{group__sprite}{}\label{group__sprite}\index{Sprite@{Sprite}}
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_sprite}{Sprite}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group__sprite_gac17a91fd309ebffd07be3daa9c194d86}{create\+\_\+sprite}} (const char \texorpdfstring{$\ast$}{*}pic\mbox{[}$\,$\mbox{]}, int x, int y, int xspeed, int yspeed)
+\begin{DoxyCompactList}\small\item\em Creates a sprite. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__sprite_ga89f1990315453247c90b2c0ea575ddc9}{animate\+\_\+sprite}} (\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*}sp)
+\begin{DoxyCompactList}\small\item\em Animates a sprite. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__sprite_ga6c75fbf31230126d2f19b29deaf24b2f}{draw\+\_\+sprite}} (\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*}sp)
+\begin{DoxyCompactList}\small\item\em Draws a sprite. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__sprite_ga6a170b91a4de8e3e292018d56627d551}{draw\+\_\+sprite\+\_\+to\+\_\+buffer}} (\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*}sp, char \texorpdfstring{$\ast$}{*}buffer)
+\begin{DoxyCompactList}\small\item\em Draws a sprite to a specified buffer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__sprite_ga0b9702271420a69a1603d0a3768fda67}{destroy\+\_\+sprite}} (\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*}fig)
+\begin{DoxyCompactList}\small\item\em Destroys a sprite. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Joao Cardoso (\href{mailto:jcard@fe.up.pt}{\texttt{ jcard@fe.\+up.\+pt}}) ???? Added by \href{mailto:pfs@fe.up.pt}{\texttt{ pfs@fe.\+up.\+pt}}   
+\end{DoxyAuthor}
+\doxylink{struct_sprite}{Sprite} related functions 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group__sprite_ga89f1990315453247c90b2c0ea575ddc9}\index{Sprite@{Sprite}!animate\_sprite@{animate\_sprite}}
+\index{animate\_sprite@{animate\_sprite}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{animate\_sprite()}{animate\_sprite()}}
+{\footnotesize\ttfamily \label{group__sprite_ga89f1990315453247c90b2c0ea575ddc9} 
+int animate\+\_\+sprite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*}}]{sp}{}\end{DoxyParamCaption})}
+
+
+
+Animates a sprite. 
+
+Animate the sprite "{}fig"{} according to its attributes in memory, whose address is "{}base"{}. The animation detects the screen borders and change the speed according; it also detects collision with other objects, including the player pad. Collisions with the screen border generates a perfect reflection, while collision with other objects generates a random perturbation in the object speed. Other strategies can be devised\+: use quasi-\/elastic collision based on the objects "{}mass"{} and speed, generate spin effect based on amount of tangential speed direction relative to the object center of "{}mass"{}... Returns the kind of collision detected, RIGHT\+\_\+\+HIT or LEFT\+\_\+\+HIT, if a collision with the players pad (WHITE colored!) is detected.
+
+This function updates the sprite\textquotesingle{}s position based on its speed and then draws the sprite at its new position.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sp} & The sprite to animate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always returns 0 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__sprite_ga89f1990315453247c90b2c0ea575ddc9_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{group__sprite_gac17a91fd309ebffd07be3daa9c194d86}\index{Sprite@{Sprite}!create\_sprite@{create\_sprite}}
+\index{create\_sprite@{create\_sprite}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{create\_sprite()}{create\_sprite()}}
+{\footnotesize\ttfamily \label{group__sprite_gac17a91fd309ebffd07be3daa9c194d86} 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} create\+\_\+sprite (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{pic}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{int}]{xspeed}{, }\item[{int}]{yspeed}{}\end{DoxyParamCaption})}
+
+
+
+Creates a sprite. 
+
+Creates with random speeds (not zero) and position (within the screen limits), a new sprite with pixmap "{}pic"{}, in memory whose address is "{}base"{}; Returns NULL on invalid pixmap.
+
+This function allocates memory for a sprite object and initializes it with the provided pixmap, position, and speed.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pic} & The pixmap for the sprite \\
+\hline
+{\em x} & The initial x position of the sprite \\
+\hline
+{\em y} & The initial y position of the sprite \\
+\hline
+{\em xspeed} & The initial x speed of the sprite \\
+\hline
+{\em yspeed} & The initial y speed of the sprite \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the created sprite, or NULL if creation fails 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__sprite_gac17a91fd309ebffd07be3daa9c194d86_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{group__sprite_ga0b9702271420a69a1603d0a3768fda67}\index{Sprite@{Sprite}!destroy\_sprite@{destroy\_sprite}}
+\index{destroy\_sprite@{destroy\_sprite}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{destroy\_sprite()}{destroy\_sprite()}}
+{\footnotesize\ttfamily \label{group__sprite_ga0b9702271420a69a1603d0a3768fda67} 
+void destroy\+\_\+sprite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*}}]{sp}{}\end{DoxyParamCaption})}
+
+
+
+Destroys a sprite. 
+
+The "{}fig"{} sprite is erased from memory whose address is "{}base"{} and used resources released.
+
+This function frees the memory allocated for a sprite, including its pixmap and the sprite structure itself.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sp} & The sprite to destroy \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__sprite_ga0b9702271420a69a1603d0a3768fda67_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{group__sprite_ga6c75fbf31230126d2f19b29deaf24b2f}\index{Sprite@{Sprite}!draw\_sprite@{draw\_sprite}}
+\index{draw\_sprite@{draw\_sprite}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{draw\_sprite()}{draw\_sprite()}}
+{\footnotesize\ttfamily \label{group__sprite_ga6c75fbf31230126d2f19b29deaf24b2f} 
+int draw\+\_\+sprite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*}}]{sp}{}\end{DoxyParamCaption})}
+
+
+
+Draws a sprite. 
+
+This function draws the sprite on the screen by copying its pixmap to the drawing buffer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sp} & The sprite to draw \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always returns 0 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{group__sprite_ga6c75fbf31230126d2f19b29deaf24b2f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__sprite_ga6c75fbf31230126d2f19b29deaf24b2f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{group__sprite_ga6a170b91a4de8e3e292018d56627d551}\index{Sprite@{Sprite}!draw\_sprite\_to\_buffer@{draw\_sprite\_to\_buffer}}
+\index{draw\_sprite\_to\_buffer@{draw\_sprite\_to\_buffer}!Sprite@{Sprite}}
+\doxysubsubsection{\texorpdfstring{draw\_sprite\_to\_buffer()}{draw\_sprite\_to\_buffer()}}
+{\footnotesize\ttfamily \label{group__sprite_ga6a170b91a4de8e3e292018d56627d551} 
+int draw\+\_\+sprite\+\_\+to\+\_\+buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*}}]{sp}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{buffer}{}\end{DoxyParamCaption})}
+
+
+
+Draws a sprite to a specified buffer. 
+
+This function draws the sprite by copying its pixmap to the specified buffer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sp} & The sprite to draw \\
+\hline
+{\em buffer} & The buffer to draw the sprite onto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always returns 0 
+\end{DoxyReturn}

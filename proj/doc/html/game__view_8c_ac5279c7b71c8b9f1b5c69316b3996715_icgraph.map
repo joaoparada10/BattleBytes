@@ -1,0 +1,12 @@
+<map id="draw_cursor" name="draw_cursor">
+<area shape="rect" id="Node000001" title="Draws the cursor sprite on the screen." alt="" coords="640,31,731,57"/>
+<area shape="rect" id="Node000002" href="$game__view_8c.html#a277204c5a79891fb90505e3f04e5e842" title="Draws all game elements on the screen." alt="" coords="483,5,592,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="624,36,591,31,592,25,625,31"/>
+<area shape="rect" id="Node000004" href="$dispatcher_8c.html#a8b98fc3f43a39b953cd60f2ce95d296f" title="Handles the game state transitions and actions." alt="" coords="162,31,300,57"/>
+<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="624,47,300,47,300,41,624,41"/>
+<area shape="rect" id="Node000003" href="$game__view_8c.html#a3cef68220fcc611902108d6f0159e50f" title="Draws the game interface." alt="" coords="348,5,435,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="468,21,436,21,436,16,468,16"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="333,31,301,36,300,30,332,25"/>
+<area shape="rect" id="Node000005" href="$proj_8c.html#af244d65e69677cf312af1950452ec256" title="Main game loop for the project." alt="" coords="5,31,114,57"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="146,47,114,47,114,41,146,41"/>
+</map>

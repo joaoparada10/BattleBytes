@@ -1,0 +1,17 @@
+<map id="draw_header" name="draw_header">
+<area shape="rect" id="Node000001" title="Draws the header section of the game interface." alt="" coords="5,56,100,83"/>
+<area shape="rect" id="Node000002" href="$menu_8c.html#a44893e3b0e4dd2746abd770f5dd56f9a" title="Draws a string on the screen." alt="" coords="168,5,255,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="96,53,152,35,154,40,98,58"/>
+<area shape="rect" id="Node000005" href="$state_8c.html#ac45d046321314f1a5d9deee403f7b5db" title="Retrieves the current game state." alt="" coords="154,56,269,83"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="100,67,138,67,138,72,100,72"/>
+<area shape="rect" id="Node000006" href="$video__gr_8c.html#af91221269cb545564941ca05100d6501" title="Draws a rectangle." alt="" coords="148,107,275,133"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="98,81,154,99,152,104,96,86"/>
+<area shape="rect" id="Node000003" href="$menu_8c.html#a296070ce636082f7e52b6e39e451ed56" title="Draws a single character on the screen." alt="" coords="323,5,432,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="255,16,308,16,308,21,255,21"/>
+<area shape="rect" id="Node000004" href="$video__gr_8c.html#ae73cfe62147429fce468e5b1ed96e30a" title="Gets the drawing buffer." alt="" coords="480,5,609,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="433,16,465,16,465,21,433,21"/>
+<area shape="rect" id="Node000007" href="$video__gr_8c.html#adb08b276272848bc7f3bccc0f5e770c8" title="Draws a horizontal line." alt="" coords="327,107,428,133"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="275,117,311,117,311,123,275,123"/>
+<area shape="rect" id="Node000008" href="$video__gr_8c.html#a6f895de9725f9f231f9a7f74b6087f60" title="Draws a pixel at a specified location." alt="" coords="494,107,595,133"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="429,117,479,117,479,123,429,123"/>
+</map>

@@ -1,0 +1,25 @@
+<map id="kbd_state_handler" name="kbd_state_handler">
+<area shape="rect" id="Node000001" title="Handles keyboard input based on the current state." alt="" coords="5,107,133,133"/>
+<area shape="rect" id="Node000002" href="$state_8c.html#a38d3fc207a5e58298bdd4a606c0b1a01" title="Retrieves the current state of the game." alt="" coords="222,56,298,83"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="122,103,206,81,208,86,123,109"/>
+<area shape="rect" id="Node000003" href="$game__logic_8c.html#a80d587e65b8e8c5db2d9d60755bc1eb8" title="Handles keyboard input for game controls." alt="" coords="181,107,339,133"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="133,117,165,117,165,123,133,123"/>
+<area shape="rect" id="Node000011" href="$menu_8c.html#abadaad01537e6bcbd90890517952e580" title="Handles menu navigation based on keyboard input." alt="" coords="181,157,339,184"/>
+<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="123,131,193,150,191,155,122,137"/>
+<area shape="rect" id="Node000004" href="$game__logic_8c.html#a1c416c2df9c85e14bd2f21e7709b7ca4" title="Calculates the direction of the tank based on the position of the crosshair." alt="" coords="387,5,548,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="313,104,338,92,352,82,361,71,371,60,386,48,408,36,411,41,388,53,375,64,365,75,355,86,340,97,316,108"/>
+<area shape="rect" id="Node000006" href="$game__model_8c.html#a86bed3e29ffb0962cfc6e574e41de5ae" title="Gets the tank model." alt="" coords="596,56,710,83"/>
+<area shape="poly" id="edge6_Node000003_Node000006" title=" " alt="" coords="323,103,387,92,488,80,580,71,581,77,488,85,387,97,324,109"/>
+<area shape="rect" id="Node000007" href="$game__logic_8c.html#a4219c25f38ab1febf8d5d7ecde76241a" title="Checks for collision when moving a sprite." alt="" coords="415,107,520,133"/>
+<area shape="poly" id="edge7_Node000003_Node000007" title=" " alt="" coords="339,117,400,117,400,123,339,123"/>
+<area shape="rect" id="Node000010" href="$state_8c.html#abef3f51e03a484281acce64e7d912c21" title="Sets the state of the game to a new state." alt="" coords="430,157,505,184"/>
+<area shape="poly" id="edge10_Node000003_Node000010" title=" " alt="" coords="318,131,416,155,415,161,317,137"/>
+<area shape="rect" id="Node000005" href="$game__view_8c.html#a977046c2782eb68b21fb86d0962e4140" title="Retrieves the crosshair sprite." alt="" coords="603,5,703,32"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="549,16,588,16,588,21,549,21"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="520,30,588,49,586,54,519,35"/>
+<area shape="rect" id="Node000008" href="$arena_8c.html#a3c12c77e637315890375e0bd6f987cc3" title="Checks if a given coordinate in the arena is walkable." alt="" coords="609,107,697,133"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="521,117,594,117,594,123,521,123"/>
+<area shape="rect" id="Node000009" href="$arena_8c.html#a643076fac43cdf2e983ffe4ebb4e1f24" title="Gets the current arena." alt="" coords="758,107,883,133"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="698,117,742,117,742,123,698,123"/>
+<area shape="poly" id="edge12_Node000011_Node000010" title=" " alt="" coords="339,168,415,168,415,173,339,173"/>
+</map>

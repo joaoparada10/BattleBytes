@@ -1,0 +1,122 @@
+\doxysection{game\+\_\+view.\+h}
+\hypertarget{game__view_8h_source}{}\label{game__view_8h_source}\index{view/game\_view.h@{view/game\_view.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ \_GAME\_VIEW\_H\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ \_GAME\_VIEW\_H\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <lcom/lcf.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}../graphics/sprite.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}../graphics/asprite.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}../graphics/video\_gr.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}../model/game\_model.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}../view/constants.h"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}../logic/game\_logic.h"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}../model/arena.h"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}../menu/menu.h"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}../../assets/xpm/objects/tank1.xpm"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}../../assets/xpm/objects/tank2.xpm"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}../../assets/xpm/objects/tank3.xpm"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}../../assets/xpm/objects/tank4.xpm"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}../../assets/xpm/objects/tank5.xpm"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}../../assets/xpm/objects/tank6.xpm"{}}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}../../assets/xpm/objects/tank7.xpm"{}}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ "{}../../assets/xpm/objects/tank8.xpm"{}}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ "{}../../assets/xpm/objects/tank9.xpm"{}}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ "{}../../assets/xpm/objects/tank10.xpm"{}}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ "{}../../assets/xpm/objects/tank11.xpm"{}}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ "{}../../assets/xpm/objects/tank12.xpm"{}}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ "{}../../assets/xpm/crosshair.xpm"{}}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ "{}../../assets/xpm/cursor.xpm"{}}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}../../assets/xpm/arenas/arena1.xpm"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}../../assets/xpm/arenas/arena2.xpm"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}../../assets/xpm/arenas/arena3.xpm"{}}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ "{}../../assets/xpm/arenas/arena4.xpm"{}}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ "{}../../assets/xpm/arenas/arena5.xpm"{}}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#include\ "{}../../assets/xpm/objects/virus40.xpm"{}}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#include\ "{}../../assets/xpm/objects/virus50\_1.xpm"{}}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#include\ "{}../../assets/xpm/objects/virus50\_2.xpm"{}}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#include\ "{}../../assets/xpm/objects/virus50\_3.xpm"{}}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#include\ "{}../../assets/xpm/objects/virus50\_4.xpm"{}}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#include\ "{}../../assets/xpm/objects/virus50\_5.xpm"{}}}
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#include\ "{}../../assets/xpm/explosion/explosion1.xpm"{}}}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#include\ "{}../../assets/xpm/explosion/explosion2.xpm"{}}}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#include\ "{}../../assets/xpm/explosion/explosion3.xpm"{}}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#include\ "{}../../assets/xpm/explosion/explosion4.xpm"{}}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#include\ "{}../../assets/xpm/explosion/explosion5.xpm"{}}}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#include\ "{}../../assets/xpm/explosion/explosion6.xpm"{}}}
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#include\ "{}../../assets/xpm/explosion/explosion7.xpm"{}}}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#include\ "{}../../assets/xpm/explosion/explosion8.xpm"{}}}
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#include\ "{}../../assets/xpm/explosion/explosion9.xpm"{}}}
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#include\ "{}../../assets/xpm/explosion/explosion10.xpm"{}}}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#include\ "{}../../assets/xpm/explosion/explosion11.xpm"{}}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#include\ "{}../../assets/xpm/explosion/explosion12.xpm"{}}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#include\ "{}../../assets/xpm/explosion/explosion13.xpm"{}}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#include\ "{}../../assets/xpm/explosion/explosion14.xpm"{}}}
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#include\ "{}../../assets/xpm/explosion/explosion15.xpm"{}}}
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#include\ "{}../../assets/xpm/explosion/explosion16.xpm"{}}}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#include\ "{}../../assets/xpm/explosion/explosion17.xpm"{}}}
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#include\ "{}../../assets/xpm/explosion/explosion18.xpm"{}}}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#include\ "{}../../assets/xpm/explosion/explosion19.xpm"{}}}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#include\ "{}../../assets/xpm/explosion/explosion20.xpm"{}}}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#include\ "{}../../assets/xpm/text/game\_letters.xpm"{}}}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#include\ "{}../../assets/xpm/text/game\_numbers.xpm"{}}}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_explosion}{Explosion}}\ \{}
+\DoxyCodeLine{00063\ \ \ \ \ \mbox{\hyperlink{struct_anim_sprite}{AnimSprite}}\ *explosion\_asp;}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_explosion}{Explosion}}\ *next;}
+\DoxyCodeLine{00065\ \}\ \mbox{\hyperlink{struct_explosion}{Explosion}};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{game__view_8c_ab01a5c64476c42ec8b98e092e1b91ff1}{load\_game\_sprites}}();}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{game__view_8c_ac1f8ba094dfb3b4f6b881e04b0901fb8}{free\_game\_sprites}}();}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{game__view_8c_a52dfa580aca9ce8120a5f7b4fa4ac8d0}{load\_game\_fonts}}();}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{game__view_8c_a4f266bc864980e6ab585c327b68a32ac}{free\_game\_fonts}}();}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \mbox{\hyperlink{struct_sprite}{Sprite}}*\ \mbox{\hyperlink{game__view_8c_a4724c6f32f1f5fa896c9eb849120dd9a}{create\_virus1\_sprite}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \mbox{\hyperlink{struct_anim_sprite}{AnimSprite}}\ *\mbox{\hyperlink{game__view_8c_a05879f87abc955b89a1f171dc1bcaf6d}{create\_virus2\_asprite}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \mbox{\hyperlink{struct_explosion}{Explosion}}*\ \mbox{\hyperlink{game__view_8c_a1c3dcacb14608ae2dfd1b9146ced484e}{create\_explosion}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{game__view_8c_a3e2d71d6cef67c1d7e60d28de21df1bc}{destroy\_explosion}}(\mbox{\hyperlink{struct_explosion}{Explosion}}\ *explosion);}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{game__view_8c_a684faba00d88eaf2cdc9fcb14ee79d4b}{draw\_tank}}();}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{game__view_8c_afe86e6b2a82e0a2b63465da9da7c40d2}{draw\_enemies}}();}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{game__view_8c_a52f3af8c078714e854b2dd1a0d562dfa}{draw\_explosions}}();}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{game__view_8c_a30092734ca23c99532be7aaff169ae2f}{draw\_crosshair}}();}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{game__view_8c_ac5279c7b71c8b9f1b5c69316b3996715}{draw\_cursor}}();}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{game__view_8c_a3cef68220fcc611902108d6f0159e50f}{draw\_game}}();}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{game__view_8c_a54d5ea72de7dd571da55ceb56ef06757}{draw\_header}}();}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{game__view_8c_a277204c5a79891fb90505e3f04e5e842}{draw\_elements}}();}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{game__view_8c_afa89507f0657e2683163f687204a9261}{draw\_footer}}();}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{game__view_8c_a51d0647ae3486b0d2a77ee7cafbd1373}{draw\_arena}}();}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{game__view_8c_a87dd15170b4ec8205cd391a6f63f268c}{draw\_timer}}();}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \mbox{\hyperlink{struct_sprite}{Sprite}}*\ \mbox{\hyperlink{game__view_8c_a6cd367c585374334ec34ee3f811213bb}{get\_tank\_sprite}}();}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \mbox{\hyperlink{struct_sprite}{Sprite}}*\ \mbox{\hyperlink{game__view_8c_a977046c2782eb68b21fb86d0962e4140}{get\_crosshair}}();}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \mbox{\hyperlink{struct_sprite}{Sprite}}*\ \mbox{\hyperlink{game__view_8c_ab5073970a4a5b9e78cceb9d17a558461}{get\_cursor}}();}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00116\ }
+
+\end{DoxyCode}

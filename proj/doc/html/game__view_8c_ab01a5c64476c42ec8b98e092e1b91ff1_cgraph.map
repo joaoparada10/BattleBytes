@@ -1,0 +1,5 @@
+<map id="load_game_sprites" name="load_game_sprites">
+<area shape="rect" id="Node000001" title="Loads game sprites into memory." alt="" coords="5,5,136,32"/>
+<area shape="rect" id="Node000002" href="$group__sprite.html#gac17a91fd309ebffd07be3daa9c194d86" title="Creates a sprite." alt="" coords="184,5,280,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="136,16,168,16,168,21,136,21"/>
+</map>

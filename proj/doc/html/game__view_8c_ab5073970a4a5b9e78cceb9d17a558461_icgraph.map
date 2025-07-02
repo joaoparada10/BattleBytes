@@ -1,0 +1,15 @@
+<map id="get_cursor" name="get_cursor">
+<area shape="rect" id="Node000001" title="Retrieves the cursor sprite." alt="" coords="538,56,621,83"/>
+<area shape="rect" id="Node000002" href="$menu_8c.html#a68b6754071a65d680989e06e37311a92" title="Handles menu option selection based on mouse click." alt="" coords="357,5,489,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="523,54,465,35,467,30,525,49"/>
+<area shape="rect" id="Node000005" href="$menu_8c.html#ae67f0d98aa7346ddcaf956343870b091" title="Handles menu option hover based on mouse movement." alt="" coords="355,56,490,83"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="523,72,491,72,491,67,523,67"/>
+<area shape="rect" id="Node000006" href="$game__logic_8c.html#a8fab7627be7d63ca1be0e908488a1253" title="Moves the cursor on the screen." alt="" coords="376,107,470,133"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="525,90,467,109,465,104,523,85"/>
+<area shape="rect" id="Node000003" href="$dispatcher_8c.html#a990a5393ee8ada0a10fe8e795adf100c" title="Handles mouse input based on the current state." alt="" coords="162,56,307,83"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="356,39,287,58,286,53,355,34"/>
+<area shape="rect" id="Node000004" href="$proj_8c.html#af244d65e69677cf312af1950452ec256" title="Main game loop for the project." alt="" coords="5,56,114,83"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="146,72,114,72,114,67,146,67"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="340,72,307,72,307,67,340,67"/>
+<area shape="poly" id="edge7_Node000006_Node000003" title=" " alt="" coords="360,106,286,86,287,81,361,101"/>
+</map>

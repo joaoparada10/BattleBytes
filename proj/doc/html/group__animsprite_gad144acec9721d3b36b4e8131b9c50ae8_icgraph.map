@@ -1,0 +1,16 @@
+<map id="animate_asprite" name="animate_asprite">
+<area shape="rect" id="Node000001" title="Animates an animated sprite." alt="" coords="801,31,914,57"/>
+<area shape="rect" id="Node000002" href="$game__view_8c.html#afe86e6b2a82e0a2b63465da9da7c40d2" title="Draws enemy sprites on the screen." alt="" coords="649,5,753,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="785,35,753,30,754,24,786,30"/>
+<area shape="rect" id="Node000007" href="$game__view_8c.html#a52f3af8c078714e854b2dd1a0d562dfa" title="Draws explosion animations on the screen." alt="" coords="483,56,601,83"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="785,52,601,67,601,62,785,47"/>
+<area shape="rect" id="Node000003" href="$game__view_8c.html#a277204c5a79891fb90505e3f04e5e842" title="Draws all game elements on the screen." alt="" coords="488,5,596,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="633,21,597,21,597,16,633,16"/>
+<area shape="rect" id="Node000004" href="$game__view_8c.html#a3cef68220fcc611902108d6f0159e50f" title="Draws the game interface." alt="" coords="348,31,435,57"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="473,33,436,39,435,34,472,28"/>
+<area shape="rect" id="Node000005" href="$dispatcher_8c.html#a8b98fc3f43a39b953cd60f2ce95d296f" title="Handles the game state transitions and actions." alt="" coords="162,31,300,57"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="332,47,301,47,301,41,332,41"/>
+<area shape="rect" id="Node000006" href="$proj_8c.html#af244d65e69677cf312af1950452ec256" title="Main game loop for the project." alt="" coords="5,31,114,57"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="146,47,114,47,114,41,146,41"/>
+<area shape="poly" id="edge7_Node000007_Node000004" title=" " alt="" coords="467,59,435,54,436,49,468,54"/>
+</map>

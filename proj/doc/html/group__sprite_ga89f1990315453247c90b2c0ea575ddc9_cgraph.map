@@ -1,0 +1,9 @@
+<map id="animate_sprite" name="animate_sprite">
+<area shape="rect" id="Node000001" title="Animates a sprite." alt="" coords="5,31,112,57"/>
+<area shape="rect" id="Node000002" href="$group__sprite.html#ga6c75fbf31230126d2f19b29deaf24b2f" title="Draws a sprite." alt="" coords="160,31,247,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="112,41,144,41,144,47,112,47"/>
+<area shape="rect" id="Node000003" href="$video__gr_8c.html#ae73cfe62147429fce468e5b1ed96e30a" title="Gets the drawing buffer." alt="" coords="295,5,423,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="247,34,279,29,280,34,248,40"/>
+<area shape="rect" id="Node000004" href="$video__gr_8c.html#ac19350f0662b5c8fbb1a41e051411014" title="Gets the horizontal resolution." alt="" coords="320,56,398,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="248,48,305,58,304,63,247,54"/>
+</map>

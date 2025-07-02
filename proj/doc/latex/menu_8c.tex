@@ -1,0 +1,824 @@
+\doxysection{menu/menu.c File Reference}
+\hypertarget{menu_8c}{}\label{menu_8c}\index{menu/menu.c@{menu/menu.c}}
+
+
+Implementation of the menu system for the game.  
+
+
+{\ttfamily \#include "{}menu.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{menu_8c_a05a655ad151e3b910b4547f1ca9a2f7c}{create\+\_\+menu}} (\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*}sp, char \texorpdfstring{$\ast$}{*}title, int title\+\_\+x, int title\+\_\+y, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}options, int \texorpdfstring{$\ast$}{*}options\+\_\+x, int \texorpdfstring{$\ast$}{*}options\+\_\+y, int \texorpdfstring{$\ast$}{*}options\+\_\+x\+\_\+hitbox, int \texorpdfstring{$\ast$}{*}options\+\_\+y\+\_\+hitbox, int \texorpdfstring{$\ast$}{*}options\+\_\+height, int \texorpdfstring{$\ast$}{*}options\+\_\+width, State \texorpdfstring{$\ast$}{*}options\+\_\+state, int num\+\_\+options)
+\begin{DoxyCompactList}\small\item\em Creates a new menu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8c_ae273836e9bfb8cce6f8a767257e1dfa9}{free\+\_\+menu}} (\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*}menu)
+\begin{DoxyCompactList}\small\item\em Frees the memory allocated for the menu. \end{DoxyCompactList}\item 
+\Hypertarget{menu_8c_a0f99ee8cb01efc92b7e7ddda4fb54cf7}\label{menu_8c_a0f99ee8cb01efc92b7e7ddda4fb54cf7} 
+void {\bfseries load\+\_\+menu\+\_\+fonts} ()
+\begin{DoxyCompactList}\small\item\em Loads the fonts used in the menu. \end{DoxyCompactList}\item 
+\Hypertarget{menu_8c_a5f74d9a2f3af848d839886f376d57b2d}\label{menu_8c_a5f74d9a2f3af848d839886f376d57b2d} 
+void {\bfseries free\+\_\+menu\+\_\+fonts} ()
+\begin{DoxyCompactList}\small\item\em Frees the memory allocated for the menu fonts. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{menu_8c_ae6b9a925dd7316c83a8eeca16431a4b3}{load\+\_\+initial\+\_\+menu}} ()
+\begin{DoxyCompactList}\small\item\em Loads the initial menu. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{menu_8c_af3a717bf86704d19bf64b64bedecbac5}{load\+\_\+main\+\_\+menu}} ()
+\begin{DoxyCompactList}\small\item\em Loads the main menu. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{menu_8c_a80559d91dbda58dd9140a1ab835a2c06}{load\+\_\+help\+\_\+menu}} ()
+\begin{DoxyCompactList}\small\item\em Loads the help menu. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{menu_8c_aa481e40c9afe783e59897643a32ad5e3}{load\+\_\+highscores\+\_\+menu}} ()
+\begin{DoxyCompactList}\small\item\em Loads the highscores menu. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{menu_8c_acdcb619af2514e4eb5587f9a679f7992}{load\+\_\+pause\+\_\+menu}} ()
+\begin{DoxyCompactList}\small\item\em Loads the pause menu. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{menu_8c_a0b9d8566981a717a5afb6732c6001d0b}{load\+\_\+game\+\_\+over\+\_\+menu}} ()
+\begin{DoxyCompactList}\small\item\em Loads the game over menu. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{menu_8c_ae1ac3b606f8f8f3b0a826aaa38fc5a76}{load\+\_\+new\+\_\+highscore\+\_\+menu}} ()
+\begin{DoxyCompactList}\small\item\em Loads the new highscore menu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8c_aa2853ee7634f7c340bfca1afc4c95976}{display\+\_\+menu}} (\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*}menu)
+\begin{DoxyCompactList}\small\item\em Displays the given menu on the screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8c_a4de6ad9f5baefc1b99a1dd4ed7116bc1}{draw\+\_\+title}} (\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*}menu)
+\begin{DoxyCompactList}\small\item\em Draws the title of the menu on the screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8c_a13964e8548d49e22bdbffe9ca944df5d}{draw\+\_\+options}} (\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*}menu)
+\begin{DoxyCompactList}\small\item\em Draws the options of the menu on the screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8c_a296070ce636082f7e52b6e39e451ed56}{draw\+\_\+character}} (char c, uint16\+\_\+t x, uint16\+\_\+t y, uint16\+\_\+t font\+\_\+offset, uint16\+\_\+t font\+\_\+height, uint16\+\_\+t font\+\_\+width, uint8\+\_\+t \texorpdfstring{$\ast$}{*}font\+\_\+ptr, xpm\+\_\+image\+\_\+t font)
+\begin{DoxyCompactList}\small\item\em Draws a single character on the screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8c_a44893e3b0e4dd2746abd770f5dd56f9a}{draw\+\_\+string}} (char \texorpdfstring{$\ast$}{*}str, int x, int y, int offset, uint16\+\_\+t font\+\_\+height, uint16\+\_\+t font\+\_\+width, uint8\+\_\+t \texorpdfstring{$\ast$}{*}font\+\_\+ptr, xpm\+\_\+image\+\_\+t font)
+\begin{DoxyCompactList}\small\item\em Draws a string on the screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8c_a68b6754071a65d680989e06e37311a92}{handle\+\_\+menu\+\_\+click}} (\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*}menu)
+\begin{DoxyCompactList}\small\item\em Handles menu option selection based on mouse click. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8c_ae67f0d98aa7346ddcaf956343870b091}{handle\+\_\+menu\+\_\+hover}} (\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*}menu)
+\begin{DoxyCompactList}\small\item\em Handles menu option hover based on mouse movement. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8c_abadaad01537e6bcbd90890517952e580}{handle\+\_\+menu\+\_\+keyboard}} (\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*}menu, uint8\+\_\+t \texorpdfstring{$\ast$}{*}bytes, uint8\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Handles menu navigation based on keyboard input. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{menu_8c_a3ec9d26fecfe8d749bc5e2004afb7a7f}{get\+\_\+initial\+\_\+menu}} ()
+\begin{DoxyCompactList}\small\item\em Gets the initial menu. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{menu_8c_acd03bc6a6b6460b07697a3d35e035721}{get\+\_\+main\+\_\+menu}} ()
+\begin{DoxyCompactList}\small\item\em Gets the main menu. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{menu_8c_ae2eec2d093ac6b276dbb04ffcc24353c}{get\+\_\+help\+\_\+menu}} ()
+\begin{DoxyCompactList}\small\item\em Gets the help menu. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{menu_8c_a20534090c57188a41f48a55c8321b025}{get\+\_\+highscores\+\_\+menu}} ()
+\begin{DoxyCompactList}\small\item\em Gets the highscores menu. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{menu_8c_a9f199223d5e75ac2e57c751261305741}{get\+\_\+pause\+\_\+menu}} ()
+\begin{DoxyCompactList}\small\item\em Gets the pause menu. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{menu_8c_aea917191ea17747f45cbe0ebedef91c1}{get\+\_\+game\+\_\+over\+\_\+menu}} ()
+\begin{DoxyCompactList}\small\item\em Gets the game over menu. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{menu_8c_a7fb9f236187d49597e97221ad9e82ad6}{get\+\_\+new\+\_\+highscore\+\_\+menu}} ()
+\begin{DoxyCompactList}\small\item\em Gets the new highscore menu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of the menu system for the game. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{menu_8c_a05a655ad151e3b910b4547f1ca9a2f7c}\index{menu.c@{menu.c}!create\_menu@{create\_menu}}
+\index{create\_menu@{create\_menu}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{create\_menu()}{create\_menu()}}
+{\footnotesize\ttfamily \label{menu_8c_a05a655ad151e3b910b4547f1ca9a2f7c} 
+\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*} create\+\_\+menu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*}}]{sp}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{title}{, }\item[{int}]{title\+\_\+x}{, }\item[{int}]{title\+\_\+y}{, }\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{options}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{options\+\_\+x}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{options\+\_\+y}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{options\+\_\+x\+\_\+hitbox}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{options\+\_\+y\+\_\+hitbox}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{options\+\_\+height}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{options\+\_\+width}{, }\item[{State \texorpdfstring{$\ast$}{*}}]{options\+\_\+state}{, }\item[{int}]{num\+\_\+options}{}\end{DoxyParamCaption})}
+
+
+
+Creates a new menu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sp} & Pointer to the sprite representing the menu background. \\
+\hline
+{\em title} & The title of the menu. \\
+\hline
+{\em title\+\_\+x} & X coordinate for the title. \\
+\hline
+{\em title\+\_\+y} & Y coordinate for the title. \\
+\hline
+{\em options} & Array of strings representing the menu options. \\
+\hline
+{\em options\+\_\+x} & Array of X coordinates for each option. \\
+\hline
+{\em options\+\_\+y} & Array of Y coordinates for each option. \\
+\hline
+{\em options\+\_\+x\+\_\+hitbox} & Array of X coordinates for the hitboxes of each option. \\
+\hline
+{\em options\+\_\+y\+\_\+hitbox} & Array of Y coordinates for the hitboxes of each option. \\
+\hline
+{\em options\+\_\+height} & Array of heights for each option\textquotesingle{}s hitbox. \\
+\hline
+{\em options\+\_\+width} & Array of widths for each option\textquotesingle{}s hitbox. \\
+\hline
+{\em options\+\_\+state} & Array of states associated with each option. \\
+\hline
+{\em num\+\_\+options} & The number of options in the menu. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the newly created menu or NULL if memory allocation fails. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8c_a05a655ad151e3b910b4547f1ca9a2f7c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{menu_8c_aa2853ee7634f7c340bfca1afc4c95976}\index{menu.c@{menu.c}!display\_menu@{display\_menu}}
+\index{display\_menu@{display\_menu}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{display\_menu()}{display\_menu()}}
+{\footnotesize\ttfamily \label{menu_8c_aa2853ee7634f7c340bfca1afc4c95976} 
+void display\+\_\+menu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*}}]{menu}{}\end{DoxyParamCaption})}
+
+
+
+Displays the given menu on the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em menu} & Pointer to the menu to be displayed. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8c_aa2853ee7634f7c340bfca1afc4c95976_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8c_aa2853ee7634f7c340bfca1afc4c95976_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{menu_8c_a296070ce636082f7e52b6e39e451ed56}\index{menu.c@{menu.c}!draw\_character@{draw\_character}}
+\index{draw\_character@{draw\_character}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{draw\_character()}{draw\_character()}}
+{\footnotesize\ttfamily \label{menu_8c_a296070ce636082f7e52b6e39e451ed56} 
+void draw\+\_\+character (\begin{DoxyParamCaption}\item[{char}]{c}{, }\item[{uint16\+\_\+t}]{x}{, }\item[{uint16\+\_\+t}]{y}{, }\item[{uint16\+\_\+t}]{font\+\_\+offset}{, }\item[{uint16\+\_\+t}]{font\+\_\+height}{, }\item[{uint16\+\_\+t}]{font\+\_\+width}{, }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{font\+\_\+ptr}{, }\item[{xpm\+\_\+image\+\_\+t}]{font}{}\end{DoxyParamCaption})}
+
+
+
+Draws a single character on the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & The character to be drawn. \\
+\hline
+{\em x} & The X coordinate of the character. \\
+\hline
+{\em y} & The Y coordinate of the character. \\
+\hline
+{\em font\+\_\+offset} & The offset between characters in the font. \\
+\hline
+{\em font\+\_\+height} & The height of the character. \\
+\hline
+{\em font\+\_\+width} & The width of the character. \\
+\hline
+{\em font\+\_\+ptr} & Pointer to the font data. \\
+\hline
+{\em font} & The font image. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{menu_8c_a296070ce636082f7e52b6e39e451ed56_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8c_a296070ce636082f7e52b6e39e451ed56_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{menu_8c_a13964e8548d49e22bdbffe9ca944df5d}\index{menu.c@{menu.c}!draw\_options@{draw\_options}}
+\index{draw\_options@{draw\_options}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{draw\_options()}{draw\_options()}}
+{\footnotesize\ttfamily \label{menu_8c_a13964e8548d49e22bdbffe9ca944df5d} 
+void draw\+\_\+options (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*}}]{menu}{}\end{DoxyParamCaption})}
+
+
+
+Draws the options of the menu on the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em menu} & Pointer to the menu whose options are to be drawn. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8c_a13964e8548d49e22bdbffe9ca944df5d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8c_a13964e8548d49e22bdbffe9ca944df5d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{menu_8c_a44893e3b0e4dd2746abd770f5dd56f9a}\index{menu.c@{menu.c}!draw\_string@{draw\_string}}
+\index{draw\_string@{draw\_string}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{draw\_string()}{draw\_string()}}
+{\footnotesize\ttfamily \label{menu_8c_a44893e3b0e4dd2746abd770f5dd56f9a} 
+void draw\+\_\+string (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{str}{, }\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{int}]{offset}{, }\item[{uint16\+\_\+t}]{font\+\_\+height}{, }\item[{uint16\+\_\+t}]{font\+\_\+width}{, }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{font\+\_\+ptr}{, }\item[{xpm\+\_\+image\+\_\+t}]{font}{}\end{DoxyParamCaption})}
+
+
+
+Draws a string on the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & The string to be drawn. \\
+\hline
+{\em x} & The X coordinate of the string. \\
+\hline
+{\em y} & The Y coordinate of the string. \\
+\hline
+{\em offset} & The offset between characters. \\
+\hline
+{\em font\+\_\+height} & The height of the characters. \\
+\hline
+{\em font\+\_\+width} & The width of the characters. \\
+\hline
+{\em font\+\_\+ptr} & Pointer to the font data. \\
+\hline
+{\em font} & The font image. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8c_a44893e3b0e4dd2746abd770f5dd56f9a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8c_a44893e3b0e4dd2746abd770f5dd56f9a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{menu_8c_a4de6ad9f5baefc1b99a1dd4ed7116bc1}\index{menu.c@{menu.c}!draw\_title@{draw\_title}}
+\index{draw\_title@{draw\_title}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{draw\_title()}{draw\_title()}}
+{\footnotesize\ttfamily \label{menu_8c_a4de6ad9f5baefc1b99a1dd4ed7116bc1} 
+void draw\+\_\+title (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*}}]{menu}{}\end{DoxyParamCaption})}
+
+
+
+Draws the title of the menu on the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em menu} & Pointer to the menu whose title is to be drawn. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8c_a4de6ad9f5baefc1b99a1dd4ed7116bc1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8c_a4de6ad9f5baefc1b99a1dd4ed7116bc1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{menu_8c_ae273836e9bfb8cce6f8a767257e1dfa9}\index{menu.c@{menu.c}!free\_menu@{free\_menu}}
+\index{free\_menu@{free\_menu}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{free\_menu()}{free\_menu()}}
+{\footnotesize\ttfamily \label{menu_8c_ae273836e9bfb8cce6f8a767257e1dfa9} 
+void free\+\_\+menu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*}}]{menu}{}\end{DoxyParamCaption})}
+
+
+
+Frees the memory allocated for the menu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em menu} & Pointer to the menu to be freed. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8c_ae273836e9bfb8cce6f8a767257e1dfa9_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{menu_8c_aea917191ea17747f45cbe0ebedef91c1}\index{menu.c@{menu.c}!get\_game\_over\_menu@{get\_game\_over\_menu}}
+\index{get\_game\_over\_menu@{get\_game\_over\_menu}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{get\_game\_over\_menu()}{get\_game\_over\_menu()}}
+{\footnotesize\ttfamily \label{menu_8c_aea917191ea17747f45cbe0ebedef91c1} 
+\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*} get\+\_\+game\+\_\+over\+\_\+menu (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the game over menu. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the game over menu. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8c_aea917191ea17747f45cbe0ebedef91c1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8c_aea917191ea17747f45cbe0ebedef91c1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{menu_8c_ae2eec2d093ac6b276dbb04ffcc24353c}\index{menu.c@{menu.c}!get\_help\_menu@{get\_help\_menu}}
+\index{get\_help\_menu@{get\_help\_menu}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{get\_help\_menu()}{get\_help\_menu()}}
+{\footnotesize\ttfamily \label{menu_8c_ae2eec2d093ac6b276dbb04ffcc24353c} 
+\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*} get\+\_\+help\+\_\+menu (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the help menu. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the help menu. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8c_ae2eec2d093ac6b276dbb04ffcc24353c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8c_ae2eec2d093ac6b276dbb04ffcc24353c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{menu_8c_a20534090c57188a41f48a55c8321b025}\index{menu.c@{menu.c}!get\_highscores\_menu@{get\_highscores\_menu}}
+\index{get\_highscores\_menu@{get\_highscores\_menu}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{get\_highscores\_menu()}{get\_highscores\_menu()}}
+{\footnotesize\ttfamily \label{menu_8c_a20534090c57188a41f48a55c8321b025} 
+\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*} get\+\_\+highscores\+\_\+menu (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the highscores menu. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the highscores menu. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8c_a20534090c57188a41f48a55c8321b025_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8c_a20534090c57188a41f48a55c8321b025_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{menu_8c_a3ec9d26fecfe8d749bc5e2004afb7a7f}\index{menu.c@{menu.c}!get\_initial\_menu@{get\_initial\_menu}}
+\index{get\_initial\_menu@{get\_initial\_menu}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{get\_initial\_menu()}{get\_initial\_menu()}}
+{\footnotesize\ttfamily \label{menu_8c_a3ec9d26fecfe8d749bc5e2004afb7a7f} 
+\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*} get\+\_\+initial\+\_\+menu (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the initial menu. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the initial menu. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8c_a3ec9d26fecfe8d749bc5e2004afb7a7f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8c_a3ec9d26fecfe8d749bc5e2004afb7a7f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{menu_8c_acd03bc6a6b6460b07697a3d35e035721}\index{menu.c@{menu.c}!get\_main\_menu@{get\_main\_menu}}
+\index{get\_main\_menu@{get\_main\_menu}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{get\_main\_menu()}{get\_main\_menu()}}
+{\footnotesize\ttfamily \label{menu_8c_acd03bc6a6b6460b07697a3d35e035721} 
+\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*} get\+\_\+main\+\_\+menu (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the main menu. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the main menu. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8c_acd03bc6a6b6460b07697a3d35e035721_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8c_acd03bc6a6b6460b07697a3d35e035721_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{menu_8c_a7fb9f236187d49597e97221ad9e82ad6}\index{menu.c@{menu.c}!get\_new\_highscore\_menu@{get\_new\_highscore\_menu}}
+\index{get\_new\_highscore\_menu@{get\_new\_highscore\_menu}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{get\_new\_highscore\_menu()}{get\_new\_highscore\_menu()}}
+{\footnotesize\ttfamily \label{menu_8c_a7fb9f236187d49597e97221ad9e82ad6} 
+\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*} get\+\_\+new\+\_\+highscore\+\_\+menu (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the new highscore menu. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the new highscore menu. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8c_a7fb9f236187d49597e97221ad9e82ad6_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{menu_8c_a9f199223d5e75ac2e57c751261305741}\index{menu.c@{menu.c}!get\_pause\_menu@{get\_pause\_menu}}
+\index{get\_pause\_menu@{get\_pause\_menu}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{get\_pause\_menu()}{get\_pause\_menu()}}
+{\footnotesize\ttfamily \label{menu_8c_a9f199223d5e75ac2e57c751261305741} 
+\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*} get\+\_\+pause\+\_\+menu (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the pause menu. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the pause menu. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8c_a9f199223d5e75ac2e57c751261305741_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8c_a9f199223d5e75ac2e57c751261305741_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{menu_8c_a68b6754071a65d680989e06e37311a92}\index{menu.c@{menu.c}!handle\_menu\_click@{handle\_menu\_click}}
+\index{handle\_menu\_click@{handle\_menu\_click}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{handle\_menu\_click()}{handle\_menu\_click()}}
+{\footnotesize\ttfamily \label{menu_8c_a68b6754071a65d680989e06e37311a92} 
+void handle\+\_\+menu\+\_\+click (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*}}]{menu}{}\end{DoxyParamCaption})}
+
+
+
+Handles menu option selection based on mouse click. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em menu} & Pointer to the menu. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{menu_8c_a68b6754071a65d680989e06e37311a92_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8c_a68b6754071a65d680989e06e37311a92_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{menu_8c_ae67f0d98aa7346ddcaf956343870b091}\index{menu.c@{menu.c}!handle\_menu\_hover@{handle\_menu\_hover}}
+\index{handle\_menu\_hover@{handle\_menu\_hover}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{handle\_menu\_hover()}{handle\_menu\_hover()}}
+{\footnotesize\ttfamily \label{menu_8c_ae67f0d98aa7346ddcaf956343870b091} 
+void handle\+\_\+menu\+\_\+hover (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*}}]{menu}{}\end{DoxyParamCaption})}
+
+
+
+Handles menu option hover based on mouse movement. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em menu} & Pointer to the menu. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=279pt]{menu_8c_ae67f0d98aa7346ddcaf956343870b091_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8c_ae67f0d98aa7346ddcaf956343870b091_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{menu_8c_abadaad01537e6bcbd90890517952e580}\index{menu.c@{menu.c}!handle\_menu\_keyboard@{handle\_menu\_keyboard}}
+\index{handle\_menu\_keyboard@{handle\_menu\_keyboard}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{handle\_menu\_keyboard()}{handle\_menu\_keyboard()}}
+{\footnotesize\ttfamily \label{menu_8c_abadaad01537e6bcbd90890517952e580} 
+void handle\+\_\+menu\+\_\+keyboard (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*}}]{menu}{, }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{bytes}{, }\item[{uint8\+\_\+t}]{size}{}\end{DoxyParamCaption})}
+
+
+
+Handles menu navigation based on keyboard input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em menu} & Pointer to the menu. \\
+\hline
+{\em bytes} & Array of bytes representing the keyboard input. \\
+\hline
+{\em size} & Size of the array of bytes. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{menu_8c_abadaad01537e6bcbd90890517952e580_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8c_abadaad01537e6bcbd90890517952e580_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{menu_8c_a0b9d8566981a717a5afb6732c6001d0b}\index{menu.c@{menu.c}!load\_game\_over\_menu@{load\_game\_over\_menu}}
+\index{load\_game\_over\_menu@{load\_game\_over\_menu}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{load\_game\_over\_menu()}{load\_game\_over\_menu()}}
+{\footnotesize\ttfamily \label{menu_8c_a0b9d8566981a717a5afb6732c6001d0b} 
+\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*} load\+\_\+game\+\_\+over\+\_\+menu (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Loads the game over menu. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the newly loaded game over menu. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=303pt]{menu_8c_a0b9d8566981a717a5afb6732c6001d0b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8c_a0b9d8566981a717a5afb6732c6001d0b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{menu_8c_a80559d91dbda58dd9140a1ab835a2c06}\index{menu.c@{menu.c}!load\_help\_menu@{load\_help\_menu}}
+\index{load\_help\_menu@{load\_help\_menu}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{load\_help\_menu()}{load\_help\_menu()}}
+{\footnotesize\ttfamily \label{menu_8c_a80559d91dbda58dd9140a1ab835a2c06} 
+\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*} load\+\_\+help\+\_\+menu (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Loads the help menu. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the newly loaded help menu. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=275pt]{menu_8c_a80559d91dbda58dd9140a1ab835a2c06_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8c_a80559d91dbda58dd9140a1ab835a2c06_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{menu_8c_aa481e40c9afe783e59897643a32ad5e3}\index{menu.c@{menu.c}!load\_highscores\_menu@{load\_highscores\_menu}}
+\index{load\_highscores\_menu@{load\_highscores\_menu}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{load\_highscores\_menu()}{load\_highscores\_menu()}}
+{\footnotesize\ttfamily \label{menu_8c_aa481e40c9afe783e59897643a32ad5e3} 
+\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*} load\+\_\+highscores\+\_\+menu (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Loads the highscores menu. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the newly loaded highscores menu. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{menu_8c_aa481e40c9afe783e59897643a32ad5e3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8c_aa481e40c9afe783e59897643a32ad5e3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{menu_8c_ae6b9a925dd7316c83a8eeca16431a4b3}\index{menu.c@{menu.c}!load\_initial\_menu@{load\_initial\_menu}}
+\index{load\_initial\_menu@{load\_initial\_menu}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{load\_initial\_menu()}{load\_initial\_menu()}}
+{\footnotesize\ttfamily \label{menu_8c_ae6b9a925dd7316c83a8eeca16431a4b3} 
+\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*} load\+\_\+initial\+\_\+menu (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Loads the initial menu. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the newly loaded initial menu. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=279pt]{menu_8c_ae6b9a925dd7316c83a8eeca16431a4b3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8c_ae6b9a925dd7316c83a8eeca16431a4b3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{menu_8c_af3a717bf86704d19bf64b64bedecbac5}\index{menu.c@{menu.c}!load\_main\_menu@{load\_main\_menu}}
+\index{load\_main\_menu@{load\_main\_menu}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{load\_main\_menu()}{load\_main\_menu()}}
+{\footnotesize\ttfamily \label{menu_8c_af3a717bf86704d19bf64b64bedecbac5} 
+\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*} load\+\_\+main\+\_\+menu (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Loads the main menu. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the newly loaded main menu. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{menu_8c_af3a717bf86704d19bf64b64bedecbac5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8c_af3a717bf86704d19bf64b64bedecbac5_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{menu_8c_ae1ac3b606f8f8f3b0a826aaa38fc5a76}\index{menu.c@{menu.c}!load\_new\_highscore\_menu@{load\_new\_highscore\_menu}}
+\index{load\_new\_highscore\_menu@{load\_new\_highscore\_menu}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{load\_new\_highscore\_menu()}{load\_new\_highscore\_menu()}}
+{\footnotesize\ttfamily \label{menu_8c_ae1ac3b606f8f8f3b0a826aaa38fc5a76} 
+\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*} load\+\_\+new\+\_\+highscore\+\_\+menu (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Loads the new highscore menu. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the newly loaded new highscore menu. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{menu_8c_ae1ac3b606f8f8f3b0a826aaa38fc5a76_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8c_ae1ac3b606f8f8f3b0a826aaa38fc5a76_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{menu_8c_acdcb619af2514e4eb5587f9a679f7992}\index{menu.c@{menu.c}!load\_pause\_menu@{load\_pause\_menu}}
+\index{load\_pause\_menu@{load\_pause\_menu}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{load\_pause\_menu()}{load\_pause\_menu()}}
+{\footnotesize\ttfamily \label{menu_8c_acdcb619af2514e4eb5587f9a679f7992} 
+\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*} load\+\_\+pause\+\_\+menu (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Loads the pause menu. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the newly loaded pause menu. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=283pt]{menu_8c_acdcb619af2514e4eb5587f9a679f7992_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8c_acdcb619af2514e4eb5587f9a679f7992_icgraph}
+\end{center}
+\end{figure}

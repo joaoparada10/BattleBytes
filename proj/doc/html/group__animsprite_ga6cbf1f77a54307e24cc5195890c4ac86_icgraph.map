@@ -1,0 +1,20 @@
+<map id="create_asprite" name="create_asprite">
+<area shape="rect" id="Node000001" title="Creates an animated sprite." alt="" coords="886,31,989,57"/>
+<area shape="rect" id="Node000002" href="$game__view_8c.html#a1c3dcacb14608ae2dfd1b9146ced484e" title="Creates an explosion effect at the specified coordinates." alt="" coords="707,5,826,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="870,37,826,30,827,25,871,32"/>
+<area shape="rect" id="Node000006" href="$game__view_8c.html#a05879f87abc955b89a1f171dc1bcaf6d" title="Creates an animated sprite for a virus type 2 enemy." alt="" coords="695,56,838,83"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="871,57,839,61,838,56,870,51"/>
+<area shape="rect" id="Node000003" href="$game__logic_8c.html#aa3912aa6df5e81d539cf9f0709cb765f" title="Fires a shot from the tank towards the crosshair." alt="" coords="568,5,621,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="691,21,622,21,622,16,691,16"/>
+<area shape="rect" id="Node000004" href="$dispatcher_8c.html#a990a5393ee8ada0a10fe8e795adf100c" title="Handles mouse input based on the current state." alt="" coords="162,5,307,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="552,21,308,21,308,16,552,16"/>
+<area shape="rect" id="Node000005" href="$proj_8c.html#af244d65e69677cf312af1950452ec256" title="Main game loop for the project." alt="" coords="5,31,114,57"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="147,34,114,39,114,34,146,29"/>
+<area shape="rect" id="Node000007" href="$game__model_8c.html#af9ec5530dca91f2bd2892fd950664215" title="Spawns an enemy of the given type." alt="" coords="542,56,647,83"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="679,72,647,72,647,67,679,67"/>
+<area shape="rect" id="Node000008" href="$game__model_8c.html#ab5f84d60c750cbd88988bc03e16ce7a1" title="Spawns a wave of enemies." alt="" coords="355,56,494,83"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="527,72,495,72,495,67,527,67"/>
+<area shape="rect" id="Node000009" href="$dispatcher_8c.html#a8b98fc3f43a39b953cd60f2ce95d296f" title="Handles the game state transitions and actions." alt="" coords="165,56,304,83"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="340,72,304,72,304,67,340,67"/>
+<area shape="poly" id="edge9_Node000009_Node000005" title=" " alt="" coords="150,60,114,54,114,49,150,54"/>
+</map>

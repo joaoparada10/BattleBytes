@@ -1,0 +1,7 @@
+<map id="mouse_state_machine" name="mouse_state_machine">
+<area shape="rect" id="Node000001" title="Mouse state machine to handle gestures." alt="" coords="5,31,158,57"/>
+<area shape="rect" id="Node000002" href="$mouse_8c.html#ae54061f53107e451921cf8bd7f9d4265" title="Changes the state of the mouse state machine." alt="" coords="209,5,309,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="158,30,193,25,194,31,158,36"/>
+<area shape="rect" id="Node000003" href="$mouse_8c.html#a814697dcd2ddaef69ae9f5f3e3742ff1" title="Maintains the current state of the mouse state machine." alt="" coords="206,56,312,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="158,52,190,57,190,62,158,58"/>
+</map>

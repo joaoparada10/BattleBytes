@@ -1,0 +1,9 @@
+<map id="draw_cursor" name="draw_cursor">
+<area shape="rect" id="Node000001" title="Draws the cursor sprite on the screen." alt="" coords="5,31,97,57"/>
+<area shape="rect" id="Node000002" href="$group__sprite.html#ga6c75fbf31230126d2f19b29deaf24b2f" title="Draws a sprite." alt="" coords="145,31,232,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="97,41,129,41,129,47,97,47"/>
+<area shape="rect" id="Node000003" href="$video__gr_8c.html#ae73cfe62147429fce468e5b1ed96e30a" title="Gets the drawing buffer." alt="" coords="280,5,408,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="232,34,264,29,265,34,233,40"/>
+<area shape="rect" id="Node000004" href="$video__gr_8c.html#ac19350f0662b5c8fbb1a41e051411014" title="Gets the horizontal resolution." alt="" coords="305,56,383,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="233,48,290,58,289,63,232,54"/>
+</map>

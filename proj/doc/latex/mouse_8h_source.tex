@@ -1,0 +1,46 @@
+\doxysection{mouse.\+h}
+\hypertarget{mouse_8h_source}{}\label{mouse_8h_source}\index{device/mouse.h@{device/mouse.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ \_\_MOUSE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ \_\_MOUSE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}i8042.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{00010\ \ \ \ \ START,}
+\DoxyCodeLine{00011\ \ \ \ \ DRAWING1,}
+\DoxyCodeLine{00012\ \ \ \ \ PEAK,}
+\DoxyCodeLine{00013\ \ \ \ \ DRAWING2,}
+\DoxyCodeLine{00014\ \ \ \ \ COMPLETE}
+\DoxyCodeLine{00015\ \}\ MouseState;}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ int\ (m\_kbc\_subscribe\_int)(uint8\_t\ *bit\_no);}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ int\ (m\_kbc\_unsubscribe\_int)();}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ bool\ (is\_valid\_m\_st)(uint8\_t\ stat);}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ int\ (m\_read\_obf\_byte)();}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ void\ (mouse\_ih)();}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ int\ (mouse\_packet\_handler)(\textcolor{keyword}{struct\ }packet\ *pp);}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ int\ (\mbox{\hyperlink{mouse_8c_a4608e046c09d4995c29f7bb64b0f4338}{kbc\_issue\_mouse\_cmd}})(uint8\_t\ cmd);}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ int\ (\mbox{\hyperlink{keyboard_8c_a7fda2db9eff761164ba3b879462431df}{kbc\_issue\_cmd}})(uint8\_t\ p,\ uint8\_t\ cmd);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ void\ (\mbox{\hyperlink{mouse_8c_a0a7123b336afa8b09046173ebc3ffd23}{mouse\_state\_machine}})(\textcolor{keyword}{struct\ }packet\ *pp,\ MouseState\ *\mbox{\hyperlink{mouse_8c_ae0504870939140db7e3752454fd63be2}{currentState}},\ uint8\_t\ x\_len,\ uint8\_t\ tolerance);}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ void\ (\mbox{\hyperlink{mouse_8c_ae54061f53107e451921cf8bd7f9d4265}{state\_change}})(MouseState\ newState);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ void\ (\mbox{\hyperlink{mouse_8c_a814697dcd2ddaef69ae9f5f3e3742ff1}{state\_maintain}})(\textcolor{keyword}{struct\ }packet\ *pp);}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

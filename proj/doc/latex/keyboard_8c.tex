@@ -1,0 +1,241 @@
+\doxysection{device/keyboard.c File Reference}
+\hypertarget{keyboard_8c}{}\label{keyboard_8c}\index{device/keyboard.c@{device/keyboard.c}}
+
+
+Keyboard interrupt handling and KBC communication.  
+
+
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include "{}keyboard.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{keyboard_8c_a18c596b224bba98ca524a0bfa9730609}{kbc\+\_\+subscribe\+\_\+int}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}bit\+\_\+no)
+\begin{DoxyCompactList}\small\item\em Subscribes keyboard interrupts. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{keyboard_8c_a0e945987c2233f1c30a645ec5fc750c1}{kbc\+\_\+unsubscribe\+\_\+int}} ()
+\begin{DoxyCompactList}\small\item\em Unsubscribes keyboard interrupts. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{keyboard_8c_a7fda2db9eff761164ba3b879462431df}{kbc\+\_\+issue\+\_\+cmd}} (uint8\+\_\+t p, uint8\+\_\+t cmd)
+\begin{DoxyCompactList}\small\item\em Issues a command to the KBC. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{keyboard_8c_a7d11ac73a2c153a411579ce106cf16d8}{kbc\+\_\+read\+\_\+cmd}} ()
+\begin{DoxyCompactList}\small\item\em Reads a command byte from the KBC. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{keyboard_8c_a3b6065665843fa04842278085d21897d}{is\+\_\+valid\+\_\+kb\+\_\+st}} (uint8\+\_\+t \mbox{\hyperlink{keyboard_8c_abd61b647db7d40c2ce95ff26f84e2cfd}{kbd\+\_\+status\+\_\+byte}})
+\begin{DoxyCompactList}\small\item\em Checks if the keyboard status byte is valid. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{keyboard_8c_ad3bf022e15eeebdef39790c1ed290c95}{kbc\+\_\+read\+\_\+value}} ()
+\begin{DoxyCompactList}\small\item\em Reads a value from the KBC output buffer. \end{DoxyCompactList}\item 
+\Hypertarget{keyboard_8c_ab9e6ed7960d60aa4834f2038247d4536}\label{keyboard_8c_ab9e6ed7960d60aa4834f2038247d4536} 
+void {\bfseries kbc\+\_\+ih} ()
+\begin{DoxyCompactList}\small\item\em Keyboard interrupt handler. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{keyboard_8c_ae8c52188280e63908750d0db0de39fe1}{process\+\_\+scancode}} (bool \texorpdfstring{$\ast$}{*}is\+\_\+make, uint8\+\_\+t \texorpdfstring{$\ast$}{*}size, uint8\+\_\+t \texorpdfstring{$\ast$}{*}bytes)
+\begin{DoxyCompactList}\small\item\em Processes scancodes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{keyboard_8c_a96f78a87d064e47d627d222f67a8d012}\label{keyboard_8c_a96f78a87d064e47d627d222f67a8d012} 
+int {\bfseries hook\+\_\+id} = 1
+\begin{DoxyCompactList}\small\item\em Hook ID for keyboard interrupts. \end{DoxyCompactList}\item 
+\Hypertarget{keyboard_8c_a4106b9f641b7ec5bdb602975fce75bcf}\label{keyboard_8c_a4106b9f641b7ec5bdb602975fce75bcf} 
+uint8\+\_\+t {\bfseries keyboard\+\_\+data}
+\begin{DoxyCompactList}\small\item\em Data read from the keyboard. \end{DoxyCompactList}\item 
+\Hypertarget{keyboard_8c_abd61b647db7d40c2ce95ff26f84e2cfd}\label{keyboard_8c_abd61b647db7d40c2ce95ff26f84e2cfd} 
+uint8\+\_\+t {\bfseries kbd\+\_\+status\+\_\+byte}
+\begin{DoxyCompactList}\small\item\em Status byte from the keyboard controller. \end{DoxyCompactList}\item 
+\Hypertarget{keyboard_8c_af6e6946037c04989b451d3ef606e9c0c}\label{keyboard_8c_af6e6946037c04989b451d3ef606e9c0c} 
+bool {\bfseries discard\+\_\+keyboard\+\_\+data} = false
+\begin{DoxyCompactList}\small\item\em Flag to discard erroneous keyboard data. \end{DoxyCompactList}\item 
+\Hypertarget{keyboard_8c_a88dd62d9340ad0c03e07b976e16aaad1}\label{keyboard_8c_a88dd62d9340ad0c03e07b976e16aaad1} 
+bool {\bfseries skip\+\_\+print} = false
+\begin{DoxyCompactList}\small\item\em Flag to skip printing of scancodes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Keyboard interrupt handling and KBC communication. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{keyboard_8c_a3b6065665843fa04842278085d21897d}\index{keyboard.c@{keyboard.c}!is\_valid\_kb\_st@{is\_valid\_kb\_st}}
+\index{is\_valid\_kb\_st@{is\_valid\_kb\_st}!keyboard.c@{keyboard.c}}
+\doxysubsubsection{\texorpdfstring{is\_valid\_kb\_st()}{is\_valid\_kb\_st()}}
+{\footnotesize\ttfamily \label{keyboard_8c_a3b6065665843fa04842278085d21897d} 
+bool is\+\_\+valid\+\_\+kb\+\_\+st (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{kbd\+\_\+status\+\_\+byte}{}\end{DoxyParamCaption})}
+
+
+
+Checks if the keyboard status byte is valid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em kbd\+\_\+status\+\_\+byte} & Status byte to be checked. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if valid, false otherwise. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{keyboard_8c_a3b6065665843fa04842278085d21897d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{keyboard_8c_a7fda2db9eff761164ba3b879462431df}\index{keyboard.c@{keyboard.c}!kbc\_issue\_cmd@{kbc\_issue\_cmd}}
+\index{kbc\_issue\_cmd@{kbc\_issue\_cmd}!keyboard.c@{keyboard.c}}
+\doxysubsubsection{\texorpdfstring{kbc\_issue\_cmd()}{kbc\_issue\_cmd()}}
+{\footnotesize\ttfamily \label{keyboard_8c_a7fda2db9eff761164ba3b879462431df} 
+int kbc\+\_\+issue\+\_\+cmd (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{p}{, }\item[{uint8\+\_\+t}]{cmd}{}\end{DoxyParamCaption})}
+
+
+
+Issues a command to the KBC. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Port to issue the command to. \\
+\hline
+{\em cmd} & Command to be issued. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, non-\/zero otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=268pt]{keyboard_8c_a7fda2db9eff761164ba3b879462431df_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{keyboard_8c_a7fda2db9eff761164ba3b879462431df_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{keyboard_8c_a7d11ac73a2c153a411579ce106cf16d8}\index{keyboard.c@{keyboard.c}!kbc\_read\_cmd@{kbc\_read\_cmd}}
+\index{kbc\_read\_cmd@{kbc\_read\_cmd}!keyboard.c@{keyboard.c}}
+\doxysubsubsection{\texorpdfstring{kbc\_read\_cmd()}{kbc\_read\_cmd()}}
+{\footnotesize\ttfamily \label{keyboard_8c_a7d11ac73a2c153a411579ce106cf16d8} 
+uint8\+\_\+t kbc\+\_\+read\+\_\+cmd (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Reads a command byte from the KBC. 
+
+\begin{DoxyReturn}{Returns}
+Command byte. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{keyboard_8c_a7d11ac73a2c153a411579ce106cf16d8_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{keyboard_8c_ad3bf022e15eeebdef39790c1ed290c95}\index{keyboard.c@{keyboard.c}!kbc\_read\_value@{kbc\_read\_value}}
+\index{kbc\_read\_value@{kbc\_read\_value}!keyboard.c@{keyboard.c}}
+\doxysubsubsection{\texorpdfstring{kbc\_read\_value()}{kbc\_read\_value()}}
+{\footnotesize\ttfamily \label{keyboard_8c_ad3bf022e15eeebdef39790c1ed290c95} 
+int kbc\+\_\+read\+\_\+value (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Reads a value from the KBC output buffer. 
+
+\begin{DoxyReturn}{Returns}
+0 on success, non-\/zero otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{keyboard_8c_ad3bf022e15eeebdef39790c1ed290c95_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{keyboard_8c_ad3bf022e15eeebdef39790c1ed290c95_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{keyboard_8c_a18c596b224bba98ca524a0bfa9730609}\index{keyboard.c@{keyboard.c}!kbc\_subscribe\_int@{kbc\_subscribe\_int}}
+\index{kbc\_subscribe\_int@{kbc\_subscribe\_int}!keyboard.c@{keyboard.c}}
+\doxysubsubsection{\texorpdfstring{kbc\_subscribe\_int()}{kbc\_subscribe\_int()}}
+{\footnotesize\ttfamily \label{keyboard_8c_a18c596b224bba98ca524a0bfa9730609} 
+int kbc\+\_\+subscribe\+\_\+int (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{bit\+\_\+no}{}\end{DoxyParamCaption})}
+
+
+
+Subscribes keyboard interrupts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bit\+\_\+no} & Pointer to the bit number to be set. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, non-\/zero otherwise. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{keyboard_8c_a18c596b224bba98ca524a0bfa9730609_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{keyboard_8c_a0e945987c2233f1c30a645ec5fc750c1}\index{keyboard.c@{keyboard.c}!kbc\_unsubscribe\_int@{kbc\_unsubscribe\_int}}
+\index{kbc\_unsubscribe\_int@{kbc\_unsubscribe\_int}!keyboard.c@{keyboard.c}}
+\doxysubsubsection{\texorpdfstring{kbc\_unsubscribe\_int()}{kbc\_unsubscribe\_int()}}
+{\footnotesize\ttfamily \label{keyboard_8c_a0e945987c2233f1c30a645ec5fc750c1} 
+int kbc\+\_\+unsubscribe\+\_\+int (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Unsubscribes keyboard interrupts. 
+
+\begin{DoxyReturn}{Returns}
+0 on success, non-\/zero otherwise. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=303pt]{keyboard_8c_a0e945987c2233f1c30a645ec5fc750c1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{keyboard_8c_ae8c52188280e63908750d0db0de39fe1}\index{keyboard.c@{keyboard.c}!process\_scancode@{process\_scancode}}
+\index{process\_scancode@{process\_scancode}!keyboard.c@{keyboard.c}}
+\doxysubsubsection{\texorpdfstring{process\_scancode()}{process\_scancode()}}
+{\footnotesize\ttfamily \label{keyboard_8c_ae8c52188280e63908750d0db0de39fe1} 
+void process\+\_\+scancode (\begin{DoxyParamCaption}\item[{bool \texorpdfstring{$\ast$}{*}}]{is\+\_\+make}{, }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{size}{, }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{bytes}{}\end{DoxyParamCaption})}
+
+
+
+Processes scancodes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\+\_\+make} & Pointer to a boolean that indicates if it is a make code. \\
+\hline
+{\em size} & Pointer to the size of the scancode. \\
+\hline
+{\em bytes} & Pointer to the array of scancode bytes. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=295pt]{keyboard_8c_ae8c52188280e63908750d0db0de39fe1_icgraph}
+\end{center}
+\end{figure}

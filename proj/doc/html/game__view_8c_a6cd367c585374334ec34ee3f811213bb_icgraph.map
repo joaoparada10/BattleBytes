@@ -1,0 +1,16 @@
+<map id="get_tank_sprite" name="get_tank_sprite">
+<area shape="rect" id="Node000001" title="Retrieves the tank sprite." alt="" coords="900,31,1010,57"/>
+<area shape="rect" id="Node000002" href="$game__model_8c.html#a39dc3df5a3d04e49828549e139469944" title="Creates the game elements." alt="" coords="535,5,692,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="884,41,692,27,692,22,884,36"/>
+<area shape="rect" id="Node000005" href="$game__logic_8c.html#a92e3fa41cbaf0a28e54be4958150e58f" title="Checks for collision when spawning an object." alt="" coords="740,56,852,83"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="885,58,853,63,852,58,884,53"/>
+<area shape="rect" id="Node000003" href="$dispatcher_8c.html#a8b98fc3f43a39b953cd60f2ce95d296f" title="Handles the game state transitions and actions." alt="" coords="162,31,300,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="520,27,301,42,300,37,520,22"/>
+<area shape="rect" id="Node000004" href="$proj_8c.html#af244d65e69677cf312af1950452ec256" title="Main game loop for the project." alt="" coords="5,31,114,57"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="146,47,114,47,114,41,146,41"/>
+<area shape="rect" id="Node000006" href="$game__model_8c.html#af9ec5530dca91f2bd2892fd950664215" title="Spawns an enemy of the given type." alt="" coords="561,56,666,83"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="724,72,666,72,666,67,724,67"/>
+<area shape="rect" id="Node000007" href="$game__model_8c.html#ab5f84d60c750cbd88988bc03e16ce7a1" title="Spawns a wave of enemies." alt="" coords="348,56,487,83"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="546,72,488,72,488,67,546,67"/>
+<area shape="poly" id="edge7_Node000007_Node000003" title=" " alt="" coords="332,60,300,56,301,51,333,55"/>
+</map>

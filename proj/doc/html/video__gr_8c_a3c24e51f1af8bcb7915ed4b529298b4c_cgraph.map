@@ -1,0 +1,7 @@
+<map id="vg_move_pixmap" name="vg_move_pixmap">
+<area shape="rect" id="Node000001" title="Moves a pixmap." alt="" coords="5,5,125,32"/>
+<area shape="rect" id="Node000002" href="$video__gr_8c.html#a79fc4f8d064fec8ee1f1330c2a5bd580" title="Draws a pixmap." alt="" coords="173,5,289,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="125,16,157,16,157,21,125,21"/>
+<area shape="rect" id="Node000003" href="$video__gr_8c.html#a6f895de9725f9f231f9a7f74b6087f60" title="Draws a pixel at a specified location." alt="" coords="337,5,438,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="290,16,321,16,321,21,290,21"/>
+</map>

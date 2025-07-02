@@ -1,0 +1,179 @@
+\doxysection{model/arena.c File Reference}
+\hypertarget{arena_8c}{}\label{arena_8c}\index{model/arena.c@{model/arena.c}}
+
+
+Implementation of the game arena.  
+
+
+{\ttfamily \#include "{}arena.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_arena}{Arena}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{arena_8c_a5a12a111043f2011cd8950c83e067d79}{create\+\_\+arena}} (xpm\+\_\+map\+\_\+t xpm, uint32\+\_\+t ground\+\_\+color)
+\begin{DoxyCompactList}\small\item\em Creates a new arena. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{arena_8c_a3c12c77e637315890375e0bd6f987cc3}{is\+\_\+walkable}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Checks if a given coordinate in the arena is walkable. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{arena_8c_a9aa796be96aee9ae5f86f9938cc4f8ad}{arena\+\_\+collision}} (\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*}sprite)
+\begin{DoxyCompactList}\small\item\em Checks if a given sprite collides with any obstacles in the arena. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{arena_8c_a9d713f87cbb3bc2f771a192f069a081e}{destroy\+\_\+arena}} (\mbox{\hyperlink{struct_arena}{Arena}} \texorpdfstring{$\ast$}{*}arena)
+\begin{DoxyCompactList}\small\item\em Destroys the given arena and frees allocated memory. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_arena}{Arena}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{arena_8c_a643076fac43cdf2e983ffe4ebb4e1f24}{get\+\_\+current\+\_\+arena}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current arena. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of the game arena. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{arena_8c_a9aa796be96aee9ae5f86f9938cc4f8ad}\index{arena.c@{arena.c}!arena\_collision@{arena\_collision}}
+\index{arena\_collision@{arena\_collision}!arena.c@{arena.c}}
+\doxysubsubsection{\texorpdfstring{arena\_collision()}{arena\_collision()}}
+{\footnotesize\ttfamily \label{arena_8c_a9aa796be96aee9ae5f86f9938cc4f8ad} 
+bool arena\+\_\+collision (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*}}]{sprite}{}\end{DoxyParamCaption})}
+
+
+
+Checks if a given sprite collides with any obstacles in the arena. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sprite} & Pointer to the sprite to check for collisions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the sprite collides with an obstacle, false otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{arena_8c_a9aa796be96aee9ae5f86f9938cc4f8ad_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{arena_8c_a9aa796be96aee9ae5f86f9938cc4f8ad_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{arena_8c_a5a12a111043f2011cd8950c83e067d79}\index{arena.c@{arena.c}!create\_arena@{create\_arena}}
+\index{create\_arena@{create\_arena}!arena.c@{arena.c}}
+\doxysubsubsection{\texorpdfstring{create\_arena()}{create\_arena()}}
+{\footnotesize\ttfamily \label{arena_8c_a5a12a111043f2011cd8950c83e067d79} 
+\mbox{\hyperlink{struct_arena}{Arena}} \texorpdfstring{$\ast$}{*} create\+\_\+arena (\begin{DoxyParamCaption}\item[{xpm\+\_\+map\+\_\+t}]{xpm}{, }\item[{uint32\+\_\+t}]{ground\+\_\+color}{}\end{DoxyParamCaption})}
+
+
+
+Creates a new arena. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xpm} & The XPM map representing the arena layout. \\
+\hline
+{\em ground\+\_\+color} & The color representing the walkable ground in the arena. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the newly created arena, or NULL if memory allocation fails. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{arena_8c_a5a12a111043f2011cd8950c83e067d79_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{arena_8c_a5a12a111043f2011cd8950c83e067d79_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{arena_8c_a9d713f87cbb3bc2f771a192f069a081e}\index{arena.c@{arena.c}!destroy\_arena@{destroy\_arena}}
+\index{destroy\_arena@{destroy\_arena}!arena.c@{arena.c}}
+\doxysubsubsection{\texorpdfstring{destroy\_arena()}{destroy\_arena()}}
+{\footnotesize\ttfamily \label{arena_8c_a9d713f87cbb3bc2f771a192f069a081e} 
+void destroy\+\_\+arena (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_arena}{Arena}} \texorpdfstring{$\ast$}{*}}]{arena}{}\end{DoxyParamCaption})}
+
+
+
+Destroys the given arena and frees allocated memory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arena} & Pointer to the arena to be destroyed. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{arena_8c_a9d713f87cbb3bc2f771a192f069a081e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{arena_8c_a643076fac43cdf2e983ffe4ebb4e1f24}\index{arena.c@{arena.c}!get\_current\_arena@{get\_current\_arena}}
+\index{get\_current\_arena@{get\_current\_arena}!arena.c@{arena.c}}
+\doxysubsubsection{\texorpdfstring{get\_current\_arena()}{get\_current\_arena()}}
+{\footnotesize\ttfamily \label{arena_8c_a643076fac43cdf2e983ffe4ebb4e1f24} 
+\mbox{\hyperlink{struct_arena}{Arena}} \texorpdfstring{$\ast$}{*} get\+\_\+current\+\_\+arena (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the current arena. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the current arena. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{arena_8c_a643076fac43cdf2e983ffe4ebb4e1f24_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{arena_8c_a3c12c77e637315890375e0bd6f987cc3}\index{arena.c@{arena.c}!is\_walkable@{is\_walkable}}
+\index{is\_walkable@{is\_walkable}!arena.c@{arena.c}}
+\doxysubsubsection{\texorpdfstring{is\_walkable()}{is\_walkable()}}
+{\footnotesize\ttfamily \label{arena_8c_a3c12c77e637315890375e0bd6f987cc3} 
+bool is\+\_\+walkable (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Checks if a given coordinate in the arena is walkable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The X coordinate. \\
+\hline
+{\em y} & The Y coordinate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the coordinate is walkable, false otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{arena_8c_a3c12c77e637315890375e0bd6f987cc3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{arena_8c_a3c12c77e637315890375e0bd6f987cc3_icgraph}
+\end{center}
+\end{figure}

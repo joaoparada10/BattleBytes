@@ -1,0 +1,7 @@
+<map id="create_enemy" name="create_enemy">
+<area shape="rect" id="Node000001" title="Creates an enemy." alt="" coords="5,47,109,73"/>
+<area shape="rect" id="Node000002" href="$game__model_8c.html#adb578ef990a9827c4874fc3e0489b4c5" title="Creates an animated game element." alt="" coords="157,5,313,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="109,48,141,42,142,47,109,53"/>
+<area shape="rect" id="Node000003" href="$game__model_8c.html#a955d5de38dda62712aed7ed1d1cdf1ec" title="Creates a static game element." alt="" coords="167,72,303,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="109,67,152,75,151,80,109,72"/>
+</map>

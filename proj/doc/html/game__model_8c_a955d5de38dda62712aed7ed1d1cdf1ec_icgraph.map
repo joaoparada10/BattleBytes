@@ -1,0 +1,16 @@
+<map id="create_static_game_element" name="create_static_game_element">
+<area shape="rect" id="Node000001" title="Creates a static game element." alt="" coords="891,23,1026,65"/>
+<area shape="rect" id="Node000002" href="$game__model_8c.html#a60ac9c9d1d1b51ac203668ce2b8107d3" title="Creates an enemy." alt="" coords="740,5,843,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="875,34,843,29,844,24,876,29"/>
+<area shape="rect" id="Node000007" href="$game__model_8c.html#a39dc3df5a3d04e49828549e139469944" title="Creates the game elements." alt="" coords="535,56,692,83"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="876,53,692,66,692,61,875,47"/>
+<area shape="rect" id="Node000003" href="$game__model_8c.html#af9ec5530dca91f2bd2892fd950664215" title="Spawns an enemy of the given type." alt="" coords="561,5,666,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="724,21,666,21,666,16,724,16"/>
+<area shape="rect" id="Node000004" href="$game__model_8c.html#ab5f84d60c750cbd88988bc03e16ce7a1" title="Spawns a wave of enemies." alt="" coords="348,5,487,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="546,21,488,21,488,16,546,16"/>
+<area shape="rect" id="Node000005" href="$dispatcher_8c.html#a8b98fc3f43a39b953cd60f2ce95d296f" title="Handles the game state transitions and actions." alt="" coords="162,31,300,57"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="333,33,301,37,300,32,332,28"/>
+<area shape="rect" id="Node000006" href="$proj_8c.html#af244d65e69677cf312af1950452ec256" title="Main game loop for the project." alt="" coords="5,31,114,57"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="146,47,114,47,114,41,146,41"/>
+<area shape="poly" id="edge7_Node000007_Node000005" title=" " alt="" coords="520,66,300,51,301,46,520,61"/>
+</map>

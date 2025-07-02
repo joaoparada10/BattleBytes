@@ -1,0 +1,7 @@
+<map id="load_pause_menu" name="load_pause_menu">
+<area shape="rect" id="Node000001" title="Loads the pause menu." alt="" coords="5,31,132,57"/>
+<area shape="rect" id="Node000002" href="$menu_8c.html#a05a655ad151e3b910b4547f1ca9a2f7c" title="Creates a new menu." alt="" coords="180,5,276,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="132,31,164,26,165,31,133,37"/>
+<area shape="rect" id="Node000003" href="$group__sprite.html#gac17a91fd309ebffd07be3daa9c194d86" title="Creates a sprite." alt="" coords="180,56,276,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="133,51,165,57,164,62,132,57"/>
+</map>

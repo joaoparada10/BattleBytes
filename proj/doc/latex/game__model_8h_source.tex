@@ -1,0 +1,77 @@
+\doxysection{game\+\_\+model.\+h}
+\hypertarget{game__model_8h_source}{}\label{game__model_8h_source}\index{model/game\_model.h@{model/game\_model.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ \_GAME\_MODEL\_H\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ \_GAME\_MODEL\_H\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}arena.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}../graphics/sprite.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}../view/game\_view.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}../view/constants.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}../dispatcher/state.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}../logic/direction.h"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <lcom/lcf.h>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <math.h>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{00015\ \ \ STATIC\_SPRITE,}
+\DoxyCodeLine{00016\ \ \ ANIMATED\_SPRITE}
+\DoxyCodeLine{00017\ \}\ SpriteType;}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00020\ \ \ uint16\_t\ hp;}
+\DoxyCodeLine{00021\ \ \ SpriteType\ type;}
+\DoxyCodeLine{00022\ \ \ \textcolor{keyword}{union}\{}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{struct_sprite}{Sprite}}\ *sp;}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{struct_anim_sprite}{AnimSprite}}\ *asp;}
+\DoxyCodeLine{00025\ \ \ \}\ sprite;}
+\DoxyCodeLine{00026\ \ \ Direction\ direction;}
+\DoxyCodeLine{00027\ \}\ \mbox{\hyperlink{struct_game_unit}{GameUnit}};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{00030\ \ \ VIRUS1,}
+\DoxyCodeLine{00031\ \ \ VIRUS2}
+\DoxyCodeLine{00032\ \}\ EnemyType;}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_enemy}{Enemy}}\ \{}
+\DoxyCodeLine{00035\ \ \ \mbox{\hyperlink{struct_game_unit}{GameUnit}}\ *model;}
+\DoxyCodeLine{00036\ \ \ EnemyType\ enemy\_type;}
+\DoxyCodeLine{00037\ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_enemy}{Enemy}}\ *next;\ \textcolor{comment}{//\ storing\ references\ to\ each\ enemy\ dynamically,\ so\ we\ can\ spawn/destroy\ enemies\ at\ runtime}}
+\DoxyCodeLine{00038\ \}\ \mbox{\hyperlink{struct_enemy}{Enemy}};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{game__model_8c_a39dc3df5a3d04e49828549e139469944}{create\_game\_elements}}();}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \mbox{\hyperlink{struct_game_unit}{GameUnit}}*\ \mbox{\hyperlink{game__model_8c_a955d5de38dda62712aed7ed1d1cdf1ec}{create\_static\_game\_element}}(uint16\_t\ hp,\ \mbox{\hyperlink{struct_sprite}{Sprite}}\ *sp,\ Direction\ direction);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \mbox{\hyperlink{struct_game_unit}{GameUnit}}*\ \mbox{\hyperlink{game__model_8c_adb578ef990a9827c4874fc3e0489b4c5}{create\_animated\_game\_element}}(uint16\_t\ hp,\ \mbox{\hyperlink{struct_anim_sprite}{AnimSprite}}\ *asp,\ Direction\ direction);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \mbox{\hyperlink{struct_enemy}{Enemy}}*\ \mbox{\hyperlink{game__model_8c_a60ac9c9d1d1b51ac203668ce2b8107d3}{create\_enemy}}(\textcolor{keywordtype}{void}*\ sp,\ Direction\ direction,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ EnemyType\ enemy\_type);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{game__model_8c_a9c91af6c39906b42d4bd727d8fcdc22b}{destroy\_game\_element}}(\mbox{\hyperlink{struct_game_unit}{GameUnit}}\ *element,SpriteType\ type);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{game__model_8c_aa21ce6881832fb20fedbc92c4ff241df}{destroy\_enemy}}(\mbox{\hyperlink{struct_enemy}{Enemy}}\ *enemy);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{game__model_8c_ad71ad0f82650f114326eef28f17bdb9d}{free\_enemies}}();}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{game__model_8c_a1436960df441ce74e9843a2c8fd92f73}{cleanup\_elements}}();}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{game__model_8c_af9ec5530dca91f2bd2892fd950664215}{spawn\_enemy}}(EnemyType\ new\_enemy);}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{game__model_8c_ab5f84d60c750cbd88988bc03e16ce7a1}{spawn\_enemy\_wave}}();}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{game__model_8c_a2cd3e7ca1c080225665d435871d1d5a4}{update\_enemies}}();}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{game__logic_8c_a1c416c2df9c85e14bd2f21e7709b7ca4}{calculate\_tank\_direction}}();}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{game__logic_8c_aa3912aa6df5e81d539cf9f0709cb765f}{shoot}}();}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \mbox{\hyperlink{struct_game_unit}{GameUnit}}*\ \mbox{\hyperlink{game__model_8c_a86bed3e29ffb0962cfc6e574e41de5ae}{get\_tank\_model}}();}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \mbox{\hyperlink{struct_enemy}{Enemy}}*\ \mbox{\hyperlink{game__model_8c_ad04dee4317dc9f97066b219ebc13558e}{get\_enemy\_list}}();}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00071\ }
+
+\end{DoxyCode}

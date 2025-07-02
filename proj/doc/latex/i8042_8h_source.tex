@@ -1,0 +1,127 @@
+\doxysection{i8042.\+h}
+\hypertarget{i8042_8h_source}{}\label{i8042_8h_source}\index{device/i8042.h@{device/i8042.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ \_LCOM\_I8042\_H\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ \_LCOM\_I8042\_H\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <lcom/lcf.h>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ DELAY\_US\ \ \ \ 20000}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ KEYBOARD\_IRQ\ 1}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ MOUSE\_IRQ\ 12}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ KBC\_ST\_REG\ 0x64}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ KBC\_CMD\_REG\ 0x64}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ KBC\_OUT\_BUF\ 0x60}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ KBC\_IN\_BUF\ 0x60}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#define\ KBC\_ST\_PAR\_ERR\ BIT(7)}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ KBC\_ST\_TO\_ERR\ BIT(6)}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#define\ KBC\_ST\_AUX\ BIT(5)}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ KBC\_ST\_IBF\ BIT(1)}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ KBC\_ST\_OBF\ BIT(0)}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#define\ ESC\_BREAK\_CODE\ 0x81}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#define\ SPACEBAR\_MAKE\_CODE\ 0x39}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#define\ SPACEBAR\_BREAK\_CODE\ 0xb9}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#define\ ARROW\_UP\_MAKE\_CODE\ 0x48}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#define\ ARROW\_UP\_BREAK\_CODE\ 0xc8}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ ARROW\_DOWN\_MAKE\_CODE\ 0x50}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#define\ ARROW\_DOWN\_BREAK\_CODE\ 0xd0}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#define\ A\_MAKE\_CODE\ 0x1e}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#define\ A\_BREAK\_CODE\ 0x9e}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#define\ B\_MAKE\_CODE\ 0x30}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#define\ B\_BREAK\_CODE\ 0xb0}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#define\ C\_MAKE\_CODE\ 0x2e}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#define\ C\_BREAK\_CODE\ 0xae}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#define\ D\_MAKE\_CODE\ 0x20}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#define\ D\_BREAK\_CODE\ 0xa0}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#define\ E\_MAKE\_CODE\ 0x12}}
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#define\ E\_BREAK\_CODE\ 0X92}}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#define\ F\_MAKE\_CODE\ 0x21}}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#define\ F\_BREAK\_CODE\ 0xa1}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#define\ G\_MAKE\_CODE\ 0x22}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#define\ G\_BREAK\_CODE\ 0xa2}}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#define\ H\_MAKE\_CODE\ 0x23}}
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#define\ H\_BREAK\_CODE\ 0xa3}}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#define\ I\_MAKE\_CODE\ 0x17}}
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#define\ I\_BREAK\_CODE\ 0x97}}
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#define\ J\_MAKE\_CODE\ 0x24}}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#define\ J\_BREAK\_CODE\ 0xa4}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#define\ K\_MAKE\_CODE\ 0x25}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#define\ K\_BREAK\_CODE\ 0xa5}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#define\ L\_MAKE\_CODE\ 0x26}}
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#define\ L\_BREAK\_CODE\ 0xa6}}
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#define\ M\_MAKE\_CODE\ 0x32}}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#define\ M\_BREAK\_CODE\ 0xb2}}
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#define\ N\_MAKE\_CODE\ 0x31}}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#define\ N\_BREAK\_CODE\ 0xb1}}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#define\ O\_MAKE\_CODE\ 0x18}}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#define\ O\_BREAK\_CODE\ 0x98}}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#define\ P\_MAKE\_CODE\ 0x19}}
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#define\ P\_BREAK\_CODE\ 0x99}}
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#define\ Q\_MAKE\_CODE\ 0x10}}
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#define\ Q\_BEEAK\_CODE\ 0x90}}
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#define\ R\_MAKE\_CODE\ 0x13}}
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#define\ R\_BREAK\_CODE\ 093\ }}
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#define\ S\_MAKE\_CODE\ 0x1f}}
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#define\ S\_BREAK\_CODE\ 0x9f}}
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#define\ T\_MAKE\_CODE\ 0x14}}
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#define\ T\_BREAK\_CODE\ 0x94}}
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#define\ U\_MAKE\_CODE\ 0x16}}
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#define\ U\_BREAK\_CODE\ 0x96}}
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#define\ V\_MAKE\_CODE\ 0x2f}}
+\DoxyCodeLine{00072\ \textcolor{preprocessor}{\#define\ V\_BREAK\_CODE\ 0xaf}}
+\DoxyCodeLine{00073\ \textcolor{preprocessor}{\#define\ W\_MAKE\_CODE\ 0x11}}
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#define\ W\_BREAK\_CODE\ 0x91}}
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#define\ X\_MAKE\_CODE\ 0x2d}}
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#define\ X\_BREAK\_CODE\ 0xad}}
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\#define\ Y\_MAKE\_CODE\ 0x15}}
+\DoxyCodeLine{00078\ \textcolor{preprocessor}{\#define\ Y\_BREAK\_CODE\ 0x95}}
+\DoxyCodeLine{00079\ \textcolor{preprocessor}{\#define\ Z\_MAKE\_CODE\ 0x2c}}
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\#define\ Z\_BREAK\_CODE\ 0xac}}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\#define\ SCANCODE\_PREFIX\ 0xE0}}
+\DoxyCodeLine{00083\ \textcolor{preprocessor}{\#define\ BREAK\_BIT\ BIT(7)}}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \textcolor{preprocessor}{\#define\ KBC\_READ\_CMD\_BYTE\ 0x20}}
+\DoxyCodeLine{00086\ \textcolor{preprocessor}{\#define\ KBC\_WRITE\_CMD\_BYTE\ 0x60}}
+\DoxyCodeLine{00087\ \textcolor{preprocessor}{\#define\ DISABLE\_MOUSE\_CMD\ 0xA7}}
+\DoxyCodeLine{00088\ \textcolor{preprocessor}{\#define\ ENABLE\_MOUSE\_CMD\ 0xA8}}
+\DoxyCodeLine{00089\ \textcolor{preprocessor}{\#define\ MOUSE\_INTERFACE\_CMD\ 0xA9}}
+\DoxyCodeLine{00090\ \textcolor{preprocessor}{\#define\ WRITE\_BYTE\_MOUSE\_CMD\ 0xD4}}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \textcolor{preprocessor}{\#define\ ACK\_BYTE\ 0xFA}}
+\DoxyCodeLine{00094\ \textcolor{preprocessor}{\#define\ NACK\_BYTE\ 0xFE}}
+\DoxyCodeLine{00095\ \textcolor{preprocessor}{\#define\ ERROR\_BYTE\ 0xFC}}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \textcolor{preprocessor}{\#define\ MOUSE\_RESET\ 0xFF}}
+\DoxyCodeLine{00098\ \textcolor{preprocessor}{\#define\ MOUSE\_RESEND\ 0xFE}}
+\DoxyCodeLine{00099\ \textcolor{preprocessor}{\#define\ SET\_DEFAULTS\ 0xF6}}
+\DoxyCodeLine{00100\ \textcolor{preprocessor}{\#define\ DISABLE\_DATA\_REPORT\ 0xF5}}
+\DoxyCodeLine{00101\ \textcolor{preprocessor}{\#define\ ENABLE\_DATA\_REPORT\ 0xF4}}
+\DoxyCodeLine{00102\ \textcolor{preprocessor}{\#define\ SET\_SAMPLE\_RATE\ 0xF3}}
+\DoxyCodeLine{00103\ \textcolor{preprocessor}{\#define\ SET\_REMOTE\_MODE\ 0xF0}}
+\DoxyCodeLine{00104\ \textcolor{preprocessor}{\#define\ READ\_DATA\ 0xEB}}
+\DoxyCodeLine{00105\ \textcolor{preprocessor}{\#define\ SET\_STREAM\_MODE\ 0xEA}}
+\DoxyCodeLine{00106\ \textcolor{preprocessor}{\#define\ STATUS\_REQUEST\ 0xE9}}
+\DoxyCodeLine{00107\ \textcolor{preprocessor}{\#define\ SET\_RESOLUTION\ 0xE8}}
+\DoxyCodeLine{00108\ \textcolor{preprocessor}{\#define\ SET\_SCALING\_2\_1\ 0xE7}}
+\DoxyCodeLine{00109\ \textcolor{preprocessor}{\#define\ SET\_SCALING\_1\_1\ 0xE6}}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \textcolor{preprocessor}{\#define\ LEFT\_BUTTON\ BIT(0)}}
+\DoxyCodeLine{00112\ \textcolor{preprocessor}{\#define\ RIGHT\_BUTTON\ BIT(1)}}
+\DoxyCodeLine{00113\ \textcolor{preprocessor}{\#define\ MIDDLE\_BUTTON\ BIT(2)}}
+\DoxyCodeLine{00114\ \textcolor{preprocessor}{\#define\ MSB\_X\_DELTA\ BIT(4)}}
+\DoxyCodeLine{00115\ \textcolor{preprocessor}{\#define\ MSB\_Y\_DELTA\ BIT(5)}}
+\DoxyCodeLine{00116\ \textcolor{preprocessor}{\#define\ MOUSE\_X\_OVFL\ BIT(6)}}
+\DoxyCodeLine{00117\ \textcolor{preprocessor}{\#define\ MOUSE\_Y\_OVFL\ BIT(7)}}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ \textcolor{preprocessor}{\#define\ NEGATE\_VALUE\ BIT(8)}}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

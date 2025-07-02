@@ -1,0 +1,21 @@
+<map id="display_menu" name="display_menu">
+<area shape="rect" id="Node000001" title="Displays the given menu on the screen." alt="" coords="5,56,107,83"/>
+<area shape="rect" id="Node000002" href="$menu_8c.html#a13964e8548d49e22bdbffe9ca944df5d" title="Draws the options of the menu on the screen." alt="" coords="155,56,252,83"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="107,67,139,67,139,72,107,72"/>
+<area shape="rect" id="Node000007" href="$group__sprite.html#ga6c75fbf31230126d2f19b29deaf24b2f" title="Draws a sprite." alt="" coords="160,107,247,133"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="98,81,149,99,147,104,96,86"/>
+<area shape="rect" id="Node000009" href="$menu_8c.html#a4de6ad9f5baefc1b99a1dd4ed7116bc1" title="Draws the title of the menu on the screen." alt="" coords="165,5,242,32"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="96,53,150,34,151,39,98,58"/>
+<area shape="rect" id="Node000003" href="$menu_8c.html#a44893e3b0e4dd2746abd770f5dd56f9a" title="Draws a string on the screen." alt="" coords="314,5,401,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="246,53,299,35,301,40,247,58"/>
+<area shape="rect" id="Node000006" href="$state_8c.html#ac45d046321314f1a5d9deee403f7b5db" title="Retrieves the current game state." alt="" coords="300,56,414,83"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="252,67,285,67,285,72,252,72"/>
+<area shape="rect" id="Node000004" href="$menu_8c.html#a296070ce636082f7e52b6e39e451ed56" title="Draws a single character on the screen." alt="" coords="462,31,572,57"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="402,23,448,30,447,36,401,28"/>
+<area shape="rect" id="Node000005" href="$video__gr_8c.html#ae73cfe62147429fce468e5b1ed96e30a" title="Gets the drawing buffer." alt="" coords="620,81,748,108"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="564,55,624,74,622,79,563,61"/>
+<area shape="poly" id="edge7_Node000007_Node000005" title=" " alt="" coords="247,115,604,96,604,101,248,120"/>
+<area shape="rect" id="Node000008" href="$video__gr_8c.html#ac19350f0662b5c8fbb1a41e051411014" title="Gets the horizontal resolution." alt="" coords="318,157,396,184"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="247,131,304,150,302,155,246,137"/>
+<area shape="poly" id="edge10_Node000009_Node000003" title=" " alt="" coords="242,16,298,16,298,21,242,21"/>
+</map>

@@ -1,0 +1,23 @@
+<map id="move_collision" name="move_collision">
+<area shape="rect" id="Node000001" title="Checks for collision when moving a sprite." alt="" coords="1029,31,1135,57"/>
+<area shape="rect" id="Node000002" href="$game__logic_8c.html#a80d587e65b8e8c5db2d9d60755bc1eb8" title="Handles keyboard input for game controls." alt="" coords="823,5,981,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1014,37,982,33,982,27,1014,32"/>
+<area shape="rect" id="Node000005" href="$game__logic_8c.html#a5832452cf7e4857d93142b33d9c7edb0" title="Moves a sprite to the specified coordinates while handling collision." alt="" coords="848,56,956,83"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="1015,56,957,64,956,59,1014,51"/>
+<area shape="rect" id="Node000003" href="$dispatcher_8c.html#a742b7f931bee7d36bc1c9a585bd28b79" title="Handles keyboard input based on the current state." alt="" coords="483,5,611,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="808,21,611,21,611,16,808,16"/>
+<area shape="rect" id="Node000004" href="$proj_8c.html#af244d65e69677cf312af1950452ec256" title="Main game loop for the project." alt="" coords="5,31,114,57"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="468,25,114,44,114,39,467,20"/>
+<area shape="rect" id="Node000006" href="$game__view_8c.html#a30092734ca23c99532be7aaff169ae2f" title="Draws the crosshair sprite on the screen." alt="" coords="663,56,771,83"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="832,72,771,72,771,67,832,67"/>
+<area shape="rect" id="Node000010" href="$game__model_8c.html#a2cd3e7ca1c080225665d435871d1d5a4" title="Updates the enemies." alt="" coords="659,107,775,133"/>
+<area shape="poly" id="edge10_Node000005_Node000010" title=" " alt="" coords="837,90,769,109,768,103,835,85"/>
+<area shape="rect" id="Node000007" href="$game__view_8c.html#a277204c5a79891fb90505e3f04e5e842" title="Draws all game elements on the screen." alt="" coords="493,56,601,83"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="647,72,602,72,602,67,647,67"/>
+<area shape="rect" id="Node000008" href="$game__view_8c.html#a3cef68220fcc611902108d6f0159e50f" title="Draws the game interface." alt="" coords="348,56,435,83"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="477,72,436,72,436,67,477,67"/>
+<area shape="rect" id="Node000009" href="$dispatcher_8c.html#a8b98fc3f43a39b953cd60f2ce95d296f" title="Handles the game state transitions and actions." alt="" coords="162,56,300,83"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="332,72,301,72,301,67,332,67"/>
+<area shape="poly" id="edge9_Node000009_Node000004" title=" " alt="" coords="146,60,114,55,115,49,147,54"/>
+<area shape="poly" id="edge11_Node000010_Node000008" title=" " alt="" coords="643,118,566,110,483,97,435,85,436,80,484,92,566,105,644,113"/>
+</map>

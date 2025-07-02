@@ -1,0 +1,25 @@
+<map id="get_crosshair" name="get_crosshair">
+<area shape="rect" id="Node000001" title="Retrieves the crosshair sprite." alt="" coords="1113,81,1213,108"/>
+<area shape="rect" id="Node000002" href="$game__logic_8c.html#a1c416c2df9c85e14bd2f21e7709b7ca4" title="Calculates the direction of the tank based on the position of the crosshair." alt="" coords="904,56,1065,83"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1097,88,1066,84,1066,78,1098,83"/>
+<area shape="rect" id="Node000010" href="$game__logic_8c.html#aa3912aa6df5e81d539cf9f0709cb765f" title="Fires a shot from the tank towards the crosshair." alt="" coords="958,107,1011,133"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="1098,107,1012,119,1012,114,1097,101"/>
+<area shape="rect" id="Node000003" href="$game__view_8c.html#a30092734ca23c99532be7aaff169ae2f" title="Draws the crosshair sprite on the screen." alt="" coords="723,5,831,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="911,54,831,34,832,29,913,49"/>
+<area shape="rect" id="Node000008" href="$game__logic_8c.html#a80d587e65b8e8c5db2d9d60755bc1eb8" title="Handles keyboard input for game controls." alt="" coords="698,56,856,83"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="888,72,857,72,857,67,888,67"/>
+<area shape="rect" id="Node000004" href="$game__view_8c.html#a277204c5a79891fb90505e3f04e5e842" title="Draws all game elements on the screen." alt="" coords="541,5,650,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="707,21,650,21,650,16,707,16"/>
+<area shape="rect" id="Node000005" href="$game__view_8c.html#a3cef68220fcc611902108d6f0159e50f" title="Draws the game interface." alt="" coords="377,5,464,32"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="526,21,465,21,465,16,526,16"/>
+<area shape="rect" id="Node000006" href="$dispatcher_8c.html#a8b98fc3f43a39b953cd60f2ce95d296f" title="Handles the game state transitions and actions." alt="" coords="162,5,300,32"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="362,21,301,21,301,16,362,16"/>
+<area shape="rect" id="Node000007" href="$proj_8c.html#af244d65e69677cf312af1950452ec256" title="Main game loop for the project." alt="" coords="5,56,114,83"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="169,40,108,58,106,53,168,34"/>
+<area shape="rect" id="Node000009" href="$dispatcher_8c.html#a742b7f931bee7d36bc1c9a585bd28b79" title="Handles keyboard input based on the current state." alt="" coords="167,56,295,83"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="682,72,295,72,295,67,682,67"/>
+<area shape="poly" id="edge9_Node000009_Node000007" title=" " alt="" coords="152,72,114,72,114,67,152,67"/>
+<area shape="rect" id="Node000011" href="$dispatcher_8c.html#a990a5393ee8ada0a10fe8e795adf100c" title="Handles mouse input based on the current state." alt="" coords="348,107,493,133"/>
+<area shape="poly" id="edge11_Node000010_Node000011" title=" " alt="" coords="942,123,494,123,494,117,942,117"/>
+<area shape="poly" id="edge12_Node000011_Node000007" title=" " alt="" coords="333,117,249,110,161,97,110,86,111,81,162,92,250,104,333,112"/>
+</map>

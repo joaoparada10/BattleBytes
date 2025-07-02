@@ -1,0 +1,136 @@
+\doxysection{Anim\+Sprite}
+\hypertarget{group__animsprite}{}\label{group__animsprite}\index{AnimSprite@{AnimSprite}}
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_anim_sprite}{Anim\+Sprite}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_anim_sprite}{Anim\+Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group__animsprite_ga6cbf1f77a54307e24cc5195890c4ac86}{create\+\_\+asprite}} (int aspeed, uint8\+\_\+t no\+\_\+pic, const char \texorpdfstring{$\ast$}{*}pic1\mbox{[}$\,$\mbox{]},...)
+\begin{DoxyCompactList}\small\item\em Creates an animated sprite. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__animsprite_gad144acec9721d3b36b4e8131b9c50ae8}{animate\+\_\+asprite}} (\mbox{\hyperlink{struct_anim_sprite}{Anim\+Sprite}} \texorpdfstring{$\ast$}{*}asp, bool destroy)
+\begin{DoxyCompactList}\small\item\em Animates an animated sprite. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__animsprite_ga05d186cb4268b897f3d8d7d890ed6cc4}{destroy\+\_\+asprite}} (\mbox{\hyperlink{struct_anim_sprite}{Anim\+Sprite}} \texorpdfstring{$\ast$}{*}asp)
+\begin{DoxyCompactList}\small\item\em Destroys an animated sprite. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Joao Cardoso (\href{mailto:jcard@fe.up.pt}{\texttt{ jcard@fe.\+up.\+pt}}) ???? Added by \href{mailto:pfs@fe.up.pt}{\texttt{ pfs@fe.\+up.\+pt}}   
+\end{DoxyAuthor}
+Animated \doxylink{struct_sprite}{Sprite} related functions 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group__animsprite_gad144acec9721d3b36b4e8131b9c50ae8}\index{AnimSprite@{AnimSprite}!animate\_asprite@{animate\_asprite}}
+\index{animate\_asprite@{animate\_asprite}!AnimSprite@{AnimSprite}}
+\doxysubsubsection{\texorpdfstring{animate\_asprite()}{animate\_asprite()}}
+{\footnotesize\ttfamily \label{group__animsprite_gad144acec9721d3b36b4e8131b9c50ae8} 
+int animate\+\_\+asprite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_anim_sprite}{Anim\+Sprite}} \texorpdfstring{$\ast$}{*}}]{asp}{, }\item[{bool}]{destroy}{}\end{DoxyParamCaption})}
+
+
+
+Animates an animated sprite. 
+
+Animate an Animated \doxylink{struct_sprite}{Sprite}
+
+This function updates the animated sprite\textquotesingle{}s current frame according to its animation speed. If the animation speed allows for it, the sprite\textquotesingle{}s pixmap is updated to the next frame.
+
+
+\begin{DoxyParams}{Parameters}
+{\em asp} & The animated sprite to animate \\
+\hline
+{\em destroy} & Flag indicating whether the sprite should be destroyed after reaching the last frame \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if the last frame is reached and destroy flag is set, 0 otherwise 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__animsprite_gad144acec9721d3b36b4e8131b9c50ae8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{group__animsprite_ga6cbf1f77a54307e24cc5195890c4ac86}\index{AnimSprite@{AnimSprite}!create\_asprite@{create\_asprite}}
+\index{create\_asprite@{create\_asprite}!AnimSprite@{AnimSprite}}
+\doxysubsubsection{\texorpdfstring{create\_asprite()}{create\_asprite()}}
+{\footnotesize\ttfamily \label{group__animsprite_ga6cbf1f77a54307e24cc5195890c4ac86} 
+\mbox{\hyperlink{struct_anim_sprite}{Anim\+Sprite}} \texorpdfstring{$\ast$}{*} create\+\_\+asprite (\begin{DoxyParamCaption}\item[{int}]{aspeed}{, }\item[{uint8\+\_\+t}]{no\+\_\+pic}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{pic1}{\mbox{[}$\,$\mbox{]}, }\item[{}]{...}{}\end{DoxyParamCaption})}
+
+
+
+Creates an animated sprite. 
+
+Create an Animated \doxylink{struct_sprite}{Sprite} from multiple pixmaps At least one pixmap must be specified.
+
+This function creates an animated sprite with the provided parameters. It initializes the sprite with the first pixmap and allocates memory for an array of pointers to store subsequent pixmaps.
+
+
+\begin{DoxyParams}{Parameters}
+{\em aspeed} & The animation speed \\
+\hline
+{\em no\+\_\+pic} & The number of pixmap frames \\
+\hline
+{\em pic1} & The first pixmap frame \\
+\hline
+{\em ...} & Additional pixmap frames (variadic arguments) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the created animated sprite, or NULL if creation fails 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=271pt]{group__animsprite_ga6cbf1f77a54307e24cc5195890c4ac86_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__animsprite_ga6cbf1f77a54307e24cc5195890c4ac86_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{group__animsprite_ga05d186cb4268b897f3d8d7d890ed6cc4}\index{AnimSprite@{AnimSprite}!destroy\_asprite@{destroy\_asprite}}
+\index{destroy\_asprite@{destroy\_asprite}!AnimSprite@{AnimSprite}}
+\doxysubsubsection{\texorpdfstring{destroy\_asprite()}{destroy\_asprite()}}
+{\footnotesize\ttfamily \label{group__animsprite_ga05d186cb4268b897f3d8d7d890ed6cc4} 
+void destroy\+\_\+asprite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_anim_sprite}{Anim\+Sprite}} \texorpdfstring{$\ast$}{*}}]{asp}{}\end{DoxyParamCaption})}
+
+
+
+Destroys an animated sprite. 
+
+Destroy an Animated \doxylink{struct_sprite}{Sprite} from video memoty and release all resources allocated.
+
+This function frees the memory allocated for an animated sprite, including its pixmaps and the sprite structure itself.
+
+
+\begin{DoxyParams}{Parameters}
+{\em asp} & The animated sprite to destroy \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{group__animsprite_ga05d186cb4268b897f3d8d7d890ed6cc4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__animsprite_ga05d186cb4268b897f3d8d7d890ed6cc4_icgraph}
+\end{center}
+\end{figure}

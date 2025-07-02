@@ -1,0 +1,31 @@
+<map id="draw_sprite" name="draw_sprite">
+<area shape="rect" id="Node000001" title="Draws a sprite." alt="" coords="805,157,892,184"/>
+<area shape="rect" id="Node000002" href="$group__sprite.html#ga89f1990315453247c90b2c0ea575ddc9" title="Animates a sprite." alt="" coords="650,5,756,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="829,145,797,100,755,53,730,35,733,30,759,49,802,96,834,142"/>
+<area shape="rect" id="Node000003" href="$menu_8c.html#aa2853ee7634f7c340bfca1afc4c95976" title="Displays the given menu on the screen." alt="" coords="491,56,593,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="824,148,794,120,756,97,715,83,672,75,593,70,593,65,672,70,716,78,758,92,797,116,828,144"/>
+<area shape="rect" id="Node000006" href="$game__view_8c.html#a30092734ca23c99532be7aaff169ae2f" title="Draws the crosshair sprite on the screen." alt="" coords="649,259,757,285"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="824,196,794,223,758,249,737,261,735,256,756,244,791,219,821,192"/>
+<area shape="rect" id="Node000009" href="$game__view_8c.html#ac5279c7b71c8b9f1b5c69316b3996715" title="Draws the cursor sprite on the screen." alt="" coords="657,107,749,133"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="793,154,743,136,744,131,795,149"/>
+<area shape="rect" id="Node000010" href="$game__view_8c.html#afe86e6b2a82e0a2b63465da9da7c40d2" title="Draws enemy sprites on the screen." alt="" coords="651,309,755,336"/>
+<area shape="poly" id="edge12_Node000001_Node000010" title=" " alt="" coords="836,199,804,249,783,276,759,299,741,311,738,307,755,295,779,272,800,246,831,197"/>
+<area shape="rect" id="Node000011" href="$game__view_8c.html#a52f3af8c078714e854b2dd1a0d562dfa" title="Draws explosion animations on the screen." alt="" coords="483,157,601,184"/>
+<area shape="poly" id="edge14_Node000001_Node000011" title=" " alt="" coords="789,173,601,173,601,168,789,168"/>
+<area shape="rect" id="Node000012" href="$game__view_8c.html#a684faba00d88eaf2cdc9fcb14ee79d4b" title="Draws the tank sprite on the screen." alt="" coords="663,208,743,235"/>
+<area shape="poly" id="edge16_Node000001_Node000012" title=" " alt="" coords="795,192,744,210,743,205,793,187"/>
+<area shape="rect" id="Node000004" href="$dispatcher_8c.html#a8b98fc3f43a39b953cd60f2ce95d296f" title="Handles the game state transitions and actions." alt="" coords="162,107,300,133"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="477,83,301,111,300,106,476,77"/>
+<area shape="rect" id="Node000005" href="$proj_8c.html#af244d65e69677cf312af1950452ec256" title="Main game loop for the project." alt="" coords="5,107,114,133"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="146,123,114,123,114,117,146,117"/>
+<area shape="rect" id="Node000007" href="$game__view_8c.html#a277204c5a79891fb90505e3f04e5e842" title="Draws all game elements on the screen." alt="" coords="488,208,596,235"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="643,256,586,238,588,233,644,251"/>
+<area shape="rect" id="Node000008" href="$game__view_8c.html#a3cef68220fcc611902108d6f0159e50f" title="Draws the game interface." alt="" coords="348,157,435,184"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="485,205,433,187,434,182,487,200"/>
+<area shape="poly" id="edge8_Node000008_Node000004" title=" " alt="" coords="333,155,275,136,276,131,334,150"/>
+<area shape="poly" id="edge11_Node000009_Node000004" title=" " alt="" coords="642,123,300,123,300,117,642,117"/>
+<area shape="poly" id="edge10_Node000009_Node000007" title=" " alt="" coords="676,146,641,172,602,198,579,210,577,205,599,194,638,168,672,141"/>
+<area shape="poly" id="edge13_Node000010_Node000007" title=" " alt="" coords="656,304,647,300,598,267,559,237,562,233,602,263,650,295,658,300"/>
+<area shape="poly" id="edge15_Node000011_Node000008" title=" " alt="" coords="467,173,436,173,436,168,467,168"/>
+<area shape="poly" id="edge17_Node000012_Node000007" title=" " alt="" coords="647,224,596,224,596,219,647,219"/>
+</map>

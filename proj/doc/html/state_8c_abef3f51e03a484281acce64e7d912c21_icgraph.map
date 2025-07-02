@@ -1,0 +1,25 @@
+<map id="set_state" name="set_state">
+<area shape="rect" id="Node000001" title="Sets the state of the game to a new state." alt="" coords="737,107,812,133"/>
+<area shape="rect" id="Node000002" href="$dispatcher_8c.html#a8b98fc3f43a39b953cd60f2ce95d296f" title="Handles the game state transitions and actions." alt="" coords="165,157,304,184"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="722,140,689,148,585,162,479,170,304,174,304,169,479,165,584,157,688,143,721,135"/>
+<area shape="rect" id="Node000004" href="$game__logic_8c.html#a80d587e65b8e8c5db2d9d60755bc1eb8" title="Handles keyboard input for game controls." alt="" coords="530,56,689,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="721,107,655,86,656,81,723,102"/>
+<area shape="rect" id="Node000006" href="$menu_8c.html#a68b6754071a65d680989e06e37311a92" title="Handles menu option selection based on mouse click." alt="" coords="543,208,676,235"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="750,146,722,169,690,192,652,210,650,205,687,187,719,165,746,142"/>
+<area shape="rect" id="Node000008" href="$menu_8c.html#abadaad01537e6bcbd90890517952e580" title="Handles menu navigation based on keyboard input." alt="" coords="530,5,689,32"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="749,97,721,71,687,46,663,35,665,30,690,42,724,67,753,93"/>
+<area shape="rect" id="Node000009" href="$game__model_8c.html#a2cd3e7ca1c080225665d435871d1d5a4" title="Updates the enemies." alt="" coords="551,107,668,133"/>
+<area shape="poly" id="edge11_Node000001_Node000009" title=" " alt="" coords="721,123,668,123,668,117,721,117"/>
+<area shape="rect" id="Node000003" href="$proj_8c.html#af244d65e69677cf312af1950452ec256" title="Main game loop for the project." alt="" coords="5,157,114,184"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="150,173,114,173,114,168,150,168"/>
+<area shape="rect" id="Node000005" href="$dispatcher_8c.html#a742b7f931bee7d36bc1c9a585bd28b79" title="Handles keyboard input based on the current state." alt="" coords="355,56,482,83"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="515,72,483,72,483,67,515,67"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="354,90,110,159,109,154,353,85"/>
+<area shape="rect" id="Node000007" href="$dispatcher_8c.html#a990a5393ee8ada0a10fe8e795adf100c" title="Handles mouse input based on the current state." alt="" coords="162,208,307,235"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="528,224,307,224,307,219,528,219"/>
+<area shape="poly" id="edge8_Node000007_Node000003" title=" " alt="" coords="170,206,107,187,109,182,172,200"/>
+<area shape="poly" id="edge10_Node000008_Node000005" title=" " alt="" coords="542,39,472,58,471,53,541,34"/>
+<area shape="rect" id="Node000010" href="$game__view_8c.html#a3cef68220fcc611902108d6f0159e50f" title="Draws the game interface." alt="" coords="375,107,462,133"/>
+<area shape="poly" id="edge12_Node000009_Node000010" title=" " alt="" coords="535,123,463,123,463,117,535,117"/>
+<area shape="poly" id="edge13_Node000010_Node000002" title=" " alt="" coords="361,139,286,159,285,154,359,133"/>
+</map>

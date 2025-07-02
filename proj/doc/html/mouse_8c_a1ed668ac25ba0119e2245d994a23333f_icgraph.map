@@ -1,0 +1,10 @@
+<map id="m_read_obf_byte" name="m_read_obf_byte">
+<area shape="rect" id="Node000001" title="Reads a byte from the KBC output buffer for the mouse." alt="" coords="368,31,488,57"/>
+<area shape="rect" id="Node000002" href="$mouse_8c.html#a4608e046c09d4995c29f7bb64b0f4338" title="Issues a command to the mouse." alt="" coords="162,5,320,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="352,36,320,32,321,27,353,31"/>
+<area shape="rect" id="Node000004" href="$mouse_8c.html#a834b6d7efe311484d6da234db333cb97" title="Mouse interrupt handler." alt="" coords="202,56,280,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="353,57,280,67,280,61,352,52"/>
+<area shape="rect" id="Node000003" href="$proj_8c.html#af244d65e69677cf312af1950452ec256" title="Main game loop for the project." alt="" coords="5,31,114,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="146,35,114,39,114,34,146,29"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="186,64,114,54,115,49,187,59"/>
+</map>

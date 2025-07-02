@@ -1,0 +1,9 @@
+<map id="load_pause_menu" name="load_pause_menu">
+<area shape="rect" id="Node000001" title="Loads the pause menu." alt="" coords="516,5,643,32"/>
+<area shape="rect" id="Node000002" href="$menu_8c.html#a9f199223d5e75ac2e57c751261305741" title="Gets the pause menu." alt="" coords="348,5,468,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="501,21,469,21,469,16,501,16"/>
+<area shape="rect" id="Node000003" href="$dispatcher_8c.html#a8b98fc3f43a39b953cd60f2ce95d296f" title="Handles the game state transitions and actions." alt="" coords="162,5,300,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="332,21,300,21,300,16,332,16"/>
+<area shape="rect" id="Node000004" href="$proj_8c.html#af244d65e69677cf312af1950452ec256" title="Main game loop for the project." alt="" coords="5,5,114,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="146,21,114,21,114,16,146,16"/>
+</map>

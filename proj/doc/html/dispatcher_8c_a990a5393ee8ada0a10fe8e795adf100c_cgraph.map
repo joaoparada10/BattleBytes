@@ -1,0 +1,41 @@
+<map id="mouse_state_handler" name="mouse_state_handler">
+<area shape="rect" id="Node000001" title="Handles mouse input based on the current state." alt="" coords="5,107,151,133"/>
+<area shape="rect" id="Node000002" href="$state_8c.html#a38d3fc207a5e58298bdd4a606c0b1a01" title="Retrieves the current state of the game." alt="" coords="229,5,304,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="97,104,142,74,197,42,213,34,215,39,200,46,145,78,100,108"/>
+<area shape="rect" id="Node000003" href="$menu_8c.html#a68b6754071a65d680989e06e37311a92" title="Handles menu option selection based on mouse click." alt="" coords="200,157,333,184"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="131,131,200,150,199,155,130,137"/>
+<area shape="rect" id="Node000006" href="$menu_8c.html#ae67f0d98aa7346ddcaf956343870b091" title="Handles menu option hover based on mouse movement." alt="" coords="199,56,334,83"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="130,103,199,85,200,90,131,109"/>
+<area shape="rect" id="Node000007" href="$game__logic_8c.html#a8fab7627be7d63ca1be0e908488a1253" title="Moves the cursor on the screen." alt="" coords="219,107,314,133"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="151,117,204,117,204,123,151,123"/>
+<area shape="rect" id="Node000008" href="$game__logic_8c.html#aa3912aa6df5e81d539cf9f0709cb765f" title="Fires a shot from the tank towards the crosshair." alt="" coords="240,284,293,311"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="96,132,241,271,238,275,92,136"/>
+<area shape="rect" id="Node000004" href="$game__view_8c.html#ab5073970a4a5b9e78cceb9d17a558461" title="Retrieves the cursor sprite." alt="" coords="401,107,483,133"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="315,154,385,134,386,139,316,159"/>
+<area shape="rect" id="Node000005" href="$state_8c.html#abef3f51e03a484281acce64e7d912c21" title="Sets the state of the game to a new state." alt="" coords="404,157,479,184"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="333,168,388,168,388,173,333,173"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="316,81,386,101,385,106,315,86"/>
+<area shape="poly" id="edge8_Node000007_Node000004" title=" " alt="" coords="314,117,385,117,385,123,314,123"/>
+<area shape="rect" id="Node000009" href="$game__view_8c.html#a1c3dcacb14608ae2dfd1b9146ced484e" title="Creates an explosion effect at the specified coordinates." alt="" coords="382,208,501,235"/>
+<area shape="poly" id="edge10_Node000008_Node000009" title=" " alt="" coords="292,283,381,244,393,239,395,244,383,249,295,288"/>
+<area shape="rect" id="Node000013" href="$game__model_8c.html#aa21ce6881832fb20fedbc92c4ff241df" title="Destroys an enemy." alt="" coords="387,259,497,285"/>
+<area shape="poly" id="edge14_Node000008_Node000013" title=" " alt="" coords="293,291,371,280,372,285,294,296"/>
+<area shape="rect" id="Node000016" href="$game__view_8c.html#a977046c2782eb68b21fb86d0962e4140" title="Retrieves the crosshair sprite." alt="" coords="392,309,491,336"/>
+<area shape="poly" id="edge19_Node000008_Node000016" title=" " alt="" coords="294,298,377,311,376,316,293,304"/>
+<area shape="rect" id="Node000017" href="$game__model_8c.html#ad04dee4317dc9f97066b219ebc13558e" title="Gets the list of enemies." alt="" coords="387,360,496,387"/>
+<area shape="poly" id="edge20_Node000008_Node000017" title=" " alt="" coords="295,306,383,346,395,351,393,356,381,350,292,311"/>
+<area shape="rect" id="Node000018" href="$state_8c.html#a2cf5edc632cfcc66bd78b43dc2d2fc1b" title="Increases the score based on the current difficulty level." alt="" coords="387,411,496,437"/>
+<area shape="poly" id="edge21_Node000008_Node000018" title=" " alt="" coords="282,309,325,351,383,396,392,401,389,406,381,401,322,355,278,313"/>
+<area shape="rect" id="Node000010" href="$group__animsprite.html#ga6cbf1f77a54307e24cc5195890c4ac86" title="Creates an animated sprite." alt="" coords="576,208,679,235"/>
+<area shape="poly" id="edge11_Node000009_Node000010" title=" " alt="" coords="502,219,560,219,560,224,502,224"/>
+<area shape="rect" id="Node000011" href="$group__sprite.html#gac17a91fd309ebffd07be3daa9c194d86" title="Creates a sprite." alt="" coords="761,157,857,184"/>
+<area shape="poly" id="edge12_Node000010_Node000011" title=" " alt="" coords="677,205,745,186,747,191,679,210"/>
+<area shape="rect" id="Node000012" href="$group__sprite.html#ga0b9702271420a69a1603d0a3768fda67" title="Destroys a sprite." alt="" coords="912,259,1015,285"/>
+<area shape="poly" id="edge13_Node000010_Node000012" title=" " alt="" coords="680,225,864,251,897,256,896,262,864,256,679,230"/>
+<area shape="rect" id="Node000014" href="$game__model_8c.html#a9c91af6c39906b42d4bd727d8fcdc22b" title="Destroys a game element." alt="" coords="549,259,706,285"/>
+<area shape="poly" id="edge15_Node000013_Node000014" title=" " alt="" coords="497,269,534,269,534,275,497,275"/>
+<area shape="poly" id="edge18_Node000014_Node000012" title=" " alt="" coords="706,269,897,269,897,275,706,275"/>
+<area shape="rect" id="Node000015" href="$group__animsprite.html#ga05d186cb4268b897f3d8d7d890ed6cc4" title="Destroys an animated sprite." alt="" coords="754,309,864,336"/>
+<area shape="poly" id="edge16_Node000014_Node000015" title=" " alt="" coords="679,283,745,302,743,307,677,289"/>
+<area shape="poly" id="edge17_Node000015_Node000012" title=" " alt="" coords="851,306,905,288,907,293,853,311"/>
+</map>

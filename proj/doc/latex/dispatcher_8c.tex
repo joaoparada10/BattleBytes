@@ -1,0 +1,117 @@
+\doxysection{dispatcher/dispatcher.c File Reference}
+\hypertarget{dispatcher_8c}{}\label{dispatcher_8c}\index{dispatcher/dispatcher.c@{dispatcher/dispatcher.c}}
+
+
+Dispatcher for handling game states and inputs.  
+
+
+{\ttfamily \#include "{}dispatcher.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{dispatcher_8c_a8b98fc3f43a39b953cd60f2ce95d296f}{game\+\_\+state\+\_\+handler}} ()
+\begin{DoxyCompactList}\small\item\em Handles the game state transitions and actions. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{dispatcher_8c_a742b7f931bee7d36bc1c9a585bd28b79}{kbd\+\_\+state\+\_\+handler}} (bool make, uint8\+\_\+t size, uint8\+\_\+t \texorpdfstring{$\ast$}{*}bytes)
+\begin{DoxyCompactList}\small\item\em Handles keyboard input based on the current state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{dispatcher_8c_a990a5393ee8ada0a10fe8e795adf100c}{mouse\+\_\+state\+\_\+handler}} (struct packet \texorpdfstring{$\ast$}{*}pp)
+\begin{DoxyCompactList}\small\item\em Handles mouse input based on the current state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Dispatcher for handling game states and inputs. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{dispatcher_8c_a8b98fc3f43a39b953cd60f2ce95d296f}\index{dispatcher.c@{dispatcher.c}!game\_state\_handler@{game\_state\_handler}}
+\index{game\_state\_handler@{game\_state\_handler}!dispatcher.c@{dispatcher.c}}
+\doxysubsubsection{\texorpdfstring{game\_state\_handler()}{game\_state\_handler()}}
+{\footnotesize\ttfamily \label{dispatcher_8c_a8b98fc3f43a39b953cd60f2ce95d296f} 
+void game\+\_\+state\+\_\+handler (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Handles the game state transitions and actions. 
+
+This function manages the various states of the game, performing actions such as loading menus, updating game elements, and rendering the screen based on the current state. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{dispatcher_8c_a8b98fc3f43a39b953cd60f2ce95d296f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{dispatcher_8c_a8b98fc3f43a39b953cd60f2ce95d296f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{dispatcher_8c_a742b7f931bee7d36bc1c9a585bd28b79}\index{dispatcher.c@{dispatcher.c}!kbd\_state\_handler@{kbd\_state\_handler}}
+\index{kbd\_state\_handler@{kbd\_state\_handler}!dispatcher.c@{dispatcher.c}}
+\doxysubsubsection{\texorpdfstring{kbd\_state\_handler()}{kbd\_state\_handler()}}
+{\footnotesize\ttfamily \label{dispatcher_8c_a742b7f931bee7d36bc1c9a585bd28b79} 
+void kbd\+\_\+state\+\_\+handler (\begin{DoxyParamCaption}\item[{bool}]{make}{, }\item[{uint8\+\_\+t}]{size}{, }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{bytes}{}\end{DoxyParamCaption})}
+
+
+
+Handles keyboard input based on the current state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em make} & True if the key was pressed, false if it was released. \\
+\hline
+{\em size} & Size of the bytes array. \\
+\hline
+{\em bytes} & Array containing the scancode bytes. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dispatcher_8c_a742b7f931bee7d36bc1c9a585bd28b79_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=293pt]{dispatcher_8c_a742b7f931bee7d36bc1c9a585bd28b79_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{dispatcher_8c_a990a5393ee8ada0a10fe8e795adf100c}\index{dispatcher.c@{dispatcher.c}!mouse\_state\_handler@{mouse\_state\_handler}}
+\index{mouse\_state\_handler@{mouse\_state\_handler}!dispatcher.c@{dispatcher.c}}
+\doxysubsubsection{\texorpdfstring{mouse\_state\_handler()}{mouse\_state\_handler()}}
+{\footnotesize\ttfamily \label{dispatcher_8c_a990a5393ee8ada0a10fe8e795adf100c} 
+void mouse\+\_\+state\+\_\+handler (\begin{DoxyParamCaption}\item[{struct packet \texorpdfstring{$\ast$}{*}}]{pp}{}\end{DoxyParamCaption})}
+
+
+
+Handles mouse input based on the current state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pp} & Packet structure containing mouse event data. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dispatcher_8c_a990a5393ee8ada0a10fe8e795adf100c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{dispatcher_8c_a990a5393ee8ada0a10fe8e795adf100c_icgraph}
+\end{center}
+\end{figure}

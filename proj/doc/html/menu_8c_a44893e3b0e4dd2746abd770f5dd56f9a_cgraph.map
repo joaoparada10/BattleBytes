@@ -1,0 +1,7 @@
+<map id="draw_string" name="draw_string">
+<area shape="rect" id="Node000001" title="Draws a string on the screen." alt="" coords="5,5,93,32"/>
+<area shape="rect" id="Node000002" href="$menu_8c.html#a296070ce636082f7e52b6e39e451ed56" title="Draws a single character on the screen." alt="" coords="141,5,250,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="93,16,125,16,125,21,93,21"/>
+<area shape="rect" id="Node000003" href="$video__gr_8c.html#ae73cfe62147429fce468e5b1ed96e30a" title="Gets the drawing buffer." alt="" coords="298,5,426,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="250,16,283,16,283,21,250,21"/>
+</map>

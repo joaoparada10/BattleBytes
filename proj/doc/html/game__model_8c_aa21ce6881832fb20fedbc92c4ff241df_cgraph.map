@@ -1,0 +1,10 @@
+<map id="destroy_enemy" name="destroy_enemy">
+<area shape="rect" id="Node000001" title="Destroys an enemy." alt="" coords="5,31,116,57"/>
+<area shape="rect" id="Node000002" href="$game__model_8c.html#a9c91af6c39906b42d4bd727d8fcdc22b" title="Destroys a game element." alt="" coords="164,31,320,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="116,41,148,41,148,47,116,47"/>
+<area shape="rect" id="Node000003" href="$group__animsprite.html#ga05d186cb4268b897f3d8d7d890ed6cc4" title="Destroys an animated sprite." alt="" coords="368,5,478,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="320,30,352,26,353,31,321,36"/>
+<area shape="rect" id="Node000004" href="$group__sprite.html#ga0b9702271420a69a1603d0a3768fda67" title="Destroys a sprite." alt="" coords="526,31,630,57"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="321,41,511,41,511,47,321,47"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="479,25,511,30,510,36,478,30"/>
+</map>

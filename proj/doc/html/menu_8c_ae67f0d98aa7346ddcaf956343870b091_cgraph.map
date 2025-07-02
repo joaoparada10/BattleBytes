@@ -1,0 +1,5 @@
+<map id="handle_menu_hover" name="handle_menu_hover">
+<area shape="rect" id="Node000001" title="Handles menu option hover based on mouse movement." alt="" coords="5,5,141,32"/>
+<area shape="rect" id="Node000002" href="$game__view_8c.html#ab5073970a4a5b9e78cceb9d17a558461" title="Retrieves the cursor sprite." alt="" coords="189,5,271,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="141,16,173,16,173,21,141,21"/>
+</map>

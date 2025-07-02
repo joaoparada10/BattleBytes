@@ -1,0 +1,8 @@
+<map id="kbc_read_cmd" name="kbc_read_cmd">
+<area shape="rect" id="Node000001" title="Reads a command byte from the KBC." alt="" coords="5,31,112,57"/>
+<area shape="rect" id="Node000002" href="$keyboard_8c.html#a7fda2db9eff761164ba3b879462431df" title="Issues a command to the KBC." alt="" coords="160,5,272,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="112,33,144,28,144,33,113,38"/>
+<area shape="rect" id="Node000003" href="$utils_8c.html#a2b56f50ba159e9d5115ed1a75eff15d9" title="Reads a byte from a specified port." alt="" coords="320,31,410,57"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="112,41,305,41,305,47,112,47"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="273,26,305,31,304,36,272,31"/>
+</map>

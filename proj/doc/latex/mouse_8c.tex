@@ -1,0 +1,306 @@
+\doxysection{device/mouse.c File Reference}
+\hypertarget{mouse_8c}{}\label{mouse_8c}\index{device/mouse.c@{device/mouse.c}}
+
+
+Mouse interrupt handling and packet processing.  
+
+
+{\ttfamily \#include "{}mouse.\+h"{}}\newline
+{\ttfamily \#include "{}keyboard.\+h"{}}\newline
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{mouse_8c_a6d22e8d5c31599efd664249783ce4ff8}{m\+\_\+kbc\+\_\+subscribe\+\_\+int}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}bit\+\_\+no)
+\begin{DoxyCompactList}\small\item\em Subscribes mouse interrupts. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{mouse_8c_a3c8f56ab564de37052ba3c728e99946f}{m\+\_\+kbc\+\_\+unsubscribe\+\_\+int}} ()
+\begin{DoxyCompactList}\small\item\em Unsubscribes mouse interrupts. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{mouse_8c_a3277838f74bbd6e5c84f9b9c40b734d1}{is\+\_\+valid\+\_\+m\+\_\+st}} (uint8\+\_\+t \mbox{\hyperlink{mouse_8c_a72ccb2485f526a99d8b0ac9bff9d88b3}{mouse\+\_\+status\+\_\+byte}})
+\begin{DoxyCompactList}\small\item\em Checks if the mouse status byte is valid. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{mouse_8c_a1ed668ac25ba0119e2245d994a23333f}{m\+\_\+read\+\_\+obf\+\_\+byte}} ()
+\begin{DoxyCompactList}\small\item\em Reads a byte from the KBC output buffer for the mouse. \end{DoxyCompactList}\item 
+\Hypertarget{mouse_8c_a834b6d7efe311484d6da234db333cb97}\label{mouse_8c_a834b6d7efe311484d6da234db333cb97} 
+void {\bfseries mouse\+\_\+ih} ()
+\begin{DoxyCompactList}\small\item\em Mouse interrupt handler. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{mouse_8c_a3350519fb55ce3ed23b782c5ceea9297}{mouse\+\_\+packet\+\_\+handler}} (struct packet \texorpdfstring{$\ast$}{*}pp)
+\begin{DoxyCompactList}\small\item\em Handles mouse packets. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{mouse_8c_a4608e046c09d4995c29f7bb64b0f4338}{kbc\+\_\+issue\+\_\+mouse\+\_\+cmd}} (uint8\+\_\+t cmd)
+\begin{DoxyCompactList}\small\item\em Issues a command to the mouse. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{mouse_8c_a0a7123b336afa8b09046173ebc3ffd23}{mouse\+\_\+state\+\_\+machine}} (struct packet \texorpdfstring{$\ast$}{*}pp, Mouse\+State \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{mouse_8c_ae0504870939140db7e3752454fd63be2}{current\+State}}, uint8\+\_\+t x\+\_\+len, uint8\+\_\+t tolerance)
+\begin{DoxyCompactList}\small\item\em Mouse state machine to handle gestures. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{mouse_8c_ae54061f53107e451921cf8bd7f9d4265}{state\+\_\+change}} (Mouse\+State new\+State)
+\begin{DoxyCompactList}\small\item\em Changes the state of the mouse state machine. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{mouse_8c_a814697dcd2ddaef69ae9f5f3e3742ff1}{state\+\_\+maintain}} (struct packet \texorpdfstring{$\ast$}{*}pp)
+\begin{DoxyCompactList}\small\item\em Maintains the current state of the mouse state machine. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{mouse_8c_a37cad7cad93664f8a1ed1b0258fe958b}\label{mouse_8c_a37cad7cad93664f8a1ed1b0258fe958b} 
+int {\bfseries mouse\+\_\+hook\+\_\+id} = 5
+\begin{DoxyCompactList}\small\item\em Hook ID for mouse interrupts. \end{DoxyCompactList}\item 
+\Hypertarget{mouse_8c_a72ccb2485f526a99d8b0ac9bff9d88b3}\label{mouse_8c_a72ccb2485f526a99d8b0ac9bff9d88b3} 
+uint8\+\_\+t {\bfseries mouse\+\_\+status\+\_\+byte}
+\begin{DoxyCompactList}\small\item\em Status byte from the mouse controller. \end{DoxyCompactList}\item 
+\Hypertarget{mouse_8c_aa609298e312c52ae74a53ac6c8274fd3}\label{mouse_8c_aa609298e312c52ae74a53ac6c8274fd3} 
+uint8\+\_\+t {\bfseries mouse\+\_\+data}
+\begin{DoxyCompactList}\small\item\em Data read from the mouse. \end{DoxyCompactList}\item 
+\Hypertarget{mouse_8c_aeb1d1ca16fcdcb9ed02e352d167196ec}\label{mouse_8c_aeb1d1ca16fcdcb9ed02e352d167196ec} 
+bool {\bfseries discard\+\_\+mouse\+\_\+data}
+\begin{DoxyCompactList}\small\item\em Flag to discard erroneous mouse data. \end{DoxyCompactList}\item 
+\Hypertarget{mouse_8c_adf424476c4755694cb40b3a264235a0d}\label{mouse_8c_adf424476c4755694cb40b3a264235a0d} 
+uint8\+\_\+t {\bfseries mouse\+\_\+count} = 0
+\begin{DoxyCompactList}\small\item\em Counter for mouse packets. \end{DoxyCompactList}\item 
+\Hypertarget{mouse_8c_afa8d08727a88ef438e9b086d7cd7497a}\label{mouse_8c_afa8d08727a88ef438e9b086d7cd7497a} 
+int {\bfseries x\+\_\+sum} = 0
+\begin{DoxyCompactList}\small\item\em Sum of X movements. \end{DoxyCompactList}\item 
+\Hypertarget{mouse_8c_af62425ed841cce1f0626854722ea44c0}\label{mouse_8c_af62425ed841cce1f0626854722ea44c0} 
+int {\bfseries y\+\_\+sum} = 0
+\begin{DoxyCompactList}\small\item\em Sum of Y movements. \end{DoxyCompactList}\item 
+\Hypertarget{mouse_8c_ae0504870939140db7e3752454fd63be2}\label{mouse_8c_ae0504870939140db7e3752454fd63be2} 
+Mouse\+State {\bfseries current\+State} = START
+\begin{DoxyCompactList}\small\item\em Current state of the mouse state machine. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Mouse interrupt handling and packet processing. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{mouse_8c_a3277838f74bbd6e5c84f9b9c40b734d1}\index{mouse.c@{mouse.c}!is\_valid\_m\_st@{is\_valid\_m\_st}}
+\index{is\_valid\_m\_st@{is\_valid\_m\_st}!mouse.c@{mouse.c}}
+\doxysubsubsection{\texorpdfstring{is\_valid\_m\_st()}{is\_valid\_m\_st()}}
+{\footnotesize\ttfamily \label{mouse_8c_a3277838f74bbd6e5c84f9b9c40b734d1} 
+bool is\+\_\+valid\+\_\+m\+\_\+st (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{mouse\+\_\+status\+\_\+byte}{}\end{DoxyParamCaption})}
+
+
+
+Checks if the mouse status byte is valid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mouse\+\_\+status\+\_\+byte} & Status byte to be checked. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if valid, false otherwise. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse_8c_a3277838f74bbd6e5c84f9b9c40b734d1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mouse_8c_a4608e046c09d4995c29f7bb64b0f4338}\index{mouse.c@{mouse.c}!kbc\_issue\_mouse\_cmd@{kbc\_issue\_mouse\_cmd}}
+\index{kbc\_issue\_mouse\_cmd@{kbc\_issue\_mouse\_cmd}!mouse.c@{mouse.c}}
+\doxysubsubsection{\texorpdfstring{kbc\_issue\_mouse\_cmd()}{kbc\_issue\_mouse\_cmd()}}
+{\footnotesize\ttfamily \label{mouse_8c_a4608e046c09d4995c29f7bb64b0f4338} 
+int kbc\+\_\+issue\+\_\+mouse\+\_\+cmd (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{cmd}{}\end{DoxyParamCaption})}
+
+
+
+Issues a command to the mouse. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmd} & Command to be issued. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, non-\/zero otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse_8c_a4608e046c09d4995c29f7bb64b0f4338_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{mouse_8c_a4608e046c09d4995c29f7bb64b0f4338_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mouse_8c_a6d22e8d5c31599efd664249783ce4ff8}\index{mouse.c@{mouse.c}!m\_kbc\_subscribe\_int@{m\_kbc\_subscribe\_int}}
+\index{m\_kbc\_subscribe\_int@{m\_kbc\_subscribe\_int}!mouse.c@{mouse.c}}
+\doxysubsubsection{\texorpdfstring{m\_kbc\_subscribe\_int()}{m\_kbc\_subscribe\_int()}}
+{\footnotesize\ttfamily \label{mouse_8c_a6d22e8d5c31599efd664249783ce4ff8} 
+int m\+\_\+kbc\+\_\+subscribe\+\_\+int (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{bit\+\_\+no}{}\end{DoxyParamCaption})}
+
+
+
+Subscribes mouse interrupts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bit\+\_\+no} & Pointer to the bit number to be set. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, non-\/zero otherwise. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{mouse_8c_a6d22e8d5c31599efd664249783ce4ff8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mouse_8c_a3c8f56ab564de37052ba3c728e99946f}\index{mouse.c@{mouse.c}!m\_kbc\_unsubscribe\_int@{m\_kbc\_unsubscribe\_int}}
+\index{m\_kbc\_unsubscribe\_int@{m\_kbc\_unsubscribe\_int}!mouse.c@{mouse.c}}
+\doxysubsubsection{\texorpdfstring{m\_kbc\_unsubscribe\_int()}{m\_kbc\_unsubscribe\_int()}}
+{\footnotesize\ttfamily \label{mouse_8c_a3c8f56ab564de37052ba3c728e99946f} 
+int m\+\_\+kbc\+\_\+unsubscribe\+\_\+int (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Unsubscribes mouse interrupts. 
+
+\begin{DoxyReturn}{Returns}
+0 on success, non-\/zero otherwise. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{mouse_8c_a3c8f56ab564de37052ba3c728e99946f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mouse_8c_a1ed668ac25ba0119e2245d994a23333f}\index{mouse.c@{mouse.c}!m\_read\_obf\_byte@{m\_read\_obf\_byte}}
+\index{m\_read\_obf\_byte@{m\_read\_obf\_byte}!mouse.c@{mouse.c}}
+\doxysubsubsection{\texorpdfstring{m\_read\_obf\_byte()}{m\_read\_obf\_byte()}}
+{\footnotesize\ttfamily \label{mouse_8c_a1ed668ac25ba0119e2245d994a23333f} 
+int m\+\_\+read\+\_\+obf\+\_\+byte (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Reads a byte from the KBC output buffer for the mouse. 
+
+\begin{DoxyReturn}{Returns}
+0 on success, non-\/zero otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=281pt]{mouse_8c_a1ed668ac25ba0119e2245d994a23333f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse_8c_a1ed668ac25ba0119e2245d994a23333f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mouse_8c_a3350519fb55ce3ed23b782c5ceea9297}\index{mouse.c@{mouse.c}!mouse\_packet\_handler@{mouse\_packet\_handler}}
+\index{mouse\_packet\_handler@{mouse\_packet\_handler}!mouse.c@{mouse.c}}
+\doxysubsubsection{\texorpdfstring{mouse\_packet\_handler()}{mouse\_packet\_handler()}}
+{\footnotesize\ttfamily \label{mouse_8c_a3350519fb55ce3ed23b782c5ceea9297} 
+int mouse\+\_\+packet\+\_\+handler (\begin{DoxyParamCaption}\item[{struct packet \texorpdfstring{$\ast$}{*}}]{pp}{}\end{DoxyParamCaption})}
+
+
+
+Handles mouse packets. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pp} & Pointer to the packet structure to be filled. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, non-\/zero otherwise. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{mouse_8c_a3350519fb55ce3ed23b782c5ceea9297_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mouse_8c_a0a7123b336afa8b09046173ebc3ffd23}\index{mouse.c@{mouse.c}!mouse\_state\_machine@{mouse\_state\_machine}}
+\index{mouse\_state\_machine@{mouse\_state\_machine}!mouse.c@{mouse.c}}
+\doxysubsubsection{\texorpdfstring{mouse\_state\_machine()}{mouse\_state\_machine()}}
+{\footnotesize\ttfamily \label{mouse_8c_a0a7123b336afa8b09046173ebc3ffd23} 
+void mouse\+\_\+state\+\_\+machine (\begin{DoxyParamCaption}\item[{struct packet \texorpdfstring{$\ast$}{*}}]{pp}{, }\item[{Mouse\+State \texorpdfstring{$\ast$}{*}}]{current\+State}{, }\item[{uint8\+\_\+t}]{x\+\_\+len}{, }\item[{uint8\+\_\+t}]{tolerance}{}\end{DoxyParamCaption})}
+
+
+
+Mouse state machine to handle gestures. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pp} & Pointer to the packet structure. \\
+\hline
+{\em current\+State} & Pointer to the current state of the mouse. \\
+\hline
+{\em x\+\_\+len} & Minimum x length for gesture detection. \\
+\hline
+{\em tolerance} & Tolerance for gesture detection. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{mouse_8c_a0a7123b336afa8b09046173ebc3ffd23_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mouse_8c_ae54061f53107e451921cf8bd7f9d4265}\index{mouse.c@{mouse.c}!state\_change@{state\_change}}
+\index{state\_change@{state\_change}!mouse.c@{mouse.c}}
+\doxysubsubsection{\texorpdfstring{state\_change()}{state\_change()}}
+{\footnotesize\ttfamily \label{mouse_8c_ae54061f53107e451921cf8bd7f9d4265} 
+void state\+\_\+change (\begin{DoxyParamCaption}\item[{Mouse\+State}]{new\+State}{}\end{DoxyParamCaption})}
+
+
+
+Changes the state of the mouse state machine. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+State} & New state to be set. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=305pt]{mouse_8c_ae54061f53107e451921cf8bd7f9d4265_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mouse_8c_a814697dcd2ddaef69ae9f5f3e3742ff1}\index{mouse.c@{mouse.c}!state\_maintain@{state\_maintain}}
+\index{state\_maintain@{state\_maintain}!mouse.c@{mouse.c}}
+\doxysubsubsection{\texorpdfstring{state\_maintain()}{state\_maintain()}}
+{\footnotesize\ttfamily \label{mouse_8c_a814697dcd2ddaef69ae9f5f3e3742ff1} 
+void state\+\_\+maintain (\begin{DoxyParamCaption}\item[{struct packet \texorpdfstring{$\ast$}{*}}]{pp}{}\end{DoxyParamCaption})}
+
+
+
+Maintains the current state of the mouse state machine. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pp} & Pointer to the packet structure. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{mouse_8c_a814697dcd2ddaef69ae9f5f3e3742ff1_icgraph}
+\end{center}
+\end{figure}

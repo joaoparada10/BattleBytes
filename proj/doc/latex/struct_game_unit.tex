@@ -1,0 +1,38 @@
+\doxysection{Game\+Unit Struct Reference}
+\hypertarget{struct_game_unit}{}\label{struct_game_unit}\index{GameUnit@{GameUnit}}
+
+
+Collaboration diagram for Game\+Unit\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{struct_game_unit__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_game_unit_ab517d54e430f914ee52f52813e1761cb}\label{struct_game_unit_ab517d54e430f914ee52f52813e1761cb} 
+uint16\+\_\+t {\bfseries hp}
+\item 
+\Hypertarget{struct_game_unit_af17583d9a0585f0585729c8cc45b4090}\label{struct_game_unit_af17583d9a0585f0585729c8cc45b4090} 
+Sprite\+Type {\bfseries type}
+\item 
+\Hypertarget{struct_game_unit_abd61d49ee535b90c821724890f36ab56}\label{struct_game_unit_abd61d49ee535b90c821724890f36ab56} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} {\bfseries sp}\\
+\>\mbox{\hyperlink{struct_anim_sprite}{AnimSprite}} \texorpdfstring{$\ast$}{*} {\bfseries asp}\\
+\} {\bfseries sprite}\\
+
+\end{tabbing}\item 
+\Hypertarget{struct_game_unit_a53421c695d00016ab925777d423b4eb6}\label{struct_game_unit_a53421c695d00016ab925777d423b4eb6} 
+Direction {\bfseries direction}
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+model/game\+\_\+model.\+h\end{DoxyCompactItemize}

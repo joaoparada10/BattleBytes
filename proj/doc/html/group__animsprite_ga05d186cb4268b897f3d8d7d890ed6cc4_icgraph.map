@@ -1,0 +1,30 @@
+<map id="destroy_asprite" name="destroy_asprite">
+<area shape="rect" id="Node000001" title="Destroys an animated sprite." alt="" coords="1063,132,1174,159"/>
+<area shape="rect" id="Node000002" href="$game__view_8c.html#a3e2d71d6cef67c1d7e60d28de21df1bc" title="Destroys an explosion and frees associated memory." alt="" coords="874,157,1000,184"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1049,158,1001,165,1000,159,1048,152"/>
+<area shape="rect" id="Node000007" href="$game__model_8c.html#a9c91af6c39906b42d4bd727d8fcdc22b" title="Destroys a game element." alt="" coords="859,107,1015,133"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="1048,138,1015,134,1016,128,1048,133"/>
+<area shape="rect" id="Node000003" href="$game__view_8c.html#a52f3af8c078714e854b2dd1a0d562dfa" title="Draws explosion animations on the screen." alt="" coords="694,157,811,184"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="859,173,811,173,811,168,859,168"/>
+<area shape="rect" id="Node000004" href="$game__view_8c.html#a3cef68220fcc611902108d6f0159e50f" title="Draws the game interface." alt="" coords="375,56,462,83"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="690,155,461,85,463,80,692,150"/>
+<area shape="rect" id="Node000005" href="$dispatcher_8c.html#a8b98fc3f43a39b953cd60f2ce95d296f" title="Handles the game state transitions and actions." alt="" coords="165,56,304,83"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="359,72,304,72,304,67,359,67"/>
+<area shape="rect" id="Node000006" href="$proj_8c.html#af244d65e69677cf312af1950452ec256" title="Main game loop for the project." alt="" coords="5,31,114,57"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="150,60,114,54,114,49,150,54"/>
+<area shape="rect" id="Node000008" href="$game__model_8c.html#aa21ce6881832fb20fedbc92c4ff241df" title="Destroys an enemy." alt="" coords="697,56,808,83"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="871,105,803,86,804,81,872,100"/>
+<area shape="rect" id="Node000012" href="$game__model_8c.html#ad71ad0f82650f114326eef28f17bdb9d" title="Frees all enemies." alt="" coords="703,107,802,133"/>
+<area shape="poly" id="edge13_Node000007_Node000012" title=" " alt="" coords="844,123,802,123,802,117,844,117"/>
+<area shape="rect" id="Node000009" href="$game__logic_8c.html#aa3912aa6df5e81d539cf9f0709cb765f" title="Fires a shot from the tank towards the crosshair." alt="" coords="561,5,614,32"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="691,53,614,29,616,24,693,48"/>
+<area shape="rect" id="Node000011" href="$game__model_8c.html#a2cd3e7ca1c080225665d435871d1d5a4" title="Updates the enemies." alt="" coords="529,56,646,83"/>
+<area shape="poly" id="edge11_Node000008_Node000011" title=" " alt="" coords="681,72,646,72,646,67,681,67"/>
+<area shape="rect" id="Node000010" href="$dispatcher_8c.html#a990a5393ee8ada0a10fe8e795adf100c" title="Handles mouse input based on the current state." alt="" coords="162,5,307,32"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="545,21,307,21,307,16,545,16"/>
+<area shape="poly" id="edge10_Node000010_Node000006" title=" " alt="" coords="147,34,114,39,114,34,146,29"/>
+<area shape="poly" id="edge12_Node000011_Node000004" title=" " alt="" coords="514,72,462,72,462,67,514,67"/>
+<area shape="rect" id="Node000013" href="$game__model_8c.html#a1436960df441ce74e9843a2c8fd92f73" title="Cleans up game elements." alt="" coords="355,107,481,133"/>
+<area shape="poly" id="edge14_Node000012_Node000013" title=" " alt="" coords="688,123,482,123,482,117,688,117"/>
+<area shape="poly" id="edge15_Node000013_Node000005" title=" " alt="" coords="351,104,285,86,286,81,353,99"/>
+</map>

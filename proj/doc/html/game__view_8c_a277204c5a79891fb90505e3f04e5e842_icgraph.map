@@ -1,0 +1,9 @@
+<map id="draw_elements" name="draw_elements">
+<area shape="rect" id="Node000001" title="Draws all game elements on the screen." alt="" coords="483,5,592,32"/>
+<area shape="rect" id="Node000002" href="$game__view_8c.html#a3cef68220fcc611902108d6f0159e50f" title="Draws the game interface." alt="" coords="348,5,435,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="468,21,436,21,436,16,468,16"/>
+<area shape="rect" id="Node000003" href="$dispatcher_8c.html#a8b98fc3f43a39b953cd60f2ce95d296f" title="Handles the game state transitions and actions." alt="" coords="162,5,300,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="332,21,301,21,301,16,332,16"/>
+<area shape="rect" id="Node000004" href="$proj_8c.html#af244d65e69677cf312af1950452ec256" title="Main game loop for the project." alt="" coords="5,5,114,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="146,21,114,21,114,16,146,16"/>
+</map>

@@ -1,0 +1,29 @@
+\doxysection{asprite.\+h}
+\hypertarget{asprite_8h_source}{}\label{asprite_8h_source}\index{graphics/asprite.h@{graphics/asprite.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ \_ASPRITE\_H\_}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ \_ASPRITE\_H\_}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <stdarg.h>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}sprite.h"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{struct_sprite}{Sprite}}\ *\mbox{\hyperlink{struct_anim_sprite_a02c072c7a9012433f96792739f49fee6}{sp}};\ \ \ \ \ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_anim_sprite_abbe355dc340f87fd8915a4b57581113f}{aspeed}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_anim_sprite_a4b74fc6cf7a6e6c88c946f68d3e18dce}{cur\_aspeed}};\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_anim_sprite_a471696e4c68e49412e22b66aaeec29ba}{num\_fig}};\ \ \ \ \ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_anim_sprite_a5fc8b41f016dbe110c3d8479e66f420d}{cur\_fig}};\ \ \ \ \ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ **\mbox{\hyperlink{struct_anim_sprite_a6d985f8729c187f1c35dabba2738f0bd}{map}};\ \ \ \ \ }
+\DoxyCodeLine{00028\ \}\ \mbox{\hyperlink{struct_anim_sprite}{AnimSprite}};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00033\ \mbox{\hyperlink{struct_anim_sprite}{AnimSprite}}\ *\mbox{\hyperlink{group__animsprite_ga6cbf1f77a54307e24cc5195890c4ac86}{create\_asprite}}(\textcolor{keywordtype}{int}\ aspeed,\ uint8\_t\ no\_pic,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *pic1[],\ ...);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00037\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group__animsprite_gad144acec9721d3b36b4e8131b9c50ae8}{animate\_asprite}}(\mbox{\hyperlink{struct_anim_sprite}{AnimSprite}}\ *asp,\ \textcolor{keywordtype}{bool}\ destroy);}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00042\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__animsprite_ga05d186cb4268b897f3d8d7d890ed6cc4}{destroy\_asprite}}(\mbox{\hyperlink{struct_anim_sprite}{AnimSprite}}\ *asp);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

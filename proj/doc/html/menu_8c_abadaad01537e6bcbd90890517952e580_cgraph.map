@@ -1,0 +1,5 @@
+<map id="handle_menu_keyboard" name="handle_menu_keyboard">
+<area shape="rect" id="Node000001" title="Handles menu navigation based on keyboard input." alt="" coords="5,5,164,32"/>
+<area shape="rect" id="Node000002" href="$state_8c.html#abef3f51e03a484281acce64e7d912c21" title="Sets the state of the game to a new state." alt="" coords="212,5,287,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="164,16,196,16,196,21,164,21"/>
+</map>

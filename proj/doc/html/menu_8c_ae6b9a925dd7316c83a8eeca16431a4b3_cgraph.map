@@ -1,0 +1,7 @@
+<map id="load_initial_menu" name="load_initial_menu">
+<area shape="rect" id="Node000001" title="Loads the initial menu." alt="" coords="5,31,127,57"/>
+<area shape="rect" id="Node000002" href="$menu_8c.html#a05a655ad151e3b910b4547f1ca9a2f7c" title="Creates a new menu." alt="" coords="175,5,271,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="127,32,159,26,160,31,127,37"/>
+<area shape="rect" id="Node000003" href="$group__sprite.html#gac17a91fd309ebffd07be3daa9c194d86" title="Creates a sprite." alt="" coords="175,56,271,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="127,51,160,57,159,62,127,56"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="vg_draw_hline" name="vg_draw_hline">
+<area shape="rect" id="Node000001" title="Draws a horizontal line." alt="" coords="5,5,107,32"/>
+<area shape="rect" id="Node000002" href="$video__gr_8c.html#a6f895de9725f9f231f9a7f74b6087f60" title="Draws a pixel at a specified location." alt="" coords="155,5,256,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="107,16,139,16,139,21,107,21"/>
+</map>

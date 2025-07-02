@@ -1,0 +1,20 @@
+<map id="get_game_state" name="get_game_state">
+<area shape="rect" id="Node000001" title="Retrieves the current game state." alt="" coords="643,81,757,108"/>
+<area shape="rect" id="Node000002" href="$game__view_8c.html#afa89507f0657e2683163f687204a9261" title="Draws the footer section of the game interface." alt="" coords="502,5,590,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="656,76,574,35,576,30,658,71"/>
+<area shape="rect" id="Node000004" href="$dispatcher_8c.html#a8b98fc3f43a39b953cd60f2ce95d296f" title="Handles the game state transitions and actions." alt="" coords="162,107,300,133"/>
+<area shape="poly" id="edge10_Node000001_Node000004" title=" " alt="" coords="627,101,300,119,300,114,627,96"/>
+<area shape="rect" id="Node000006" href="$game__view_8c.html#a54d5ea72de7dd571da55ceb56ef06757" title="Draws the header section of the game interface." alt="" coords="499,56,593,83"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="627,85,593,80,594,74,628,80"/>
+<area shape="rect" id="Node000007" href="$menu_8c.html#a13964e8548d49e22bdbffe9ca944df5d" title="Draws the options of the menu on the screen." alt="" coords="497,157,595,184"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="658,118,576,159,574,154,656,113"/>
+<area shape="rect" id="Node000003" href="$game__view_8c.html#a3cef68220fcc611902108d6f0159e50f" title="Draws the game interface." alt="" coords="355,56,442,83"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="491,40,441,58,439,53,490,35"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="341,89,278,109,276,104,339,84"/>
+<area shape="rect" id="Node000005" href="$proj_8c.html#af244d65e69677cf312af1950452ec256" title="Main game loop for the project." alt="" coords="5,107,114,133"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="146,123,114,123,114,117,146,117"/>
+<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="483,72,443,72,443,67,483,67"/>
+<area shape="rect" id="Node000008" href="$menu_8c.html#aa2853ee7634f7c340bfca1afc4c95976" title="Displays the given menu on the screen." alt="" coords="348,157,449,184"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="482,173,450,173,450,168,482,168"/>
+<area shape="poly" id="edge9_Node000008_Node000004" title=" " alt="" coords="336,155,277,136,278,131,338,150"/>
+</map>

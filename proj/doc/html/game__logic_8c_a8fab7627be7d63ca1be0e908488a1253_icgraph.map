@@ -1,0 +1,7 @@
+<map id="move_cursor" name="move_cursor">
+<area shape="rect" id="Node000001" title="Moves the cursor on the screen." alt="" coords="355,5,449,32"/>
+<area shape="rect" id="Node000002" href="$dispatcher_8c.html#a990a5393ee8ada0a10fe8e795adf100c" title="Handles mouse input based on the current state." alt="" coords="162,5,307,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="339,21,307,21,307,16,339,16"/>
+<area shape="rect" id="Node000003" href="$proj_8c.html#af244d65e69677cf312af1950452ec256" title="Main game loop for the project." alt="" coords="5,5,114,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="146,21,114,21,114,16,146,16"/>
+</map>

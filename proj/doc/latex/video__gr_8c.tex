@@ -1,0 +1,529 @@
+\doxysection{graphics/video\+\_\+gr.c File Reference}
+\hypertarget{video__gr_8c}{}\label{video__gr_8c}\index{graphics/video\_gr.c@{graphics/video\_gr.c}}
+
+
+Implementation file for video graphics functions.  
+
+
+{\ttfamily \#include "{}video\+\_\+gr.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{video__gr_8c_acc11b311c479b1904fd45e8c6da5fcc3}{vg\+\_\+init}} (uint16\+\_\+t mode)
+\begin{DoxyCompactList}\small\item\em Initializes the video graphics mode. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{video__gr_8c_a6f895de9725f9f231f9a7f74b6087f60}{vg\+\_\+draw\+\_\+pixel}} (uint16\+\_\+t x, uint16\+\_\+t y, uint32\+\_\+t color)
+\begin{DoxyCompactList}\small\item\em Draws a pixel at a specified location. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{video__gr_8c_adb08b276272848bc7f3bccc0f5e770c8}{vg\+\_\+draw\+\_\+hline}} (uint16\+\_\+t x, uint16\+\_\+t y, uint16\+\_\+t len, uint32\+\_\+t color)
+\begin{DoxyCompactList}\small\item\em Draws a horizontal line. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{video__gr_8c_af91221269cb545564941ca05100d6501}{vg\+\_\+draw\+\_\+rectangle}} (uint16\+\_\+t x, uint16\+\_\+t y, u\+\_\+int16\+\_\+t width, u\+\_\+int16\+\_\+t height, uint32\+\_\+t color)
+\begin{DoxyCompactList}\small\item\em Draws a rectangle. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{video__gr_8c_a109a131f92b2cc01a88b45ec898b7b06}{vg\+\_\+draw\+\_\+pattern}} (uint8\+\_\+t no\+\_\+rectangles, uint32\+\_\+t first, uint8\+\_\+t step, uint16\+\_\+t mode)
+\begin{DoxyCompactList}\small\item\em Draws a pattern of rectangles. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{video__gr_8c_a79fc4f8d064fec8ee1f1330c2a5bd580}{vg\+\_\+draw\+\_\+pixmap}} (xpm\+\_\+map\+\_\+t xpm, uint16\+\_\+t x, uint16\+\_\+t y)
+\begin{DoxyCompactList}\small\item\em Draws a pixmap. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{video__gr_8c_a13dea5b0c48a74dde46863a8b2a36048}{vg\+\_\+draw\+\_\+arena\+\_\+xpm}} (xpm\+\_\+map\+\_\+t xpm, uint16\+\_\+t x, uint16\+\_\+t y, uint32\+\_\+t ground\+\_\+color)
+\begin{DoxyCompactList}\small\item\em Draws an arena pixmap. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{video__gr_8c_af8bb23eea36b8dc9256251547c19fd8a}{vg\+\_\+draw\+\_\+character}} (xpm\+\_\+map\+\_\+t xpm, uint16\+\_\+t x, uint16\+\_\+t y, uint16\+\_\+t xpm\+\_\+desl, uint16\+\_\+t character\+\_\+width, uint16\+\_\+t character\+\_\+height)
+\begin{DoxyCompactList}\small\item\em Draws a character pixmap. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{video__gr_8c_a3c24e51f1af8bcb7915ed4b529298b4c}{vg\+\_\+move\+\_\+pixmap}} (xpm\+\_\+map\+\_\+t xpm, uint16\+\_\+t \texorpdfstring{$\ast$}{*}current\+\_\+x, uint16\+\_\+t \texorpdfstring{$\ast$}{*}current\+\_\+y, uint16\+\_\+t xf, uint16\+\_\+t yf, int16\+\_\+t speed, bool draw)
+\begin{DoxyCompactList}\small\item\em Moves a pixmap. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{video__gr_8c_ab7a9f040731d1a0eccf3ada95fd3a276}{vg\+\_\+flip\+\_\+buffers}} ()
+\begin{DoxyCompactList}\small\item\em Flips the display buffers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{video__gr_8c_ac9794e34a4c756f29a57885461d6186b}{vg\+\_\+clear\+\_\+buffer}} (char \texorpdfstring{$\ast$}{*}buffer)
+\begin{DoxyCompactList}\small\item\em Clears the buffer. \end{DoxyCompactList}\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{video__gr_8c_a2187bcb7d0ea1fe4368bb2873c0fe9ef}{get\+\_\+first\+\_\+buffer}} ()
+\begin{DoxyCompactList}\small\item\em Gets the first buffer. \end{DoxyCompactList}\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{video__gr_8c_a1fb0e831d4a8e026f6a412550da4997a}{get\+\_\+second\+\_\+buffer}} ()
+\begin{DoxyCompactList}\small\item\em Gets the second buffer. \end{DoxyCompactList}\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{video__gr_8c_ae73cfe62147429fce468e5b1ed96e30a}{get\+\_\+drawing\+\_\+buffer}} ()
+\begin{DoxyCompactList}\small\item\em Gets the drawing buffer. \end{DoxyCompactList}\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{video__gr_8c_aed4987ed2c5abe37a630262487ebda12}{get\+\_\+arena\+\_\+buffer}} ()
+\begin{DoxyCompactList}\small\item\em Gets the arena buffer. \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{video__gr_8c_ac19350f0662b5c8fbb1a41e051411014}{get\+\_\+h\+\_\+res}} ()
+\begin{DoxyCompactList}\small\item\em Gets the horizontal resolution. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{video__gr_8c_a62e3199adef90f863fae918a5950cd52}{drawing\+\_\+first\+\_\+buffer}} = false
+\item 
+vbe\+\_\+mode\+\_\+info\+\_\+t \mbox{\hyperlink{video__gr_8c_a26081be7a771e5c611b33f15caaf831e}{vmi\+\_\+p}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation file for video graphics functions. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{video__gr_8c_aed4987ed2c5abe37a630262487ebda12}\index{video\_gr.c@{video\_gr.c}!get\_arena\_buffer@{get\_arena\_buffer}}
+\index{get\_arena\_buffer@{get\_arena\_buffer}!video\_gr.c@{video\_gr.c}}
+\doxysubsubsection{\texorpdfstring{get\_arena\_buffer()}{get\_arena\_buffer()}}
+{\footnotesize\ttfamily \label{video__gr_8c_aed4987ed2c5abe37a630262487ebda12} 
+char \texorpdfstring{$\ast$}{*} get\+\_\+arena\+\_\+buffer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the arena buffer. 
+
+This function returns a pointer to the arena buffer.
+
+\begin{DoxyReturn}{Returns}
+Pointer to the arena buffer 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{video__gr_8c_aed4987ed2c5abe37a630262487ebda12_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{video__gr_8c_ae73cfe62147429fce468e5b1ed96e30a}\index{video\_gr.c@{video\_gr.c}!get\_drawing\_buffer@{get\_drawing\_buffer}}
+\index{get\_drawing\_buffer@{get\_drawing\_buffer}!video\_gr.c@{video\_gr.c}}
+\doxysubsubsection{\texorpdfstring{get\_drawing\_buffer()}{get\_drawing\_buffer()}}
+{\footnotesize\ttfamily \label{video__gr_8c_ae73cfe62147429fce468e5b1ed96e30a} 
+char \texorpdfstring{$\ast$}{*} get\+\_\+drawing\+\_\+buffer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the drawing buffer. 
+
+This function returns a pointer to the current drawing buffer.
+
+\begin{DoxyReturn}{Returns}
+Pointer to the drawing buffer 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{video__gr_8c_ae73cfe62147429fce468e5b1ed96e30a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{video__gr_8c_a2187bcb7d0ea1fe4368bb2873c0fe9ef}\index{video\_gr.c@{video\_gr.c}!get\_first\_buffer@{get\_first\_buffer}}
+\index{get\_first\_buffer@{get\_first\_buffer}!video\_gr.c@{video\_gr.c}}
+\doxysubsubsection{\texorpdfstring{get\_first\_buffer()}{get\_first\_buffer()}}
+{\footnotesize\ttfamily \label{video__gr_8c_a2187bcb7d0ea1fe4368bb2873c0fe9ef} 
+char \texorpdfstring{$\ast$}{*} get\+\_\+first\+\_\+buffer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the first buffer. 
+
+This function returns a pointer to the first buffer.
+
+\begin{DoxyReturn}{Returns}
+Pointer to the first buffer 
+\end{DoxyReturn}
+\Hypertarget{video__gr_8c_ac19350f0662b5c8fbb1a41e051411014}\index{video\_gr.c@{video\_gr.c}!get\_h\_res@{get\_h\_res}}
+\index{get\_h\_res@{get\_h\_res}!video\_gr.c@{video\_gr.c}}
+\doxysubsubsection{\texorpdfstring{get\_h\_res()}{get\_h\_res()}}
+{\footnotesize\ttfamily \label{video__gr_8c_ac19350f0662b5c8fbb1a41e051411014} 
+unsigned get\+\_\+h\+\_\+res (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the horizontal resolution. 
+
+This function returns the horizontal resolution.
+
+\begin{DoxyReturn}{Returns}
+Horizontal resolution 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{video__gr_8c_ac19350f0662b5c8fbb1a41e051411014_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{video__gr_8c_a1fb0e831d4a8e026f6a412550da4997a}\index{video\_gr.c@{video\_gr.c}!get\_second\_buffer@{get\_second\_buffer}}
+\index{get\_second\_buffer@{get\_second\_buffer}!video\_gr.c@{video\_gr.c}}
+\doxysubsubsection{\texorpdfstring{get\_second\_buffer()}{get\_second\_buffer()}}
+{\footnotesize\ttfamily \label{video__gr_8c_a1fb0e831d4a8e026f6a412550da4997a} 
+char \texorpdfstring{$\ast$}{*} get\+\_\+second\+\_\+buffer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the second buffer. 
+
+This function returns a pointer to the second buffer.
+
+\begin{DoxyReturn}{Returns}
+Pointer to the second buffer 
+\end{DoxyReturn}
+\Hypertarget{video__gr_8c_ac9794e34a4c756f29a57885461d6186b}\index{video\_gr.c@{video\_gr.c}!vg\_clear\_buffer@{vg\_clear\_buffer}}
+\index{vg\_clear\_buffer@{vg\_clear\_buffer}!video\_gr.c@{video\_gr.c}}
+\doxysubsubsection{\texorpdfstring{vg\_clear\_buffer()}{vg\_clear\_buffer()}}
+{\footnotesize\ttfamily \label{video__gr_8c_ac9794e34a4c756f29a57885461d6186b} 
+void vg\+\_\+clear\+\_\+buffer (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{buffer}{}\end{DoxyParamCaption})}
+
+
+
+Clears the buffer. 
+
+This function clears the specified buffer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & The buffer to clear \\
+\hline
+\end{DoxyParams}
+\Hypertarget{video__gr_8c_a13dea5b0c48a74dde46863a8b2a36048}\index{video\_gr.c@{video\_gr.c}!vg\_draw\_arena\_xpm@{vg\_draw\_arena\_xpm}}
+\index{vg\_draw\_arena\_xpm@{vg\_draw\_arena\_xpm}!video\_gr.c@{video\_gr.c}}
+\doxysubsubsection{\texorpdfstring{vg\_draw\_arena\_xpm()}{vg\_draw\_arena\_xpm()}}
+{\footnotesize\ttfamily \label{video__gr_8c_a13dea5b0c48a74dde46863a8b2a36048} 
+int vg\+\_\+draw\+\_\+arena\+\_\+xpm (\begin{DoxyParamCaption}\item[{xpm\+\_\+map\+\_\+t}]{xpm}{, }\item[{uint16\+\_\+t}]{x}{, }\item[{uint16\+\_\+t}]{y}{, }\item[{uint32\+\_\+t}]{ground\+\_\+color}{}\end{DoxyParamCaption})}
+
+
+
+Draws an arena pixmap. 
+
+This function draws a pixmap at the specified (x, y) position onto the arena buffer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em xpm} & The XPM image to draw \\
+\hline
+{\em x} & The x-\/coordinate of the top-\/left corner of the pixmap \\
+\hline
+{\em y} & The y-\/coordinate of the top-\/left corner of the pixmap \\
+\hline
+{\em ground\+\_\+color} & The color representing the ground \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0 
+\end{DoxyReturn}
+\Hypertarget{video__gr_8c_af8bb23eea36b8dc9256251547c19fd8a}\index{video\_gr.c@{video\_gr.c}!vg\_draw\_character@{vg\_draw\_character}}
+\index{vg\_draw\_character@{vg\_draw\_character}!video\_gr.c@{video\_gr.c}}
+\doxysubsubsection{\texorpdfstring{vg\_draw\_character()}{vg\_draw\_character()}}
+{\footnotesize\ttfamily \label{video__gr_8c_af8bb23eea36b8dc9256251547c19fd8a} 
+int vg\+\_\+draw\+\_\+character (\begin{DoxyParamCaption}\item[{xpm\+\_\+map\+\_\+t}]{xpm}{, }\item[{uint16\+\_\+t}]{x}{, }\item[{uint16\+\_\+t}]{y}{, }\item[{uint16\+\_\+t}]{xpm\+\_\+desl}{, }\item[{uint16\+\_\+t}]{character\+\_\+width}{, }\item[{uint16\+\_\+t}]{character\+\_\+height}{}\end{DoxyParamCaption})}
+
+
+
+Draws a character pixmap. 
+
+This function draws a character pixmap at the specified (x, y) position.
+
+
+\begin{DoxyParams}{Parameters}
+{\em xpm} & The XPM image to draw \\
+\hline
+{\em x} & The x-\/coordinate of the top-\/left corner of the pixmap \\
+\hline
+{\em y} & The y-\/coordinate of the top-\/left corner of the pixmap \\
+\hline
+{\em xpm\+\_\+desl} & The XPM image displacement \\
+\hline
+{\em character\+\_\+width} & The width of the character pixmap \\
+\hline
+{\em character\+\_\+height} & The height of the character pixmap \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0 on success 
+\end{DoxyReturn}
+\Hypertarget{video__gr_8c_adb08b276272848bc7f3bccc0f5e770c8}\index{video\_gr.c@{video\_gr.c}!vg\_draw\_hline@{vg\_draw\_hline}}
+\index{vg\_draw\_hline@{vg\_draw\_hline}!video\_gr.c@{video\_gr.c}}
+\doxysubsubsection{\texorpdfstring{vg\_draw\_hline()}{vg\_draw\_hline()}}
+{\footnotesize\ttfamily \label{video__gr_8c_adb08b276272848bc7f3bccc0f5e770c8} 
+int vg\+\_\+draw\+\_\+hline (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x}{, }\item[{uint16\+\_\+t}]{y}{, }\item[{uint16\+\_\+t}]{len}{, }\item[{uint32\+\_\+t}]{color}{}\end{DoxyParamCaption})}
+
+
+
+Draws a horizontal line. 
+
+This function draws a horizontal line starting from the specified (x, y) position.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The starting x-\/coordinate of the line \\
+\hline
+{\em y} & The starting y-\/coordinate of the line \\
+\hline
+{\em len} & The length of the line \\
+\hline
+{\em color} & The color of the line \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0 on success 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=268pt]{video__gr_8c_adb08b276272848bc7f3bccc0f5e770c8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{video__gr_8c_adb08b276272848bc7f3bccc0f5e770c8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{video__gr_8c_a109a131f92b2cc01a88b45ec898b7b06}\index{video\_gr.c@{video\_gr.c}!vg\_draw\_pattern@{vg\_draw\_pattern}}
+\index{vg\_draw\_pattern@{vg\_draw\_pattern}!video\_gr.c@{video\_gr.c}}
+\doxysubsubsection{\texorpdfstring{vg\_draw\_pattern()}{vg\_draw\_pattern()}}
+{\footnotesize\ttfamily \label{video__gr_8c_a109a131f92b2cc01a88b45ec898b7b06} 
+int vg\+\_\+draw\+\_\+pattern (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{no\+\_\+rectangles}{, }\item[{uint32\+\_\+t}]{first}{, }\item[{uint8\+\_\+t}]{step}{, }\item[{uint16\+\_\+t}]{mode}{}\end{DoxyParamCaption})}
+
+
+
+Draws a pattern of rectangles. 
+
+This function draws a pattern of rectangles on the screen.
+
+
+\begin{DoxyParams}{Parameters}
+{\em no\+\_\+rectangles} & The number of rectangles per row and column \\
+\hline
+{\em first} & The color of the first rectangle \\
+\hline
+{\em step} & The color step between rectangles \\
+\hline
+{\em mode} & The mode of the pattern \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0 on success 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{video__gr_8c_a109a131f92b2cc01a88b45ec898b7b06_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{video__gr_8c_a6f895de9725f9f231f9a7f74b6087f60}\index{video\_gr.c@{video\_gr.c}!vg\_draw\_pixel@{vg\_draw\_pixel}}
+\index{vg\_draw\_pixel@{vg\_draw\_pixel}!video\_gr.c@{video\_gr.c}}
+\doxysubsubsection{\texorpdfstring{vg\_draw\_pixel()}{vg\_draw\_pixel()}}
+{\footnotesize\ttfamily \label{video__gr_8c_a6f895de9725f9f231f9a7f74b6087f60} 
+int vg\+\_\+draw\+\_\+pixel (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x}{, }\item[{uint16\+\_\+t}]{y}{, }\item[{uint32\+\_\+t}]{color}{}\end{DoxyParamCaption})}
+
+
+
+Draws a pixel at a specified location. 
+
+This function sets the color of the pixel at the specified (x, y) location.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x-\/coordinate of the pixel \\
+\hline
+{\em y} & The y-\/coordinate of the pixel \\
+\hline
+{\em color} & The color to set the pixel \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0 on success 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{video__gr_8c_a6f895de9725f9f231f9a7f74b6087f60_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{video__gr_8c_a79fc4f8d064fec8ee1f1330c2a5bd580}\index{video\_gr.c@{video\_gr.c}!vg\_draw\_pixmap@{vg\_draw\_pixmap}}
+\index{vg\_draw\_pixmap@{vg\_draw\_pixmap}!video\_gr.c@{video\_gr.c}}
+\doxysubsubsection{\texorpdfstring{vg\_draw\_pixmap()}{vg\_draw\_pixmap()}}
+{\footnotesize\ttfamily \label{video__gr_8c_a79fc4f8d064fec8ee1f1330c2a5bd580} 
+int vg\+\_\+draw\+\_\+pixmap (\begin{DoxyParamCaption}\item[{xpm\+\_\+map\+\_\+t}]{xpm}{, }\item[{uint16\+\_\+t}]{x}{, }\item[{uint16\+\_\+t}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Draws a pixmap. 
+
+This function draws a pixmap at the specified (x, y) position.
+
+
+\begin{DoxyParams}{Parameters}
+{\em xpm} & The XPM image to draw \\
+\hline
+{\em x} & The x-\/coordinate of the top-\/left corner of the pixmap \\
+\hline
+{\em y} & The y-\/coordinate of the top-\/left corner of the pixmap \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0 on success 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=279pt]{video__gr_8c_a79fc4f8d064fec8ee1f1330c2a5bd580_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=293pt]{video__gr_8c_a79fc4f8d064fec8ee1f1330c2a5bd580_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{video__gr_8c_af91221269cb545564941ca05100d6501}\index{video\_gr.c@{video\_gr.c}!vg\_draw\_rectangle@{vg\_draw\_rectangle}}
+\index{vg\_draw\_rectangle@{vg\_draw\_rectangle}!video\_gr.c@{video\_gr.c}}
+\doxysubsubsection{\texorpdfstring{vg\_draw\_rectangle()}{vg\_draw\_rectangle()}}
+{\footnotesize\ttfamily \label{video__gr_8c_af91221269cb545564941ca05100d6501} 
+int vg\+\_\+draw\+\_\+rectangle (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x}{, }\item[{uint16\+\_\+t}]{y}{, }\item[{u\+\_\+int16\+\_\+t}]{width}{, }\item[{u\+\_\+int16\+\_\+t}]{height}{, }\item[{uint32\+\_\+t}]{color}{}\end{DoxyParamCaption})}
+
+
+
+Draws a rectangle. 
+
+This function draws a rectangle starting from the specified (x, y) position.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x-\/coordinate of the rectangle \\
+\hline
+{\em y} & The y-\/coordinate of the rectangle \\
+\hline
+{\em width} & The width of the rectangle \\
+\hline
+{\em height} & The height of the rectangle \\
+\hline
+{\em color} & The color of the rectangle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0 on success 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{video__gr_8c_af91221269cb545564941ca05100d6501_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{video__gr_8c_af91221269cb545564941ca05100d6501_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{video__gr_8c_ab7a9f040731d1a0eccf3ada95fd3a276}\index{video\_gr.c@{video\_gr.c}!vg\_flip\_buffers@{vg\_flip\_buffers}}
+\index{vg\_flip\_buffers@{vg\_flip\_buffers}!video\_gr.c@{video\_gr.c}}
+\doxysubsubsection{\texorpdfstring{vg\_flip\_buffers()}{vg\_flip\_buffers()}}
+{\footnotesize\ttfamily \label{video__gr_8c_ab7a9f040731d1a0eccf3ada95fd3a276} 
+int vg\+\_\+flip\+\_\+buffers (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Flips the display buffers. 
+
+This function flips the display buffers to show the buffer that was just drawn to.
+
+\begin{DoxyReturn}{Returns}
+Returns 0 on success, -\/1 on failure 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{video__gr_8c_ab7a9f040731d1a0eccf3ada95fd3a276_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{video__gr_8c_acc11b311c479b1904fd45e8c6da5fcc3}\index{video\_gr.c@{video\_gr.c}!vg\_init@{vg\_init}}
+\index{vg\_init@{vg\_init}!video\_gr.c@{video\_gr.c}}
+\doxysubsubsection{\texorpdfstring{vg\_init()}{vg\_init()}}
+{\footnotesize\ttfamily \label{video__gr_8c_acc11b311c479b1904fd45e8c6da5fcc3} 
+void \texorpdfstring{$\ast$}{*} vg\+\_\+init (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{mode}{}\end{DoxyParamCaption})}
+
+
+
+Initializes the video graphics mode. 
+
+This function sets up the video graphics mode specified by the mode parameter, maps video memory, and prepares double buffering.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & The VBE mode to set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a pointer to the video memory, or NULL on failure 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{video__gr_8c_acc11b311c479b1904fd45e8c6da5fcc3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{video__gr_8c_a3c24e51f1af8bcb7915ed4b529298b4c}\index{video\_gr.c@{video\_gr.c}!vg\_move\_pixmap@{vg\_move\_pixmap}}
+\index{vg\_move\_pixmap@{vg\_move\_pixmap}!video\_gr.c@{video\_gr.c}}
+\doxysubsubsection{\texorpdfstring{vg\_move\_pixmap()}{vg\_move\_pixmap()}}
+{\footnotesize\ttfamily \label{video__gr_8c_a3c24e51f1af8bcb7915ed4b529298b4c} 
+int vg\+\_\+move\+\_\+pixmap (\begin{DoxyParamCaption}\item[{xpm\+\_\+map\+\_\+t}]{xpm}{, }\item[{uint16\+\_\+t \texorpdfstring{$\ast$}{*}}]{current\+\_\+x}{, }\item[{uint16\+\_\+t \texorpdfstring{$\ast$}{*}}]{current\+\_\+y}{, }\item[{uint16\+\_\+t}]{xf}{, }\item[{uint16\+\_\+t}]{yf}{, }\item[{int16\+\_\+t}]{speed}{, }\item[{bool}]{draw}{}\end{DoxyParamCaption})}
+
+
+
+Moves a pixmap. 
+
+This function moves a pixmap from its current position to the specified (xf, yf) position with a given speed.
+
+
+\begin{DoxyParams}{Parameters}
+{\em xpm} & The XPM image to move \\
+\hline
+{\em current\+\_\+x} & A pointer to the current x-\/coordinate of the pixmap \\
+\hline
+{\em current\+\_\+y} & A pointer to the current y-\/coordinate of the pixmap \\
+\hline
+{\em xf} & The x-\/coordinate of the final position \\
+\hline
+{\em yf} & The y-\/coordinate of the final position \\
+\hline
+{\em speed} & The speed of movement \\
+\hline
+{\em draw} & Indicates whether to draw the pixmap while moving \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0 on success 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{video__gr_8c_a3c24e51f1af8bcb7915ed4b529298b4c_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{video__gr_8c_a62e3199adef90f863fae918a5950cd52}\index{video\_gr.c@{video\_gr.c}!drawing\_first\_buffer@{drawing\_first\_buffer}}
+\index{drawing\_first\_buffer@{drawing\_first\_buffer}!video\_gr.c@{video\_gr.c}}
+\doxysubsubsection{\texorpdfstring{drawing\_first\_buffer}{drawing\_first\_buffer}}
+{\footnotesize\ttfamily \label{video__gr_8c_a62e3199adef90f863fae918a5950cd52} 
+bool drawing\+\_\+first\+\_\+buffer = false}
+
+Flag to track the current drawing buffer \Hypertarget{video__gr_8c_a26081be7a771e5c611b33f15caaf831e}\index{video\_gr.c@{video\_gr.c}!vmi\_p@{vmi\_p}}
+\index{vmi\_p@{vmi\_p}!video\_gr.c@{video\_gr.c}}
+\doxysubsubsection{\texorpdfstring{vmi\_p}{vmi\_p}}
+{\footnotesize\ttfamily \label{video__gr_8c_a26081be7a771e5c611b33f15caaf831e} 
+vbe\+\_\+mode\+\_\+info\+\_\+t vmi\+\_\+p}
+
+VBE mode information 

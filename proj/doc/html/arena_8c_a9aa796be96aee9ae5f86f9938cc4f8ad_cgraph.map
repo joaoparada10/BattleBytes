@@ -1,0 +1,7 @@
+<map id="arena_collision" name="arena_collision">
+<area shape="rect" id="Node000001" title="Checks if a given sprite collides with any obstacles in the arena." alt="" coords="5,5,113,32"/>
+<area shape="rect" id="Node000002" href="$arena_8c.html#a3c12c77e637315890375e0bd6f987cc3" title="Checks if a given coordinate in the arena is walkable." alt="" coords="161,5,249,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="113,16,145,16,145,21,113,21"/>
+<area shape="rect" id="Node000003" href="$arena_8c.html#a643076fac43cdf2e983ffe4ebb4e1f24" title="Gets the current arena." alt="" coords="297,5,422,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="249,16,282,16,282,21,249,21"/>
+</map>

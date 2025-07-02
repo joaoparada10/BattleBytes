@@ -1,0 +1,96 @@
+\doxysection{proj.\+c File Reference}
+\hypertarget{proj_8c}{}\label{proj_8c}\index{proj.c@{proj.c}}
+
+
+This file contains the implementation of the proj module.  
+
+
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include "{}device/mouse.\+h"{}}\newline
+{\ttfamily \#include "{}device/keyboard.\+h"{}}\newline
+{\ttfamily \#include "{}dispatcher/dispatcher.\+h"{}}\newline
+{\ttfamily \#include "{}menu/menu.\+h"{}}\newline
+{\ttfamily \#include "{}graphics/sprite.\+h"{}}\newline
+{\ttfamily \#include $<$lcom/timer.\+h$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{proj_8c_a0ddf1224851353fc92bfbff6f499fa97}\label{proj_8c_a0ddf1224851353fc92bfbff6f499fa97} 
+int {\bfseries main} (int argc, char \texorpdfstring{$\ast$}{*}argv\mbox{[}$\,$\mbox{]})
+\item 
+int \mbox{\hyperlink{proj_8c_af244d65e69677cf312af1950452ec256}{proj\+\_\+main\+\_\+loop}} (int argc, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}argv)
+\begin{DoxyCompactList}\small\item\em Main game loop for the project. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{proj_8c_a4106b9f641b7ec5bdb602975fce75bcf}\label{proj_8c_a4106b9f641b7ec5bdb602975fce75bcf} 
+uint8\+\_\+t {\bfseries keyboard\+\_\+data}
+\begin{DoxyCompactList}\small\item\em Data read from the keyboard. \end{DoxyCompactList}\item 
+\Hypertarget{proj_8c_aa609298e312c52ae74a53ac6c8274fd3}\label{proj_8c_aa609298e312c52ae74a53ac6c8274fd3} 
+uint8\+\_\+t {\bfseries mouse\+\_\+data}
+\item 
+\Hypertarget{proj_8c_abd61b647db7d40c2ce95ff26f84e2cfd}\label{proj_8c_abd61b647db7d40c2ce95ff26f84e2cfd} 
+uint8\+\_\+t {\bfseries kbd\+\_\+status\+\_\+byte}
+\item 
+\Hypertarget{proj_8c_a72ccb2485f526a99d8b0ac9bff9d88b3}\label{proj_8c_a72ccb2485f526a99d8b0ac9bff9d88b3} 
+uint8\+\_\+t {\bfseries mouse\+\_\+status\+\_\+byte}
+\item 
+\Hypertarget{proj_8c_adf424476c4755694cb40b3a264235a0d}\label{proj_8c_adf424476c4755694cb40b3a264235a0d} 
+uint8\+\_\+t {\bfseries mouse\+\_\+count}
+\item 
+\Hypertarget{proj_8c_a3b2e64ffb96c650d6525c99be01c7331}\label{proj_8c_a3b2e64ffb96c650d6525c99be01c7331} 
+struct packet {\bfseries mouse\+\_\+packet}
+\item 
+\Hypertarget{proj_8c_aeb1d1ca16fcdcb9ed02e352d167196ec}\label{proj_8c_aeb1d1ca16fcdcb9ed02e352d167196ec} 
+bool {\bfseries discard\+\_\+mouse\+\_\+data}
+\item 
+\Hypertarget{proj_8c_af6e6946037c04989b451d3ef606e9c0c}\label{proj_8c_af6e6946037c04989b451d3ef606e9c0c} 
+bool {\bfseries discard\+\_\+keyboard\+\_\+data}
+\item 
+\Hypertarget{proj_8c_a88dd62d9340ad0c03e07b976e16aaad1}\label{proj_8c_a88dd62d9340ad0c03e07b976e16aaad1} 
+bool {\bfseries skip\+\_\+print}
+\item 
+\Hypertarget{proj_8c_a0e43b21e540c75c6923fe575de1e3d0f}\label{proj_8c_a0e43b21e540c75c6923fe575de1e3d0f} 
+bool {\bfseries game\+\_\+running} = true
+\item 
+\Hypertarget{proj_8c_a0f08eb193e0aedb134a1481913b6a823}\label{proj_8c_a0f08eb193e0aedb134a1481913b6a823} 
+int {\bfseries timer\+\_\+counter}
+\begin{DoxyCompactList}\small\item\em Counter for timer interrupts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains the implementation of the proj module. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{proj_8c_af244d65e69677cf312af1950452ec256}\index{proj.c@{proj.c}!proj\_main\_loop@{proj\_main\_loop}}
+\index{proj\_main\_loop@{proj\_main\_loop}!proj.c@{proj.c}}
+\doxysubsubsection{\texorpdfstring{proj\_main\_loop()}{proj\_main\_loop()}}
+{\footnotesize\ttfamily \label{proj_8c_af244d65e69677cf312af1950452ec256} 
+int proj\+\_\+main\+\_\+loop (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{argv}{}\end{DoxyParamCaption})}
+
+
+
+Main game loop for the project. 
+
+This function initializes the game state and enters a loop that continues until the game state is KILL. Within the loop, it receives messages and handles them based on their type and source. It handles hardware interrupts for the mouse, keyboard, and timer, processing the respective data and updating the game state. After the loop, it performs cleanup by unsubscribing from the interrupts and disabling the mouse data report.
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & The number of strings pointed to by argv \\
+\hline
+{\em argv} & A pointer to an array of arguments \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Returns 0 upon successful execution 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{proj_8c_af244d65e69677cf312af1950452ec256_cgraph}
+\end{center}
+\end{figure}

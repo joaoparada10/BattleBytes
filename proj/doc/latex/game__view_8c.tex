@@ -1,0 +1,645 @@
+\doxysection{view/game\+\_\+view.c File Reference}
+\hypertarget{game__view_8c}{}\label{game__view_8c}\index{view/game\_view.c@{view/game\_view.c}}
+
+
+Contains functions related to game rendering and view management.  
+
+
+{\ttfamily \#include "{}game\+\_\+view.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{game__view_8c_ab01a5c64476c42ec8b98e092e1b91ff1}{load\+\_\+game\+\_\+sprites}} ()
+\begin{DoxyCompactList}\small\item\em Loads game sprites into memory. \end{DoxyCompactList}\item 
+\Hypertarget{game__view_8c_ac1f8ba094dfb3b4f6b881e04b0901fb8}\label{game__view_8c_ac1f8ba094dfb3b4f6b881e04b0901fb8} 
+void {\bfseries free\+\_\+game\+\_\+sprites} ()
+\begin{DoxyCompactList}\small\item\em Frees memory allocated for game sprites. \end{DoxyCompactList}\item 
+\Hypertarget{game__view_8c_a52dfa580aca9ce8120a5f7b4fa4ac8d0}\label{game__view_8c_a52dfa580aca9ce8120a5f7b4fa4ac8d0} 
+void {\bfseries load\+\_\+game\+\_\+fonts} ()
+\begin{DoxyCompactList}\small\item\em Loads game fonts into memory. \end{DoxyCompactList}\item 
+\Hypertarget{game__view_8c_a4f266bc864980e6ab585c327b68a32ac}\label{game__view_8c_a4f266bc864980e6ab585c327b68a32ac} 
+void {\bfseries free\+\_\+game\+\_\+fonts} ()
+\begin{DoxyCompactList}\small\item\em Frees memory allocated for game fonts. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_anim_sprite}{Anim\+Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{game__view_8c_a05879f87abc955b89a1f171dc1bcaf6d}{create\+\_\+virus2\+\_\+asprite}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Creates an animated sprite for a virus type 2 enemy. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{game__view_8c_a4724c6f32f1f5fa896c9eb849120dd9a}{create\+\_\+virus1\+\_\+sprite}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Creates a static sprite for a virus type 1 enemy. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_explosion}{Explosion}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{game__view_8c_a1c3dcacb14608ae2dfd1b9146ced484e}{create\+\_\+explosion}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Creates an explosion effect at the specified coordinates. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game__view_8c_a3e2d71d6cef67c1d7e60d28de21df1bc}{destroy\+\_\+explosion}} (\mbox{\hyperlink{struct_explosion}{Explosion}} \texorpdfstring{$\ast$}{*}explosion)
+\begin{DoxyCompactList}\small\item\em Destroys an explosion and frees associated memory. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{game__view_8c_a684faba00d88eaf2cdc9fcb14ee79d4b}{draw\+\_\+tank}} ()
+\begin{DoxyCompactList}\small\item\em Draws the tank sprite on the screen. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{game__view_8c_afe86e6b2a82e0a2b63465da9da7c40d2}{draw\+\_\+enemies}} ()
+\begin{DoxyCompactList}\small\item\em Draws enemy sprites on the screen. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{game__view_8c_a52f3af8c078714e854b2dd1a0d562dfa}{draw\+\_\+explosions}} ()
+\begin{DoxyCompactList}\small\item\em Draws explosion animations on the screen. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{game__view_8c_a30092734ca23c99532be7aaff169ae2f}{draw\+\_\+crosshair}} ()
+\begin{DoxyCompactList}\small\item\em Draws the crosshair sprite on the screen. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{game__view_8c_ac5279c7b71c8b9f1b5c69316b3996715}{draw\+\_\+cursor}} ()
+\begin{DoxyCompactList}\small\item\em Draws the cursor sprite on the screen. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{game__view_8c_a277204c5a79891fb90505e3f04e5e842}{draw\+\_\+elements}} ()
+\begin{DoxyCompactList}\small\item\em Draws all game elements on the screen. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{game__view_8c_a51d0647ae3486b0d2a77ee7cafbd1373}{draw\+\_\+arena}} ()
+\begin{DoxyCompactList}\small\item\em Draws the game arena on the screen. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{game__view_8c_a54d5ea72de7dd571da55ceb56ef06757}{draw\+\_\+header}} ()
+\begin{DoxyCompactList}\small\item\em Draws the header section of the game interface. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{game__view_8c_afa89507f0657e2683163f687204a9261}{draw\+\_\+footer}} ()
+\begin{DoxyCompactList}\small\item\em Draws the footer section of the game interface. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{game__view_8c_a3cef68220fcc611902108d6f0159e50f}{draw\+\_\+game}} ()
+\begin{DoxyCompactList}\small\item\em Draws the game interface. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{game__view_8c_a87dd15170b4ec8205cd391a6f63f268c}{draw\+\_\+timer}} (uint32\+\_\+t game\+\_\+timer)
+\begin{DoxyCompactList}\small\item\em Draws the game timer on the screen. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{game__view_8c_a6cd367c585374334ec34ee3f811213bb}{get\+\_\+tank\+\_\+sprite}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the tank sprite. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{game__view_8c_a977046c2782eb68b21fb86d0962e4140}{get\+\_\+crosshair}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the crosshair sprite. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{game__view_8c_ab5073970a4a5b9e78cceb9d17a558461}{get\+\_\+cursor}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the cursor sprite. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{game__view_8c_a952904fe12949ce747aaf42bfda11f1e}\label{game__view_8c_a952904fe12949ce747aaf42bfda11f1e} 
+uint8\+\_\+t \texorpdfstring{$\ast$}{*} {\bfseries tank\+\_\+sprites} \mbox{[}NUM\+\_\+\+DIRECTIONS\mbox{]}
+\item 
+\Hypertarget{game__view_8c_ae3aca8fde2d971a0f9abdef903e89652}\label{game__view_8c_ae3aca8fde2d971a0f9abdef903e89652} 
+uint8\+\_\+t \texorpdfstring{$\ast$}{*} {\bfseries game\+\_\+letters\+\_\+ptr}
+\item 
+\Hypertarget{game__view_8c_aeec453ec37590de0fd40b144649ba44d}\label{game__view_8c_aeec453ec37590de0fd40b144649ba44d} 
+uint8\+\_\+t \texorpdfstring{$\ast$}{*} {\bfseries game\+\_\+numbers\+\_\+ptr}
+\item 
+\Hypertarget{game__view_8c_a0a90af1609cc73446e5ef0bd5dc916c9}\label{game__view_8c_a0a90af1609cc73446e5ef0bd5dc916c9} 
+xpm\+\_\+image\+\_\+t {\bfseries tank\+\_\+images} \mbox{[}NUM\+\_\+\+DIRECTIONS\mbox{]}
+\item 
+\Hypertarget{game__view_8c_ad99d4bef5cd0df62dc7892213c5eec89}\label{game__view_8c_ad99d4bef5cd0df62dc7892213c5eec89} 
+xpm\+\_\+image\+\_\+t {\bfseries game\+\_\+letters}
+\item 
+\Hypertarget{game__view_8c_a9e2b1880d697a9d198bd1b6ed41e02b5}\label{game__view_8c_a9e2b1880d697a9d198bd1b6ed41e02b5} 
+xpm\+\_\+image\+\_\+t {\bfseries game\+\_\+numbers}
+\item 
+\Hypertarget{game__view_8c_a6434d92e228b7997d6111512cec594b4}\label{game__view_8c_a6434d92e228b7997d6111512cec594b4} 
+\mbox{\hyperlink{struct_explosion}{Explosion}} \texorpdfstring{$\ast$}{*} {\bfseries explosion\+\_\+list} = NULL
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains functions related to game rendering and view management. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{game__view_8c_a1c3dcacb14608ae2dfd1b9146ced484e}\index{game\_view.c@{game\_view.c}!create\_explosion@{create\_explosion}}
+\index{create\_explosion@{create\_explosion}!game\_view.c@{game\_view.c}}
+\doxysubsubsection{\texorpdfstring{create\_explosion()}{create\_explosion()}}
+{\footnotesize\ttfamily \label{game__view_8c_a1c3dcacb14608ae2dfd1b9146ced484e} 
+\mbox{\hyperlink{struct_explosion}{Explosion}} \texorpdfstring{$\ast$}{*} create\+\_\+explosion (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Creates an explosion effect at the specified coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X-\/coordinate of the explosion. \\
+\hline
+{\em y} & Y-\/coordinate of the explosion. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the created explosion. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__view_8c_a1c3dcacb14608ae2dfd1b9146ced484e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__view_8c_a1c3dcacb14608ae2dfd1b9146ced484e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{game__view_8c_a4724c6f32f1f5fa896c9eb849120dd9a}\index{game\_view.c@{game\_view.c}!create\_virus1\_sprite@{create\_virus1\_sprite}}
+\index{create\_virus1\_sprite@{create\_virus1\_sprite}!game\_view.c@{game\_view.c}}
+\doxysubsubsection{\texorpdfstring{create\_virus1\_sprite()}{create\_virus1\_sprite()}}
+{\footnotesize\ttfamily \label{game__view_8c_a4724c6f32f1f5fa896c9eb849120dd9a} 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} create\+\_\+virus1\+\_\+sprite (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Creates a static sprite for a virus type 1 enemy. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X-\/coordinate of the sprite. \\
+\hline
+{\em y} & Y-\/coordinate of the sprite. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the created sprite. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{game__view_8c_a4724c6f32f1f5fa896c9eb849120dd9a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__view_8c_a4724c6f32f1f5fa896c9eb849120dd9a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{game__view_8c_a05879f87abc955b89a1f171dc1bcaf6d}\index{game\_view.c@{game\_view.c}!create\_virus2\_asprite@{create\_virus2\_asprite}}
+\index{create\_virus2\_asprite@{create\_virus2\_asprite}!game\_view.c@{game\_view.c}}
+\doxysubsubsection{\texorpdfstring{create\_virus2\_asprite()}{create\_virus2\_asprite()}}
+{\footnotesize\ttfamily \label{game__view_8c_a05879f87abc955b89a1f171dc1bcaf6d} 
+\mbox{\hyperlink{struct_anim_sprite}{Anim\+Sprite}} \texorpdfstring{$\ast$}{*} create\+\_\+virus2\+\_\+asprite (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Creates an animated sprite for a virus type 2 enemy. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X-\/coordinate of the sprite. \\
+\hline
+{\em y} & Y-\/coordinate of the sprite. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the created animated sprite. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__view_8c_a05879f87abc955b89a1f171dc1bcaf6d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__view_8c_a05879f87abc955b89a1f171dc1bcaf6d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{game__view_8c_a3e2d71d6cef67c1d7e60d28de21df1bc}\index{game\_view.c@{game\_view.c}!destroy\_explosion@{destroy\_explosion}}
+\index{destroy\_explosion@{destroy\_explosion}!game\_view.c@{game\_view.c}}
+\doxysubsubsection{\texorpdfstring{destroy\_explosion()}{destroy\_explosion()}}
+{\footnotesize\ttfamily \label{game__view_8c_a3e2d71d6cef67c1d7e60d28de21df1bc} 
+void destroy\+\_\+explosion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_explosion}{Explosion}} \texorpdfstring{$\ast$}{*}}]{explosion}{}\end{DoxyParamCaption})}
+
+
+
+Destroys an explosion and frees associated memory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em explosion} & Pointer to the explosion to destroy. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__view_8c_a3e2d71d6cef67c1d7e60d28de21df1bc_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__view_8c_a3e2d71d6cef67c1d7e60d28de21df1bc_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{game__view_8c_a51d0647ae3486b0d2a77ee7cafbd1373}\index{game\_view.c@{game\_view.c}!draw\_arena@{draw\_arena}}
+\index{draw\_arena@{draw\_arena}!game\_view.c@{game\_view.c}}
+\doxysubsubsection{\texorpdfstring{draw\_arena()}{draw\_arena()}}
+{\footnotesize\ttfamily \label{game__view_8c_a51d0647ae3486b0d2a77ee7cafbd1373} 
+int draw\+\_\+arena (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Draws the game arena on the screen. 
+
+\begin{DoxyReturn}{Returns}
+0 on success. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__view_8c_a51d0647ae3486b0d2a77ee7cafbd1373_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__view_8c_a51d0647ae3486b0d2a77ee7cafbd1373_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{game__view_8c_a30092734ca23c99532be7aaff169ae2f}\index{game\_view.c@{game\_view.c}!draw\_crosshair@{draw\_crosshair}}
+\index{draw\_crosshair@{draw\_crosshair}!game\_view.c@{game\_view.c}}
+\doxysubsubsection{\texorpdfstring{draw\_crosshair()}{draw\_crosshair()}}
+{\footnotesize\ttfamily \label{game__view_8c_a30092734ca23c99532be7aaff169ae2f} 
+int draw\+\_\+crosshair (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Draws the crosshair sprite on the screen. 
+
+\begin{DoxyReturn}{Returns}
+0 on success. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__view_8c_a30092734ca23c99532be7aaff169ae2f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__view_8c_a30092734ca23c99532be7aaff169ae2f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{game__view_8c_ac5279c7b71c8b9f1b5c69316b3996715}\index{game\_view.c@{game\_view.c}!draw\_cursor@{draw\_cursor}}
+\index{draw\_cursor@{draw\_cursor}!game\_view.c@{game\_view.c}}
+\doxysubsubsection{\texorpdfstring{draw\_cursor()}{draw\_cursor()}}
+{\footnotesize\ttfamily \label{game__view_8c_ac5279c7b71c8b9f1b5c69316b3996715} 
+int draw\+\_\+cursor (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Draws the cursor sprite on the screen. 
+
+\begin{DoxyReturn}{Returns}
+0 on success. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__view_8c_ac5279c7b71c8b9f1b5c69316b3996715_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__view_8c_ac5279c7b71c8b9f1b5c69316b3996715_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{game__view_8c_a277204c5a79891fb90505e3f04e5e842}\index{game\_view.c@{game\_view.c}!draw\_elements@{draw\_elements}}
+\index{draw\_elements@{draw\_elements}!game\_view.c@{game\_view.c}}
+\doxysubsubsection{\texorpdfstring{draw\_elements()}{draw\_elements()}}
+{\footnotesize\ttfamily \label{game__view_8c_a277204c5a79891fb90505e3f04e5e842} 
+int draw\+\_\+elements (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Draws all game elements on the screen. 
+
+\begin{DoxyReturn}{Returns}
+0 on success. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__view_8c_a277204c5a79891fb90505e3f04e5e842_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__view_8c_a277204c5a79891fb90505e3f04e5e842_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{game__view_8c_afe86e6b2a82e0a2b63465da9da7c40d2}\index{game\_view.c@{game\_view.c}!draw\_enemies@{draw\_enemies}}
+\index{draw\_enemies@{draw\_enemies}!game\_view.c@{game\_view.c}}
+\doxysubsubsection{\texorpdfstring{draw\_enemies()}{draw\_enemies()}}
+{\footnotesize\ttfamily \label{game__view_8c_afe86e6b2a82e0a2b63465da9da7c40d2} 
+int draw\+\_\+enemies (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Draws enemy sprites on the screen. 
+
+\begin{DoxyReturn}{Returns}
+0 on success. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__view_8c_afe86e6b2a82e0a2b63465da9da7c40d2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__view_8c_afe86e6b2a82e0a2b63465da9da7c40d2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{game__view_8c_a52f3af8c078714e854b2dd1a0d562dfa}\index{game\_view.c@{game\_view.c}!draw\_explosions@{draw\_explosions}}
+\index{draw\_explosions@{draw\_explosions}!game\_view.c@{game\_view.c}}
+\doxysubsubsection{\texorpdfstring{draw\_explosions()}{draw\_explosions()}}
+{\footnotesize\ttfamily \label{game__view_8c_a52f3af8c078714e854b2dd1a0d562dfa} 
+int draw\+\_\+explosions (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Draws explosion animations on the screen. 
+
+\begin{DoxyReturn}{Returns}
+0 on success. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__view_8c_a52f3af8c078714e854b2dd1a0d562dfa_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__view_8c_a52f3af8c078714e854b2dd1a0d562dfa_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{game__view_8c_afa89507f0657e2683163f687204a9261}\index{game\_view.c@{game\_view.c}!draw\_footer@{draw\_footer}}
+\index{draw\_footer@{draw\_footer}!game\_view.c@{game\_view.c}}
+\doxysubsubsection{\texorpdfstring{draw\_footer()}{draw\_footer()}}
+{\footnotesize\ttfamily \label{game__view_8c_afa89507f0657e2683163f687204a9261} 
+int draw\+\_\+footer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Draws the footer section of the game interface. 
+
+\begin{DoxyReturn}{Returns}
+0 on success. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__view_8c_afa89507f0657e2683163f687204a9261_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__view_8c_afa89507f0657e2683163f687204a9261_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{game__view_8c_a3cef68220fcc611902108d6f0159e50f}\index{game\_view.c@{game\_view.c}!draw\_game@{draw\_game}}
+\index{draw\_game@{draw\_game}!game\_view.c@{game\_view.c}}
+\doxysubsubsection{\texorpdfstring{draw\_game()}{draw\_game()}}
+{\footnotesize\ttfamily \label{game__view_8c_a3cef68220fcc611902108d6f0159e50f} 
+int draw\+\_\+game (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Draws the game interface. 
+
+\begin{DoxyReturn}{Returns}
+0 on success. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__view_8c_a3cef68220fcc611902108d6f0159e50f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__view_8c_a3cef68220fcc611902108d6f0159e50f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{game__view_8c_a54d5ea72de7dd571da55ceb56ef06757}\index{game\_view.c@{game\_view.c}!draw\_header@{draw\_header}}
+\index{draw\_header@{draw\_header}!game\_view.c@{game\_view.c}}
+\doxysubsubsection{\texorpdfstring{draw\_header()}{draw\_header()}}
+{\footnotesize\ttfamily \label{game__view_8c_a54d5ea72de7dd571da55ceb56ef06757} 
+int draw\+\_\+header (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Draws the header section of the game interface. 
+
+\begin{DoxyReturn}{Returns}
+0 on success. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__view_8c_a54d5ea72de7dd571da55ceb56ef06757_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__view_8c_a54d5ea72de7dd571da55ceb56ef06757_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{game__view_8c_a684faba00d88eaf2cdc9fcb14ee79d4b}\index{game\_view.c@{game\_view.c}!draw\_tank@{draw\_tank}}
+\index{draw\_tank@{draw\_tank}!game\_view.c@{game\_view.c}}
+\doxysubsubsection{\texorpdfstring{draw\_tank()}{draw\_tank()}}
+{\footnotesize\ttfamily \label{game__view_8c_a684faba00d88eaf2cdc9fcb14ee79d4b} 
+int draw\+\_\+tank (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Draws the tank sprite on the screen. 
+
+\begin{DoxyReturn}{Returns}
+0 on success. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__view_8c_a684faba00d88eaf2cdc9fcb14ee79d4b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__view_8c_a684faba00d88eaf2cdc9fcb14ee79d4b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{game__view_8c_a87dd15170b4ec8205cd391a6f63f268c}\index{game\_view.c@{game\_view.c}!draw\_timer@{draw\_timer}}
+\index{draw\_timer@{draw\_timer}!game\_view.c@{game\_view.c}}
+\doxysubsubsection{\texorpdfstring{draw\_timer()}{draw\_timer()}}
+{\footnotesize\ttfamily \label{game__view_8c_a87dd15170b4ec8205cd391a6f63f268c} 
+int draw\+\_\+timer (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{game\+\_\+timer}{}\end{DoxyParamCaption})}
+
+
+
+Draws the game timer on the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+\_\+timer} & Current game timer value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=143pt]{game__view_8c_a87dd15170b4ec8205cd391a6f63f268c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__view_8c_a87dd15170b4ec8205cd391a6f63f268c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{game__view_8c_a977046c2782eb68b21fb86d0962e4140}\index{game\_view.c@{game\_view.c}!get\_crosshair@{get\_crosshair}}
+\index{get\_crosshair@{get\_crosshair}!game\_view.c@{game\_view.c}}
+\doxysubsubsection{\texorpdfstring{get\_crosshair()}{get\_crosshair()}}
+{\footnotesize\ttfamily \label{game__view_8c_a977046c2782eb68b21fb86d0962e4140} 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} get\+\_\+crosshair (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves the crosshair sprite. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the crosshair sprite. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__view_8c_a977046c2782eb68b21fb86d0962e4140_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{game__view_8c_ab5073970a4a5b9e78cceb9d17a558461}\index{game\_view.c@{game\_view.c}!get\_cursor@{get\_cursor}}
+\index{get\_cursor@{get\_cursor}!game\_view.c@{game\_view.c}}
+\doxysubsubsection{\texorpdfstring{get\_cursor()}{get\_cursor()}}
+{\footnotesize\ttfamily \label{game__view_8c_ab5073970a4a5b9e78cceb9d17a558461} 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} get\+\_\+cursor (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves the cursor sprite. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the cursor sprite. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__view_8c_ab5073970a4a5b9e78cceb9d17a558461_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{game__view_8c_a6cd367c585374334ec34ee3f811213bb}\index{game\_view.c@{game\_view.c}!get\_tank\_sprite@{get\_tank\_sprite}}
+\index{get\_tank\_sprite@{get\_tank\_sprite}!game\_view.c@{game\_view.c}}
+\doxysubsubsection{\texorpdfstring{get\_tank\_sprite()}{get\_tank\_sprite()}}
+{\footnotesize\ttfamily \label{game__view_8c_a6cd367c585374334ec34ee3f811213bb} 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} get\+\_\+tank\+\_\+sprite (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves the tank sprite. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the tank sprite. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__view_8c_a6cd367c585374334ec34ee3f811213bb_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{game__view_8c_ab01a5c64476c42ec8b98e092e1b91ff1}\index{game\_view.c@{game\_view.c}!load\_game\_sprites@{load\_game\_sprites}}
+\index{load\_game\_sprites@{load\_game\_sprites}!game\_view.c@{game\_view.c}}
+\doxysubsubsection{\texorpdfstring{load\_game\_sprites()}{load\_game\_sprites()}}
+{\footnotesize\ttfamily \label{game__view_8c_ab01a5c64476c42ec8b98e092e1b91ff1} 
+int load\+\_\+game\+\_\+sprites (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Loads game sprites into memory. 
+
+\begin{DoxyReturn}{Returns}
+0 on success. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=286pt]{game__view_8c_ab01a5c64476c42ec8b98e092e1b91ff1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__view_8c_ab01a5c64476c42ec8b98e092e1b91ff1_icgraph}
+\end{center}
+\end{figure}

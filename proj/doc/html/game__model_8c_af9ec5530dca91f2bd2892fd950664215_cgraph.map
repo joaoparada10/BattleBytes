@@ -1,0 +1,28 @@
+<map id="spawn_enemy" name="spawn_enemy">
+<area shape="rect" id="Node000001" title="Spawns an enemy of the given type." alt="" coords="5,164,110,191"/>
+<area shape="rect" id="Node000002" href="$game__model_8c.html#a60ac9c9d1d1b51ac203668ce2b8107d3" title="Creates an enemy." alt="" coords="178,80,281,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="84,161,156,124,183,111,186,116,159,129,87,166"/>
+<area shape="rect" id="Node000005" href="$game__view_8c.html#a4724c6f32f1f5fa896c9eb849120dd9a" title="Creates a static sprite for a virus type 1 enemy." alt="" coords="161,139,298,165"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="110,167,146,162,146,167,110,172"/>
+<area shape="rect" id="Node000007" href="$game__view_8c.html#a05879f87abc955b89a1f171dc1bcaf6d" title="Creates an animated sprite for a virus type 2 enemy." alt="" coords="158,189,301,216"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="110,182,143,187,142,193,110,188"/>
+<area shape="rect" id="Node000010" href="$game__logic_8c.html#a92e3fa41cbaf0a28e54be4958150e58f" title="Checks for collision when spawning an object." alt="" coords="173,240,286,267"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="85,189,159,226,173,232,171,237,157,230,82,194"/>
+<area shape="rect" id="Node000003" href="$game__model_8c.html#adb578ef990a9827c4874fc3e0489b4c5" title="Creates an animated game element." alt="" coords="349,5,505,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="271,77,346,51,348,56,272,82"/>
+<area shape="rect" id="Node000004" href="$game__model_8c.html#a955d5de38dda62712aed7ed1d1cdf1ec" title="Creates a static game element." alt="" coords="360,72,495,115"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="281,91,344,91,344,96,281,96"/>
+<area shape="rect" id="Node000006" href="$group__sprite.html#gac17a91fd309ebffd07be3daa9c194d86" title="Creates a sprite." alt="" coords="568,139,664,165"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="298,149,552,149,552,155,298,155"/>
+<area shape="rect" id="Node000008" href="$group__animsprite.html#ga6cbf1f77a54307e24cc5195890c4ac86" title="Creates an animated sprite." alt="" coords="376,189,479,216"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="301,200,360,200,360,205,301,205"/>
+<area shape="poly" id="edge8_Node000008_Node000006" title=" " alt="" coords="479,186,552,166,554,171,480,191"/>
+<area shape="rect" id="Node000009" href="$group__sprite.html#ga0b9702271420a69a1603d0a3768fda67" title="Destroys a sprite." alt="" coords="564,189,668,216"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="479,200,549,200,549,205,479,205"/>
+<area shape="rect" id="Node000011" href="$game__view_8c.html#a6cd367c585374334ec34ee3f811213bb" title="Retrieves the tank sprite." alt="" coords="372,240,482,267"/>
+<area shape="poly" id="edge11_Node000010_Node000011" title=" " alt="" coords="286,251,357,251,357,256,286,256"/>
+<area shape="rect" id="Node000012" href="$arena_8c.html#a3c12c77e637315890375e0bd6f987cc3" title="Checks if a given coordinate in the arena is walkable." alt="" coords="383,291,471,317"/>
+<area shape="poly" id="edge12_Node000010_Node000012" title=" " alt="" coords="285,265,369,286,367,292,284,270"/>
+<area shape="rect" id="Node000013" href="$arena_8c.html#a643076fac43cdf2e983ffe4ebb4e1f24" title="Gets the current arena." alt="" coords="553,291,679,317"/>
+<area shape="poly" id="edge13_Node000012_Node000013" title=" " alt="" coords="472,301,537,301,537,307,472,307"/>
+</map>

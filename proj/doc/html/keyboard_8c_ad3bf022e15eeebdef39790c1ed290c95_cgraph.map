@@ -1,0 +1,7 @@
+<map id="kbc_read_value" name="kbc_read_value">
+<area shape="rect" id="Node000001" title="Reads a value from the KBC output buffer." alt="" coords="5,31,116,57"/>
+<area shape="rect" id="Node000002" href="$keyboard_8c.html#a3b6065665843fa04842278085d21897d" title="Checks if the keyboard status byte is valid." alt="" coords="164,5,266,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="116,32,148,27,149,32,117,38"/>
+<area shape="rect" id="Node000003" href="$utils_8c.html#a2b56f50ba159e9d5115ed1a75eff15d9" title="Reads a byte from a specified port." alt="" coords="170,56,260,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="117,50,155,57,154,62,116,56"/>
+</map>

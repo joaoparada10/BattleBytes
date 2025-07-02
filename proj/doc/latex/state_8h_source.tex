@@ -1,0 +1,67 @@
+\doxysection{state.\+h}
+\hypertarget{state_8h_source}{}\label{state_8h_source}\index{dispatcher/state.h@{dispatcher/state.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ \_\_STATE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ \_\_STATE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{00007\ \ \ INITIAL,}
+\DoxyCodeLine{00008\ \ \ INITIAL\_MENU,}
+\DoxyCodeLine{00009\ \ \ LOADING\_MAIN\_MENU,}
+\DoxyCodeLine{00010\ \ \ MAIN\_MENU,}
+\DoxyCodeLine{00011\ \ \ LOADING\_HELP,}
+\DoxyCodeLine{00012\ \ \ HELP\_MENU,}
+\DoxyCodeLine{00013\ \ \ LOADING\_HIGHSCORES,}
+\DoxyCodeLine{00014\ \ \ HIGHSCORES\_MENU,}
+\DoxyCodeLine{00015\ \ \ WAITING,}
+\DoxyCodeLine{00016\ \ \ LOADING\_GAME,}
+\DoxyCodeLine{00017\ \ \ INGAME,}
+\DoxyCodeLine{00018\ \ \ LOADING\_PAUSE,}
+\DoxyCodeLine{00019\ \ \ PAUSE\_MENU,}
+\DoxyCodeLine{00020\ \ \ GAME\_END,}
+\DoxyCodeLine{00021\ \ \ GAME\_OVER,}
+\DoxyCodeLine{00022\ \ \ NEW\_HIGHSCORE,}
+\DoxyCodeLine{00023\ \ \ KILL}
+\DoxyCodeLine{00024\ \}\ State;}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00027\ \ \ \ \ uint32\_t\ score;}
+\DoxyCodeLine{00028\ \ \ \ \ uint32\_t\ timer;}
+\DoxyCodeLine{00029\ \ \ \ \ uint32\_t\ game\_time;}
+\DoxyCodeLine{00030\ \ \ \ \ uint8\_t\ difficulty;}
+\DoxyCodeLine{00031\ \ \ \ \ State\ state;}
+\DoxyCodeLine{00032\ \}\ \mbox{\hyperlink{struct_game_state}{GameState}};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ State\ \mbox{\hyperlink{state_8c_af6adcb6b1f3db905dc261ec641b819d2}{init\_game\_state}}();}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ uint32\_t\ \mbox{\hyperlink{state_8c_a21ab19713d487f02e880ee4c3f730795}{get\_score}}();}
+\DoxyCodeLine{00038\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{state_8c_a49ac678712e9885e0315a1c40640f319}{set\_score}}(uint32\_t\ new\_score);}
+\DoxyCodeLine{00039\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{state_8c_a2cf5edc632cfcc66bd78b43dc2d2fc1b}{increase\_score}}();}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ uint32\_t\ \mbox{\hyperlink{state_8c_af018f3ce79710c9abd7963211ab24e0e}{get\_timer}}();}
+\DoxyCodeLine{00042\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{state_8c_a2649bfd1ec46e9b0ad5aa7dfd3a35ca3}{set\_timer}}(uint32\_t\ new\_timer);}
+\DoxyCodeLine{00043\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{state_8c_a6a71bcde78dc527c54bc55a2dcc1f656}{increase\_timer}}();}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ uint32\_t\ \mbox{\hyperlink{state_8c_afd540dc3101b434aae44ddea489c58b6}{get\_game\_time}}();}
+\DoxyCodeLine{00046\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{state_8c_aef6e11f83952661ad9ad43238f5efdff}{set\_game\_time}}(uint32\_t\ new\_game\_time);}
+\DoxyCodeLine{00047\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{state_8c_a91865583e86517fe46b89a7be0d9fafd}{increase\_game\_time}}();}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ uint8\_t\ \mbox{\hyperlink{state_8c_ad3b4b1f504a44638230e3d2ff20439bb}{get\_difficulty}}();}
+\DoxyCodeLine{00050\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{state_8c_a174884f9d8aa485dd2df7cc1864df301}{set\_difficulty}}(uint8\_t\ new\_difficulty);}
+\DoxyCodeLine{00051\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{state_8c_add1e17182223f45388f4a70502b29c3b}{increase\_difficulty}}();}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \mbox{\hyperlink{struct_game_state}{GameState}}\ \mbox{\hyperlink{state_8c_ac45d046321314f1a5d9deee403f7b5db}{get\_game\_state}}();}
+\DoxyCodeLine{00054\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{state_8c_a8777aa396439ae8e5505357c470815b8}{set\_game\_state}}(\mbox{\hyperlink{struct_game_state}{GameState}}\ new\_game\_state);}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ State\ \mbox{\hyperlink{state_8c_a38d3fc207a5e58298bdd4a606c0b1a01}{get\_state}}();}
+\DoxyCodeLine{00057\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{state_8c_abef3f51e03a484281acce64e7d912c21}{set\_state}}(State\ new\_state);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{state_8c_a53c22c2810ba1561a5f776bffc03a599}{reset\_game\_stats}}(\mbox{\hyperlink{struct_game_state}{GameState}}\ state);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

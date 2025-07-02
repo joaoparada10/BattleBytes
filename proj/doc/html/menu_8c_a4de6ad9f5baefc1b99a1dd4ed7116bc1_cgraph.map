@@ -1,0 +1,9 @@
+<map id="draw_title" name="draw_title">
+<area shape="rect" id="Node000001" title="Draws the title of the menu on the screen." alt="" coords="5,5,82,32"/>
+<area shape="rect" id="Node000002" href="$menu_8c.html#a44893e3b0e4dd2746abd770f5dd56f9a" title="Draws a string on the screen." alt="" coords="130,5,217,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="82,16,114,16,114,21,82,21"/>
+<area shape="rect" id="Node000003" href="$menu_8c.html#a296070ce636082f7e52b6e39e451ed56" title="Draws a single character on the screen." alt="" coords="265,5,374,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="217,16,250,16,250,21,217,21"/>
+<area shape="rect" id="Node000004" href="$video__gr_8c.html#ae73cfe62147429fce468e5b1ed96e30a" title="Gets the drawing buffer." alt="" coords="422,5,551,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="375,16,407,16,407,21,375,21"/>
+</map>

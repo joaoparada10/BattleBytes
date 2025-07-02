@@ -1,0 +1,7 @@
+<map id="load_new_highscore_menu" name="load_new_highscore_menu">
+<area shape="rect" id="Node000001" title="Loads the new highscore menu." alt="" coords="5,31,183,57"/>
+<area shape="rect" id="Node000002" href="$menu_8c.html#a05a655ad151e3b910b4547f1ca9a2f7c" title="Creates a new menu." alt="" coords="231,5,327,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="183,29,215,25,215,30,184,34"/>
+<area shape="rect" id="Node000003" href="$group__sprite.html#gac17a91fd309ebffd07be3daa9c194d86" title="Creates a sprite." alt="" coords="231,56,327,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="184,54,215,58,215,63,183,59"/>
+</map>

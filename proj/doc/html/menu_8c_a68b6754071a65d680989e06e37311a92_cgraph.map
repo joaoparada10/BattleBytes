@@ -1,0 +1,7 @@
+<map id="handle_menu_click" name="handle_menu_click">
+<area shape="rect" id="Node000001" title="Handles menu option selection based on mouse click." alt="" coords="5,31,138,57"/>
+<area shape="rect" id="Node000002" href="$game__view_8c.html#ab5073970a4a5b9e78cceb9d17a558461" title="Retrieves the cursor sprite." alt="" coords="186,5,268,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="138,31,170,25,171,30,138,36"/>
+<area shape="rect" id="Node000003" href="$state_8c.html#abef3f51e03a484281acce64e7d912c21" title="Sets the state of the game to a new state." alt="" coords="189,56,265,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="138,52,174,58,173,63,138,57"/>
+</map>

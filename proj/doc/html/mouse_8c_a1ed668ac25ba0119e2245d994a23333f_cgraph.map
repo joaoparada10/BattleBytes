@@ -1,0 +1,7 @@
+<map id="m_read_obf_byte" name="m_read_obf_byte">
+<area shape="rect" id="Node000001" title="Reads a byte from the KBC output buffer for the mouse." alt="" coords="5,31,126,57"/>
+<area shape="rect" id="Node000002" href="$mouse_8c.html#a3277838f74bbd6e5c84f9b9c40b734d1" title="Checks if the mouse status byte is valid." alt="" coords="174,5,273,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="126,32,158,26,159,32,126,37"/>
+<area shape="rect" id="Node000003" href="$utils_8c.html#a2b56f50ba159e9d5115ed1a75eff15d9" title="Reads a byte from a specified port." alt="" coords="178,56,269,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="126,51,163,57,162,62,126,56"/>
+</map>

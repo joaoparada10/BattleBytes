@@ -1,0 +1,13 @@
+<map id="draw_enemies" name="draw_enemies">
+<area shape="rect" id="Node000001" title="Draws enemy sprites on the screen." alt="" coords="5,56,110,83"/>
+<area shape="rect" id="Node000002" href="$group__animsprite.html#gad144acec9721d3b36b4e8131b9c50ae8" title="Animates an animated sprite." alt="" coords="158,5,271,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="101,53,156,35,157,40,102,58"/>
+<area shape="rect" id="Node000003" href="$group__sprite.html#ga6c75fbf31230126d2f19b29deaf24b2f" title="Draws a sprite." alt="" coords="171,56,258,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="110,67,155,67,155,72,110,72"/>
+<area shape="rect" id="Node000006" href="$game__model_8c.html#ad04dee4317dc9f97066b219ebc13558e" title="Gets the list of enemies." alt="" coords="160,107,269,133"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="102,81,157,99,156,104,101,86"/>
+<area shape="rect" id="Node000004" href="$video__gr_8c.html#ae73cfe62147429fce468e5b1ed96e30a" title="Gets the drawing buffer." alt="" coords="319,31,447,57"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="258,60,303,53,304,59,259,65"/>
+<area shape="rect" id="Node000005" href="$video__gr_8c.html#ac19350f0662b5c8fbb1a41e051411014" title="Gets the horizontal resolution." alt="" coords="344,81,422,108"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="259,73,329,84,328,89,258,78"/>
+</map>

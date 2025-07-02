@@ -1,0 +1,40 @@
+<map id="create_menu" name="create_menu">
+<area shape="rect" id="Node000001" title="Creates a new menu." alt="" coords="793,157,889,184"/>
+<area shape="rect" id="Node000002" href="$menu_8c.html#a0b9d8566981a717a5afb6732c6001d0b" title="Loads the game over menu." alt="" coords="579,5,733,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="824,145,791,94,769,68,743,46,722,35,724,30,746,42,773,64,796,91,828,142"/>
+<area shape="rect" id="Node000006" href="$menu_8c.html#a80559d91dbda58dd9140a1ab835a2c06" title="Loads the help menu." alt="" coords="598,56,714,83"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="814,149,782,122,743,97,713,85,715,80,746,92,785,117,817,145"/>
+<area shape="rect" id="Node000008" href="$menu_8c.html#aa481e40c9afe783e59897643a32ad5e3" title="Loads the highscores menu." alt="" coords="579,107,733,133"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="777,156,706,136,708,131,778,151"/>
+<area shape="rect" id="Node000010" href="$menu_8c.html#ae6b9a925dd7316c83a8eeca16431a4b3" title="Loads the initial menu." alt="" coords="595,157,717,184"/>
+<area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="777,173,717,173,717,168,777,168"/>
+<area shape="rect" id="Node000012" href="$menu_8c.html#af3a717bf86704d19bf64b64bedecbac5" title="Loads the main menu." alt="" coords="596,208,716,235"/>
+<area shape="poly" id="edge14_Node000001_Node000012" title=" " alt="" coords="778,190,708,210,706,205,777,185"/>
+<area shape="rect" id="Node000014" href="$menu_8c.html#ae1ac3b606f8f8f3b0a826aaa38fc5a76" title="Loads the new highscore menu." alt="" coords="567,259,745,285"/>
+<area shape="poly" id="edge17_Node000001_Node000014" title=" " alt="" coords="817,197,785,224,746,249,718,260,716,256,743,244,782,220,814,193"/>
+<area shape="rect" id="Node000016" href="$menu_8c.html#acdcb619af2514e4eb5587f9a679f7992" title="Loads the pause menu." alt="" coords="593,309,719,336"/>
+<area shape="poly" id="edge19_Node000001_Node000016" title=" " alt="" coords="828,199,796,250,773,277,746,300,721,312,719,308,743,295,769,273,791,247,824,196"/>
+<area shape="rect" id="Node000003" href="$menu_8c.html#aea917191ea17747f45cbe0ebedef91c1" title="Gets the game over menu." alt="" coords="360,5,507,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="564,21,508,21,508,16,564,16"/>
+<area shape="rect" id="Node000004" href="$dispatcher_8c.html#a8b98fc3f43a39b953cd60f2ce95d296f" title="Handles the game state transitions and actions." alt="" coords="162,132,300,159"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="362,40,349,46,318,67,289,90,246,133,242,130,286,87,315,63,347,42,359,36"/>
+<area shape="rect" id="Node000005" href="$proj_8c.html#af244d65e69677cf312af1950452ec256" title="Main game loop for the project." alt="" coords="5,132,114,159"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="146,148,114,148,114,143,146,143"/>
+<area shape="rect" id="Node000007" href="$menu_8c.html#ae2eec2d093ac6b276dbb04ffcc24353c" title="Gets the help menu." alt="" coords="379,56,488,83"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="583,72,489,72,489,67,583,67"/>
+<area shape="poly" id="edge7_Node000007_Node000004" title=" " alt="" coords="369,90,349,97,262,134,260,129,347,92,368,85"/>
+<area shape="rect" id="Node000009" href="$menu_8c.html#a20534090c57188a41f48a55c8321b025" title="Gets the highscores menu." alt="" coords="360,107,508,133"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="563,123,508,123,508,117,563,117"/>
+<area shape="poly" id="edge10_Node000009_Node000004" title=" " alt="" coords="344,134,301,139,300,134,344,129"/>
+<area shape="rect" id="Node000011" href="$menu_8c.html#a3ec9d26fecfe8d749bc5e2004afb7a7f" title="Gets the initial menu." alt="" coords="376,157,491,184"/>
+<area shape="poly" id="edge12_Node000010_Node000011" title=" " alt="" coords="580,173,492,173,492,168,580,168"/>
+<area shape="poly" id="edge13_Node000011_Node000004" title=" " alt="" coords="361,164,300,157,301,151,361,159"/>
+<area shape="rect" id="Node000013" href="$menu_8c.html#acd03bc6a6b6460b07697a3d35e035721" title="Gets the main menu." alt="" coords="377,208,490,235"/>
+<area shape="poly" id="edge15_Node000012_Node000013" title=" " alt="" coords="580,224,491,224,491,219,580,219"/>
+<area shape="poly" id="edge16_Node000013_Node000004" title=" " alt="" coords="368,206,347,198,260,162,262,157,349,194,369,200"/>
+<area shape="rect" id="Node000015" href="$menu_8c.html#a7fb9f236187d49597e97221ad9e82ad6" title="Gets the new highscore menu." alt="" coords="348,259,519,285"/>
+<area shape="poly" id="edge18_Node000014_Node000015" title=" " alt="" coords="552,275,520,275,520,269,552,269"/>
+<area shape="rect" id="Node000017" href="$menu_8c.html#a9f199223d5e75ac2e57c751261305741" title="Gets the pause menu." alt="" coords="374,309,494,336"/>
+<area shape="poly" id="edge20_Node000016_Node000017" title=" " alt="" coords="577,325,494,325,494,320,577,320"/>
+<area shape="poly" id="edge21_Node000017_Node000004" title=" " alt="" coords="358,306,346,299,308,266,276,227,236,160,241,158,281,224,312,262,350,295,361,302"/>
+</map>

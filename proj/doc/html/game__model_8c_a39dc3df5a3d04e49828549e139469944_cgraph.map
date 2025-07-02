@@ -1,0 +1,7 @@
+<map id="create_game_elements" name="create_game_elements">
+<area shape="rect" id="Node000001" title="Creates the game elements." alt="" coords="5,43,162,69"/>
+<area shape="rect" id="Node000002" href="$game__model_8c.html#a955d5de38dda62712aed7ed1d1cdf1ec" title="Creates a static game element." alt="" coords="210,5,345,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="162,42,194,37,195,42,162,47"/>
+<area shape="rect" id="Node000003" href="$game__view_8c.html#a6cd367c585374334ec34ee3f811213bb" title="Retrieves the tank sprite." alt="" coords="222,72,333,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="162,65,208,72,207,77,162,70"/>
+</map>

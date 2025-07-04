@@ -1,6 +1,8 @@
 # BattleBytes
 Simple game written in C that integrates hardware I/O devices: Mouse, Keyboard, CPU Timer and Video Card.
-![image](https://github.com/user-attachments/assets/dc542a0f-b260-4fb1-b0f8-8629d8d27e0f)
+
+Click the image to watch a demo on Youtube:
+[![image](https://github.com/user-attachments/assets/dc542a0f-b260-4fb1-b0f8-8629d8d27e0f)](https://www.youtube.com/watch?v=-R8zuvEtYFQ)
 
 **Ported and adapted from my group's [Computer Laboratory](https://sigarra.up.pt/feup/en/ucurr_geral.ficha_uc_view?pv_ocorrencia_id=520323) GitLab repository.**
 
